@@ -1,0 +1,38 @@
+/* variables */
+
+:root {
+ --color1: #24053E;
+ --color2: #44FFA1;
+ --color3: #584D62;
+ --color4: #FCF8FF;
+ --color5: #FFFFFF;
+
+}
+
+/* resets */
+
+* {
+ margin: 0;
+ padding: 0;
+ 
+}
+
+/* base styles */
+
+/* fonts */
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Manrope', sans-serif; */
+
+/* mobile styles */
+
+
+/* tablet styles */
+@media screen and (min-width: 768px) {
+ 
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {
+
+}
