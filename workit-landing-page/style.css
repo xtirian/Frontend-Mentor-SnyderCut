@@ -197,15 +197,23 @@ span {
 
 /* Founder sect */
 
+.founderContainer{
+  display: flex;
+  flex-direction: column;
+}
+
 .founderSect {
   display: flex;
 
   justify-content: center;
+  position: relative;
+  height: 40vh;
+  max-height: 400px;
 }
 
 .image-founder {
   max-width: 281px;
-  position: relative;
+  position: absolute;
   bottom: -55px;
 
   z-index: 1;
@@ -343,6 +351,11 @@ svg:hover path {
 
   /* FOUNDER -> Add the bg pattern and adjust the position of the founder's img */
 
+  .founderContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
   .founderSect {
     justify-content: flex-start;
   }
@@ -474,4 +487,11 @@ svg:hover path {
     right: 90px;
     bottom: -80px;
   }
+}
+
+@media screen and (min-width: 1800px) {
+  .image-founder {
+    left: calc(50vw/2.5)
+  }
+  
 }

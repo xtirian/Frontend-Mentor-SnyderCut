@@ -29,7 +29,7 @@ Web
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/workit-landing-page)
+- Solution URL: [Go to Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/workit-landing-page)
 - Live Site URL: [Go to site](https://workit-landing-page-indol.vercel.app/#)
 
 ## My process
