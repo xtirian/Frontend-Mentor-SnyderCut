@@ -17,6 +17,10 @@ normally I use this as a reset
  }
 
  but, for the sake of pratice, I'll try different way to do that.*/
+
+* {
+  box-sizing: border-box;
+}
 body,
 a,
 p,
@@ -25,9 +29,6 @@ li {
   margin: 0;
   padding: 0;
   text-decoration: none;
-}
-li {
-  list-style-type: none;
 }
 
 /* LAYERS
@@ -53,54 +54,50 @@ I didn't find another way besides use the layers to create a shape formed Ellips
 .ellipsePattern {
   background-color: inherit;
 
-  
   width: 100vw;
-  height: 7em;
+  height: 4em;
 
-  clip-path: ellipse(100% 100% at top center);
-  float: inline-end;
-  bottom: -70px;
+  clip-path: ellipse(60% 100% at top center);
+  position: relative;
+  bottom: -4em;
+  left: 0;
 }
 
 /* base styles */
 body {
   background-color: var(--color5);
-  overflow-x: hidden;
-
-  /* overflow because some img could transbording the x axis, so this is for evade create the scroll */
 }
 
 header {
- background-color: var(--color1); 
- padding-top: 16px ;
+  background-color: var(--color1);
+  padding-top: 16px;
 }
 
-.navGrid{
- display: flex;
- justify-content: space-between;
- align-items: center;
-
- 
+.navGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navButton {
   color: var(--color5);
   font-weight: bold;
 }
-.navButton:hover{
- color: var(--color2);
+.navButton:hover {
+  color: var(--color2);
 }
 .button {
- background-color: var(--color2);
- color: var(--color1);
+  background-color: var(--color2);
+  color: var(--color1);
+  font-weight: bold;
 
- width: fit-content;
- padding: 10px 15px;
- margin: 10px auto;
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 20px auto;
 }
-.button:hover{
- background-color: var(--color1);
- border: 2px solid var(--color2);
- color: var(--color2);
+.button:hover {
+  background-color: var(--color1);
+  border: 2px solid var(--color2);
+  color: var(--color2);
 }
 .servicesSec {
   position: relative;
@@ -110,29 +107,29 @@ header {
 /* fonts */
 
 span {
-  border-bottom: 2px solid var(--color2);  
+  border-bottom: 2px solid var(--color2);
 }
-.headingL,.headingM,.headingS{
- font-family: 'Fraunces', serif;
+.headingL,
+.headingM,
+.headingS {
+  font-family: "Fraunces", serif;
 }
-.headingL { 
- font-size: 42px;
- line-height: 48px;
- font-weight: 600;
+.headingL {
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 600;
 
- color: var(--color5);
+  color: var(--color5);
 }
 .headingM {
-
- font-size: 32px;
- line-height: 48px;
- font-weight: 600;
-
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
 }
 .headingS {
- font-size: 28px;
- line-height: 36px;
- font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
 }
 .pBody {
   font-family: "Manrope", sans-serif;
@@ -142,136 +139,339 @@ span {
 }
 
 /* mobile styles */
-.container{
- padding: 0 3.5%;
+.container {
+  padding: 0 3.5%;
 }
 /* HEADER */
 .logo {
- max-height: 24px;
+  max-height: 24px;
 }
 .banner {
- padding: 30px 0;
- text-align: center;
+  padding: 20px 0;
+  text-align: center;
 }
+
 .bgDisplay {
- display: none;
+  display: none;
 }
 
 /* MAIN */
 
-.imgHero{
- position: relative;
- z-index: 5;
+.imgHero {
+  position: relative;
+  z-index: 5;
 
- /* This top is half height of the ellipse pattern */
- top: -5em;
- max-width: 80%;
+  /* This top is half height of the ellipse pattern */
+  top: -3em;
+  max-width: 80%;
 
- /* The calc to centralize this object is calc by half of the width of the celphone and half of the width of the screen */
- left: calc(50vw - 40vw);
+  /* The calc to centralize this object is calc by half of the width of the celphone and half of the width of the screen */
+  left: calc(50vw - 40vw);
 }
 
-.servicesGrid{
- display: flex;
- flex-direction: column;
+.servicesGrid {
+  display: flex;
+  flex-direction: column;
 
- color: var(--color1);
+  color: var(--color1);
 
- text-align: center;
- 
+  text-align: center;
 }
 
-.serviceCard{
- margin-bottom: 36px;
+.serviceCard {
+  margin-bottom: 36px;
 }
 
-.serviceDetailPattern{
- border: 1px solid var(--color1);
- border-radius: 50%;
- width: 46px;
- height: 46px;
+.serviceDetailPattern {
+  border: 1px solid var(--color1);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
 
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
- margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* Founder sect */
 
-.founderSect{
- display: flex;
+.founderSect {
+  display: flex;
 
- justify-content: center; 
+  justify-content: center;
 }
 
-.image-founder{
- max-width: 80%;
- position: relative;
- bottom: -55px;
- 
+.image-founder {
+  max-width: 281px;
+  position: relative;
+  bottom: -55px;
 
- z-index: 1;
+  z-index: 1;
 
- margin-top: 50px;
+  margin-top: 50px;
 }
 
-.founderMessage{
- display: flex;
- flex-direction: column;
+.founderMessage {
+  display: flex;
+  flex-direction: column;
 
- background-color: var(--color1);
- padding: 10px 20px 5px 20px;
+  background-color: var(--color1);
+  padding: 10px 20px 5px 20px;
 
- color: var(--color5);
- text-align: center;
+  color: var(--color5);
+  text-align: center;
 
- position: relative;
- z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Footer */
 
-.footerGrid{
- display: flex;
- flex-direction: column ;
+.footerGrid {
+  display: flex;
+  flex-direction: column;
 
- align-items: center;
+  align-items: center;
 
- padding: 60px 0;
+  padding: 60px 0;
 }
 
-.social{
- width: 115px;
- margin-top: 57px;
- 
- display: grid;
- grid-auto-flow: column;
+.social {
+  width: 115px;
+  margin-top: 57px;
 
- 
+  display: grid;
+  grid-auto-flow: column;
 }
 
-.social img{
- margin: 0 auto;
+.social img {
+  margin: 0 auto;
+}
+
+svg:hover path {
+  fill: #24053e;
 }
 
 .attribution {
- font-size: 11px;
- text-align: center;
+  font-size: 11px;
+  text-align: center;
 }
 .attribution a {
- color: var(--color1);
- 
- text-decoration: none;
+  color: var(--color1);
+
+  text-decoration: none;
 }
-
-
 
 /* tablet styles */
 @media screen and (min-width: 768px) {
+  .ellipsePattern {
+    height: 7em;
+    bottom: -7em;
+  }
+  .container {
+    padding: 0 5%;
+  }
+
+  .headingL {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  /* BANNER - The main job here was make the bg appear from nowhere */
+
+  .bannerContainer {
+    display: flex;
+    position: relative;
+  }
+  .banner {
+    padding: 0 15% 10% 15%;
+    z-index: 5;
+    margin: 0 auto;
+  }
+  .bgDisplay {
+    display: block;
+  }
+  .bg-pattern-1 {
+    background-image: url(./assets/images/bg-pattern-1.svg);
+    background-size: 270px;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    width: 135px;
+    height: 270px;
+
+    position: absolute;
+
+    left: 0px;
+  }
+  .bg-pattern-2 {
+    background-image: url(./assets/images/bg-pattern-2.svg);
+    background-size: 141px;
+    background-repeat: no-repeat;
+
+    width: 70px;
+    height: 141px;
+
+    position: absolute;
+
+    right: 0;
+    bottom: 10px;
+  }
+
+  /* SERVICES -> here I just adjust the size of the img and organized the service cards  */
+  .imgHero {
+    max-width: 517px;
+
+    top: -5em;
+
+    left: calc(50vw - (517px / 2));
+  }
+  .servicesGrid {
+    text-align: left;
+  }
+  .serviceCard {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 20% auto;
+
+    align-items: center;
+
+    padding: 0 7.5%;
+  }
+
+  /* FOUNDER -> Add the bg pattern and adjust the position of the founder's img */
+
+  .founderSect {
+    justify-content: flex-start;
+  }
+
+  .image-founder {
+    width: 40%;
+    max-width: 477px;
+    margin-top: 0;
+    bottom: -135px;
+  }
+
+  .founderMessage {
+    width: 75%;
+
+    max-width: 730px;
+
+    margin-right: 0;
+    margin-left: auto;
+    padding: 10px 55px 50px 55px;
+
+    text-align: left;
+  }
+  .founderButton {
+    margin-left: 0;
+  }
+
+  .bg-pattern-3 {
+    background-image: url(./assets/images/bg-pattern-3.svg);
+    background-size: 173px;
+    background-repeat: no-repeat;
+
+    position: absolute;
+
+    height: 165px;
+    width: 173px;
+
+    z-index: 5;
+
+    right: 20px;
+    bottom: -80px;
+  }
 }
 
 /* desktop */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
+  .ellipsePattern {
+    height: 10em;
+    bottom: -10em;
+  }
+  .container {
+    padding: 0 7.5%;
+  }
+  .headingL {
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .headingM {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  .headingS {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .pBody {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  /* Banner -> Here I jut adjust the position of the bg and his sizes */
+
+  .banner {
+    padding: 0 25% 5% 25%;
+  }
+
+  .bg-pattern-1 {
+    background-size: cover;
+    width: 225px;
+    height: 450px;
+  }
+  .bg-pattern-2 {
+    background-size: cover;
+    width: 125px;
+    height: 250px;
+    bottom: 10px;
+  }
+
+  .imgHero {
+    max-width: 60%;
+
+    top: -12em;
+
+    left: calc(50vw - (65vw / 2));
+  }
+
+  .servicesGrid {
+    text-align: center;
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+  .serviceCard {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 0 1.5%;
+  }
+
+  /* FOUNDER */
+
+  .image-founder {
+    margin-left: 5%;
+
+    bottom: -300px;
+  }
+  .founderMessage {
+    margin-right: 5%;
+    margin-left: auto;
+    padding: 10px 65px 50px 65px;
+  }
+
+  .bg-pattern-3 {
+    background-size: cover;
+    height: 220px;
+    width: 220px;
+
+    right: 90px;
+    bottom: -80px;
+  }
 }
