@@ -1,38 +1,277 @@
 /* variables */
-
 :root {
- --color1: #24053E;
- --color2: #44FFA1;
- --color3: #584D62;
- --color4: #FCF8FF;
- --color5: #FFFFFF;
-
+  --color1: #24053e;
+  --color2: #44ffa1;
+  --color3: #584d62;
+  --color4: #fcf8ff;
+  --color5: #ffffff;
 }
 
-/* resets */
+/* RESETS
 
-* {
- margin: 0;
- padding: 0;
- 
+normally I use this as a reset
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+ }
+
+ but, for the sake of pratice, I'll try different way to do that.*/
+body,
+a,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/* LAYERS
+
+As its page is performed by layers, I'll use this system to garantee that the correct layer still here*/
+
+.index1 {
+  z-index: 5;
+  position: relative;
+}
+.index2 {
+  z-index: 4;
+}
+
+.index3 {
+  z-index: 3;
+}
+
+/* THE ELLIPSES BOTOM SHAPES 
+
+I didn't find another way besides use the layers to create a shape formed Ellipse, put behind the father element  */
+
+.ellipsePattern {
+  background-color: inherit;
+
+  
+  width: 100vw;
+  height: 7em;
+
+  clip-path: ellipse(100% 100% at top center);
+  float: inline-end;
+  bottom: -70px;
 }
 
 /* base styles */
+body {
+  background-color: var(--color5);
+  overflow-x: hidden;
+
+  /* overflow because some img could transbording the x axis, so this is for evade create the scroll */
+}
+
+header {
+ background-color: var(--color1); 
+ padding-top: 16px ;
+}
+
+.navGrid{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+
+ 
+}
+.navButton {
+  color: var(--color5);
+  font-weight: bold;
+}
+.navButton:hover{
+ color: var(--color2);
+}
+.button {
+ background-color: var(--color2);
+ color: var(--color1);
+
+ width: fit-content;
+ padding: 10px 15px;
+ margin: 10px auto;
+}
+.button:hover{
+ background-color: var(--color1);
+ border: 2px solid var(--color2);
+ color: var(--color2);
+}
+.servicesSec {
+  position: relative;
+  background-color: var(--color4);
+}
 
 /* fonts */
 
-/* font-family: 'Fraunces', serif;
-font-family: 'Manrope', sans-serif; */
+span {
+  border-bottom: 2px solid var(--color2);  
+}
+.headingL,.headingM,.headingS{
+ font-family: 'Fraunces', serif;
+}
+.headingL { 
+ font-size: 42px;
+ line-height: 48px;
+ font-weight: 600;
+
+ color: var(--color5);
+}
+.headingM {
+
+ font-size: 32px;
+ line-height: 48px;
+ font-weight: 600;
+
+}
+.headingS {
+ font-size: 28px;
+ line-height: 36px;
+ font-weight: 600;
+}
+.pBody {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+
+  line-height: 28px;
+}
 
 /* mobile styles */
+.container{
+ padding: 0 3.5%;
+}
+/* HEADER */
+.logo {
+ max-height: 24px;
+}
+.banner {
+ padding: 30px 0;
+ text-align: center;
+}
+.bgDisplay {
+ display: none;
+}
+
+/* MAIN */
+
+.imgHero{
+ position: relative;
+ z-index: 5;
+
+ /* This top is half height of the ellipse pattern */
+ top: -5em;
+ max-width: 80%;
+
+ /* The calc to centralize this object is calc by half of the width of the celphone and half of the width of the screen */
+ left: calc(50vw - 40vw);
+}
+
+.servicesGrid{
+ display: flex;
+ flex-direction: column;
+
+ color: var(--color1);
+
+ text-align: center;
+ 
+}
+
+.serviceCard{
+ margin-bottom: 36px;
+}
+
+.serviceDetailPattern{
+ border: 1px solid var(--color1);
+ border-radius: 50%;
+ width: 46px;
+ height: 46px;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ margin: 0 auto;
+}
+
+/* Founder sect */
+
+.founderSect{
+ display: flex;
+
+ justify-content: center; 
+}
+
+.image-founder{
+ max-width: 80%;
+ position: relative;
+ bottom: -55px;
+ 
+
+ z-index: 1;
+
+ margin-top: 50px;
+}
+
+.founderMessage{
+ display: flex;
+ flex-direction: column;
+
+ background-color: var(--color1);
+ padding: 10px 20px 5px 20px;
+
+ color: var(--color5);
+ text-align: center;
+
+ position: relative;
+ z-index: 2;
+}
+
+/* Footer */
+
+.footerGrid{
+ display: flex;
+ flex-direction: column ;
+
+ align-items: center;
+
+ padding: 60px 0;
+}
+
+.social{
+ width: 115px;
+ margin-top: 57px;
+ 
+ display: grid;
+ grid-auto-flow: column;
+
+ 
+}
+
+.social img{
+ margin: 0 auto;
+}
+
+.attribution {
+ font-size: 11px;
+ text-align: center;
+}
+.attribution a {
+ color: var(--color1);
+ 
+ text-decoration: none;
+}
+
 
 
 /* tablet styles */
 @media screen and (min-width: 768px) {
- 
 }
 
 /* desktop */
 @media screen and (min-width: 1440px) {
-
 }

@@ -9,7 +9,9 @@
   <title>Frontend Mentor | Workit landing page</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
   <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap" rel="stylesheet">
@@ -17,93 +19,101 @@
 
 <body>
 
-  <header>
+  <header class="index1">
     <!-- LOGO/CABEÇALHO -->
-    <section>
+    <section class="container navGrid">
 
-      <img src="./assets/images/logo-light.svg" alt="logo">
-      <a href="#">Apply for access</a>
+      <img class="logo" src="./assets/images/logo-light.svg" alt="logo">
+      <a href="#" class="navButton pBody"><span>Apply for access</span></a>
 
     </section>
 
     <!-- BANNER PRESENTATION -->
-    <section>
-      <div>
+    <section class="container">
+      <div class="bgDisplay bg-pattern-1">
         <!-- Take it off later to become a bg -->
         <img src="./assets/images/bg-pattern-1.svg" alt="">
-
-        <div>
-          <h1>
-            Data <span>tailored</span> to your needs.
-          </h1>
-          <a href="#">Learn more</a>
-        </div>
-        <div>
-          <!-- Take it off later to become a bg -->
-          <img src="./assets/images/bg-pattern-2.svg" alt="">
-        </div>
-
+      </div>
+      <div class="banner">
+        <h1 class="headingL">
+          Data <span>tailored</span> to your needs.
+        </h1>
+        <a href="#" class="button pBody">Learn more</a>
+      </div>
+      <div class="bgDisplay bg-pattern-2">
+        <!-- Take it off later to become a bg -->
+        <img src="./assets/images/bg-pattern-2.svg" alt="">
+      </div>
     </section>
+    <div class="ellipsePattern index2"> </div>
   </header>
-  <main>
+
+
+  <main class="index3">
     <!-- SERVICES -->
-    <section>
-      <img src="./assets/images/image-hero.webp" alt="image-gero">
+    <section class="servicesSec container">
+      <img class="imgHero" src="./assets/images/image-hero.webp" alt="image-gero">
 
-      <div>
-        <div>
-          <h3>1</h3>
+      <div class="servicesGrid">
+        <div class="serviceCard">
+          <div class="serviceDetailPattern">
+            <h3 class="headingS">1</h3>
+          </div>
+          <h3 class="headingS">
+            Actionable insights
+          </h3>
+          <p class="pBody">
+            Optimize your products, improve customer satisfaction and stay ahead of the competition
+            with our product data analytics.
+          </p>
         </div>
-        <h3>
-          Actionable insights
-        </h3>
-        <p>
-          Optimize your products, improve customer satisfaction and stay ahead of the competition
-          with our product data analytics.
-        </p>
-      </div>
 
-      <div>
-        <div>
-          <h3>2</h3>
+        <div class="serviceCard">
+          <div class="serviceDetailPattern">
+            <h3 class="headingS">2</h3>
+          </div>
+          <h3 class="headingS">
+            Data-driven decisions
+          </h3>
+          <p class="pBody">
+            Make data-driven decisions with our product data analytics. Our AI-generated reports help
+            you unlock insights hidden in your product data.
+          </p>
         </div>
-        <h3>
-          Data-driven decisions
-        </h3>
-        <p>
-          Make data-driven decisions with our product data analytics. Our AI-generated reports help
-          you unlock insights hidden in your product data.
-        </p>
-      </div>
 
-      <div>
-        <div>
-          <h3>3</h3>
+        <div class="serviceCard">
+          <div class="serviceDetailPattern">
+            <h3 class="headingS">3</h3>
+          </div>
+          <h3 class="headingS">
+            Always affordable
+          </h3>
+          <p class="pBody">
+            Always affordable pricing that scales with your business. Get top-quality product data
+            analytics services without hidden costs or unexpected fees.
+          </p>
         </div>
-        <h3>
-          Always affordable
-        </h3>
-        <p>
-          Always affordable pricing that scales with your business. Get top-quality product data
-          analytics services without hidden costs or unexpected fees.
-        </p>
       </div>
+      <div class="ellipsePattern index2"> </div>
     </section>
 
     <!-- FOUNDER -->
-    <section>
-      <img src="./assets/images/image-founder.webp" alt="image-founder">
-      <div>
-        <h2>
+    <section class="container">
+      <div class="founderSect">
+        <img class="image-founder" src="./assets/images/image-founder.webp" alt="image-founder">
+      </div>
+      <div class="founderMessage ">
+
+        <h2 class="headingM">
           Be the first to test
         </h2>
-        <p>
+        <p class="pBody">
           Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a
           beta tester for our app and kickstart your company. Apply for access below and I'll be
           in touch to schedule a call.
         </p>
-        <a href="#">Apply for access</a>
-        <div>
+        <a href="#" class="button pBody">Apply for access</a>
+        <div class="bgDisplay bg-pattern-3">
           <!-- Take it off later to become a bg -->
           <img src="./assets/images/bg-pattern-3.svg" alt="">
         </div>
@@ -114,12 +124,18 @@
 
   <!-- RODAPE -->
   <footer>
-    <section>
-      <img src="./assets/images/logo-dark.svg" alt="logo-dark">
-      <div>
-        <img src="./assets/images/icon-facebook.svg" alt="faceIcon">
-        <img src="./assets/images/icon-twitter.svg" alt="twitterIcon">
-        <img src="./assets/images/icon-instagram.svg" alt="intaIcon">
+    <section class="container">
+      <div class="footerGrid">
+        <img class="logo" src="./assets/images/logo-dark.svg" alt="logo-dark">
+        <div class="social">
+          <img src="./assets/images/icon-facebook.svg" alt="faceIcon">
+          <img src="./assets/images/icon-twitter.svg" alt="twitterIcon">
+          <img src="./assets/images/icon-instagram.svg" alt="intaIcon">
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">xTirian</a>.
       </div>
     </section>
   </footer>
