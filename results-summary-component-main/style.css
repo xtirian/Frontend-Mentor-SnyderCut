@@ -1,0 +1,43 @@
+/* VARIABLES */
+
+/* RESETS */
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+
+/* BASE STYLES */
+
+body{
+ height: 100vh;
+}
+
+/* FONTS */
+
+h1,h2,h3,em,a,p{
+ font-family: 'Hanken Grotesk', sans-serif;
+}
+
+a {
+ text-decoration: none;
+ cursor: pointer;
+}
+
+em {
+ font-style: normal;
+}
+
+/* MOBILE STYLE */
+
+/* DESKTOP STYLE */
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
