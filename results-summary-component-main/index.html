@@ -19,65 +19,72 @@
 
 <body>
   <main>
-    <div>
-      <section>
+    <div class="componentContainer ">
+      <div class="resultDiv ">
+        <section class="sec-limit resultScoreDiv">
 
-        <h1>
-          Your Result
-        </h1>
+          <h1 class="headingM resultFont1">
+            Your Result
+          </h1>
 
-        <div>
-          <p id="resultScore">76</p>
-          <p>of 100</p>
-        </div>
-
-      </section>
-
-      <section>
-
-        <h2>Great</h2>
-        <p>You scored higher than 65% of the people who have taken these tests.</p>
-
-      </section>
-
-    </div>
-    <div>
-      <section>
-        <h3>Summary</h3>
-        <div>
-          <div>
-            <img src="" alt="recIcon" id="recIcon">
+          <div class="resultScoreCard">
+            <p id="resultScore" class="headingXL resultFont2">76</p>
+            <p class="pBody1 resultFont1">of 100</p>
           </div>
-          <h4>Reaction</h4>
-          <p><span id="ReacScore"></span> / 100</p>
-        </div>
 
-        <div>
-          <div>
-            <img src="" alt="memIcon" id="memIcon">
+        </section>
+
+        <section class="resultMessage">
+
+          <h2 class="headingL resultFont2">Great</h2>
+          <p class="pBody1 resultFont1">You scored higher than 65% of the people who have taken these tests.</p>
+
+        </section>
+      </div>
+
+
+      <div class="summaryDiv">
+        <section>
+          <h3 class="headingM">Summary</h3>
+          <div class="summaryGrid">
+            <div class="summaryRow summaryRowColor1">
+              <div class="summaryTag">
+                <img src="" alt="recIcon" id="recIcon">
+              <h4 class="pBody2">Reaction</h4>
+              </div>
+              <p class="pBody1 summaryResum"><span id="ReacScore"></span> <em>/ 100</em></p>
+            </div>
+
+            <div class="summaryRow summaryRowColor2">
+              <div class="summaryTag">
+                <img src="" alt="memIcon" id="memIcon">
+
+              <h4 class="pBody2">Memory</h4>
+              </div>
+              <p class="pBody1 summaryResum"><span id="MemScore"></span> <em>/ 100</em></p>
+            </div>
+
+            <div class="summaryRow summaryRowColor3">
+              <div class="summaryTag">
+                <img src="" alt="verbIcon" id="verbIcon">
+                <h4 class="pBody2">Verbal</h4>
+              </div>
+              <p class="pBody1 summaryResum"><span id="VerbScore"></span> <em>/ 100</em></p>
+            </div>
+
+            <div class="summaryRow summaryRowColor4">
+              <div class="summaryTag">
+                <img src="" alt="visIcon" id="visIcon">
+                <h4 class="pBody2">Visual</h4>
+              </div>
+              <p class="pBody1 summaryResum"><span id="VisScore"></span> <em>/ 100</em></p>
+            </div>
           </div>
-          <h4>Memory</h4>
-          <p><span id="MemScore"></span> / 100</p>
-        </div>
+          
+        </section>
+        <a href="" class="button pBody1">Continue</a>
+      </div>
 
-        <div>
-          <div>
-            <img src="" alt="verbIcon" id="verbIcon">
-          </div>
-          <h4>Verbal</h4>
-          <p><span id="VerbScore"></span> / 100</p>
-        </div>
-
-        <div>
-          <div>
-            <img src="" alt="visIcon" id="visIcon">
-          </div>
-          <h4>Visual</h4>
-          <p><span id="VisScore"></span> / 100</p>
-        </div>
-
-        <a href="">Continue</a>
-      </section>
     </div>
   </main>
 
@@ -92,7 +99,8 @@
 
 
 
-  
+
 </body>
 <script src="index.js"></script>
+
 </html>

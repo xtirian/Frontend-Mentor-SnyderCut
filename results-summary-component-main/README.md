@@ -2,42 +2,47 @@
 
 ![Design preview for the Results summary component coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [My process](#my-process)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+It was easy compared to the lastone, but I took 6 hours in this project. 4 hours was just studying how to fetch data from json and trying ways to use that data inside the HTML. Was a good test and I'm glad this was just a component, because I could make up for the time I wasted studying JS. The mainly content that I used for understand how works the Fetch was from these Youtube Channels [dcode](https://youtu.be/5VCY9yCZnlc) and [The coding train](https://youtu.be/uxf0--uiX0I).
 
-## The challenge
+### Screenshot
 
-Your challenge is to build out this results summary component and get it looking as close to the design as possible.
+Mobile
+![](./assets/results/mobile.png)
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+Web
+![](./assets/results/web.png)
 
-We provide the data for the results in a local `data.json` file. So you can use that to add the results and total score dynamically if you choose.
+### Links
 
-Your users should be able to:
+- Solution URL: [Go to Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/results-summary-component-main)
+- Live Site URL: [Go to site](https://sumary-component.vercel.app/)
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+## My process
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Built with
 
-## Where to find everything
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- Javascript (data fetch and manipulating of an external JSON file)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+### What I learned
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
-
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
-
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
-
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
-
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+In this project I had opportunity to learn  how to fetch datas from json from an different file. I made some notations for future works:
 
 ```js
 fetch("./data.json").then(function (response){
@@ -62,3 +67,21 @@ fetch("./data.json").then(function (response){
  // This valve will return the error to the console if there is any problem in the 
 });
 ```
+
+If you notice, despite I made this notation, I applied it in a different way. The most time I was working in this project, I was looking for the screen trying to figure how use the data, because the content I studied dont give the logic that I have to use, just the commands at the JS. My main difficult was how to use the data, because the commands were there, I fetch and then I take the response and use (Other thing that I didn't use was the command JSON.parse to convert the data in a actual data inside the JS, but by the limit of my knowledge I couldn't make it work) so I had to do the way I did. 
+
+### Continued development
+
+The organization of the code was easy today, part because I'm understandig more the dynamic of creating with the mobile-first workflow and part because was an small componen.
+
+## Author
+
+- Portifólio - [Clique aqui](https://xtirian.netlify.app/)
+- Linkedin - [Clique aqui](https://www.linkedin.com/in/mf-cunha/x)
+- GitHub - [Clique aqui](https://github.com/xtirian/)
+
+
+
+
+
+
