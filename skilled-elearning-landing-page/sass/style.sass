@@ -1,0 +1,274 @@
+//IMPORTS
+@use 'variables'
+@use 'mixins'
+
+//RESETS
+
+*
+ font-family: 'Plus Jakarta Sans', sans-serif
+ padding: 0
+ margin: 0
+ box-sizing: border-box
+
+body
+ color: variables.$text-color
+ overflow-x: hidden
+
+ a  
+  text-decoration: none
+  transition: 0.4s
+
+
+//HEADER
+
+.header
+ display: flex
+ justify-content: space-between
+ align-items: center
+ @include mixins.container
+
+ @include mixins.tablet
+  padding: 2rem 39px
+
+ @include mixins.desktop
+
+
+
+ &-logo 
+  width: 25%
+  max-width: 114px
+ 
+ &-button 
+  @include mixins.button1(variables.$primary-color)
+  @include mixins.bodyS
+  
+  &:hover
+    background-color: #666CA3
+
+  @include mixins.tablet
+    position: relative
+    z-index: 5
+
+  @include mixins.desktop
+    width: 167px
+    height: 56px
+    
+  
+// FIRST SECT - BANNER
+.banner
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column  
+  margin: 0 auto
+
+  position: relative
+  
+  @include mixins.container
+
+  @include mixins.tablet
+    align-items: flex-start
+    padding: 2rem 39px
+    height:550px
+
+  @include mixins.desktop
+    height:770px
+  
+  &-text-card
+
+    @include mixins.tablet   
+      br
+        display: none     
+      
+
+    &-title
+      @include mixins.headingL
+      color: variables.$primary-color
+      
+      @include mixins.tablet
+        max-width: 60%
+      
+      @include mixins.desktop
+        @include mixins.headingXL
+    
+    &-paragraph
+      @include mixins.bodyS
+      
+      padding-top:24px
+      font-weight: 400
+      
+      @include mixins.tablet
+        max-width: 60%
+        @include mixins.bodyM
+
+    &-button
+     @include mixins.button1(variables.$bg-gradient1)
+     @include mixins.bodyS
+
+     margin-top: 24px
+
+     &:hover
+      box-shadow: inset(0 0 100% rgba(255,255,255, 0.5))
+      background: variables.$bg-gradient1-hover
+      
+
+  
+  &-img-card    
+    width: 100%
+    max-width: 375px
+    height: 375px
+    margin-top:46px
+
+    background-image: url(../assets/image-hero-mobile.svg)
+    background-size: 100%
+    background-repeat: no-repeat
+    background-position: center
+      
+    @include mixins.tablet
+      position: absolute
+
+      max-width: 640px
+      width: 640px
+      height:640px     
+
+      top: -130px
+      right: -230px      
+      
+      background-image: url(../assets/image-hero-tablet.svg)
+      background-size: 110%
+      background-position: left bottom
+
+
+    @include mixins.desktop
+      background-image: url(../assets/image-hero-desktop.svg)
+      max-width: 990px
+      width: 990px
+      height:990px    
+
+
+      background-size: 100%
+
+      top: -240px
+      right: -450px  
+
+// COURSES SECT
+
+.courses
+  
+  background: variables.$bg-gradient3
+
+  &-grid
+    display: flex
+    flex-direction: column
+    gap: 15px
+
+    @include mixins.container
+    @include mixins.tablet    
+      justify-content: center
+      padding: 2rem 39px
+
+      flex-direction: row
+      flex-wrap: wrap
+    
+    
+
+    &-cardTitle
+      background: variables.$bg-gradient1
+      padding: 24px 28px 
+      border-radius: 15px
+
+      @include mixins.tablet
+        width: 45%
+        max-width: 350px
+        height: 283px
+
+        display: flex
+        align-items: center
+
+      @include mixins.desktop
+        width: 31%
+        max-width: 350px
+        height: 322px
+
+      &-title
+        @include mixins.headingS
+        color: variables.$tertiary-color
+
+    &-card
+      padding: 24px 28px
+      position: relative
+      background: variables.$tertiary-color
+      border-radius: 15px
+
+      @include mixins.tablet
+        width: 47%
+        max-width: 350px
+        height: 283px
+
+        padding: 0 15px  
+        margin-bottom: 50px
+      
+      @include mixins.desktop
+        width: 31%
+        max-width: 350px
+        height: 322px
+      
+      &-icon
+        position: relative
+        top: -24px
+
+        
+
+      &-title
+        @include mixins.headingS
+        color: variables.$primary-color
+        margin-bottom: 16px
+
+      &-paragraph
+        @include mixins.bodyS
+        font-weight: 400
+        margin-bottom: 24px
+
+      &-button
+        color: variables.$secondary-color
+        @include mixins.bodyM
+        font-weight: bold
+
+.footer
+  background: variables.$primary-color
+
+  padding: 36px 0
+
+  &-sect
+    @include mixins.container
+    @include mixins.tablet
+      padding: 2rem 39px
+    
+    @include mixins.desktop
+
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &-logo
+      width: 25%
+      max-width: 114px
+
+    &-button
+      @include mixins.button1(variables.$bg-gradient2)
+      @include mixins.bodyS
+
+      &:hover
+        @include mixins.button1(variables.$bg-gradient2-hover)
+
+  &-author
+    font-size: 11px
+    text-align: center
+
+    a
+      color: variables.$secondary-color
+
+
+
+

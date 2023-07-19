@@ -4,9 +4,26 @@ In this repository I'll try to assemble every project I make from the Frontend M
 
 ## Table of projects
 
-- [WorkIt - Landing Page](#workit)
-- [Result Sumary - Component](#result-sumary)
 - [Skilled Learning - Landing Page](#skilled-learning)
+- [Result Sumary - Component](#result-sumary)
+- [WorkIt - Landing Page](#workit)
+
+
+## Skilled Learning 
+
+In this project I continue my development with the mobile-first workflow and give a try to SASS with the content of the Youtube Channel [Matheus Battisti - Hora de Codar](https://www.youtube.com/@MatheusBattisti).
+
+- GitHub Repository: [Click Here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/skilled-elearning-landing-page) 
+- Live Site URL: [Click Here](https://skilled-elearning-kappa.vercel.app)
+
+
+### Result Sumary
+
+It was easy compared to the lastone, but I took 6 hours in this project. 4 hours was just studying how to fetch data from json and trying ways to use that data inside the HTML. Was a good test and I'm glad this was just a component, because I could make up for the time I wasted studying JS. The mainly content that I used for understand how works the Fetch was from these Youtube Channels [dcode](https://youtu.be/5VCY9yCZnlc) and [The coding train](https://youtu.be/uxf0--uiX0I).
+
+- GitHub Repository: [Click Here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/results-summary-component-main) 
+- Live Site URL: [Click Here](https://sumary-component.vercel.app) 
+
 
 ## WorkIt 
 
@@ -16,17 +33,3 @@ At this project I had to became intimate with positions as relative and absolute
 - Live Site URL: [Click Here](https://workit-landing-page-indol.vercel.app/) - 
 
 Hope you enjoy it!
-
-### Result Sumary
-
-It was easy compared to the lastone, but I took 6 hours in this project. 4 hours was just studying how to fetch data from json and trying ways to use that data inside the HTML. Was a good test and I'm glad this was just a component, because I could make up for the time I wasted studying JS. The mainly content that I used for understand how works the Fetch was from these Youtube Channels [dcode](https://youtu.be/5VCY9yCZnlc) and [The coding train](https://youtu.be/uxf0--uiX0I).
-
-- GitHub Repository: [Click Here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/results-summary-component-main) 
-- Live Site URL: [Click Here](https://sumary-component.vercel.app) 
-
-## Skilled Learning 
-
-
-
-- GitHub Repository: [Click Here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/skilled-elearning-landing-page) 
-- Live Site URL: [Not yet](https://workit-landing-page-indol.vercel.app/) - 

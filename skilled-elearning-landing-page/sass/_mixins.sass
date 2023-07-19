@@ -1,0 +1,63 @@
+@use 'variables'
+
+//BASE STYLES
+@mixin container
+ max-width: variables.$container-width
+ padding: 1rem 1rem
+ margin: 0 auto
+
+
+//BUTTONS
+@mixin button1($bgPicker)
+ background: $bgPicker
+
+ display: block
+
+ color: variables.$tertiary-color
+
+ height: 48px
+ width: 45%
+ max-width: 167px
+ border-radius: 24px
+ padding: 10px 0
+ text-align: center
+
+
+// TYPOGRAPHY
+
+@mixin bodyS
+ font-size: 16px
+ line-height: 28px
+ font-weight: 700
+
+@mixin bodyM
+ font-size: 18px
+ line-height: 28px
+
+@mixin headingS
+ font-size: 24px
+ font-weight: 800
+
+@mixin headingM
+ font-size: 32px
+ line-height: 40px
+ font-weight: 800
+
+@mixin headingL
+ font-size: 40px
+ font-weight: 800
+
+@mixin headingXL
+ font-size: 56px
+ font-weight: 800
+
+//MEDIA QUARY TABLE 768px - 1100px
+@mixin tablet 
+ @media (min-width: 768px)
+  @content
+
+//MEDIA QUERY desktop 1100px - 1440px
+@mixin desktop 
+ @media (min-width: 1100px)
+  @content
+//quando fizer os querys, colocar o break row display none
