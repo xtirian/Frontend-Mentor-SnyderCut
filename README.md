@@ -28,7 +28,5 @@ It was easy compared to the lastone, but I took 6 hours in this project. 4 hours
 
 
 
-- GitHub Repository: [Click Here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/workit-landing-page) 
-- Live Site URL: [Click Here](https://workit-landing-page-indol.vercel.app/) - 
-
-Hope you enjoy it!
+- GitHub Repository: [Click Here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/skilled-elearning-landing-page) 
+- Live Site URL: [Not yet](https://workit-landing-page-indol.vercel.app/) - 
