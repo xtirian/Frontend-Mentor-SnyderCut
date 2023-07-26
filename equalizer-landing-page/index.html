@@ -1,33 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Equalizer landing page</title>
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+  <!-- Header -->
+  <header class="header">
+    <!-- logo-img -->
+    <img src="./assets/logo.svg" alt="header-logo" class="header-logo">
+    <!-- image detail that appears only for tablets and pc devices with at least 768px -->
+    <img src="./assets/bg-pattern-1.svg" alt="header-bgPattern" class="header-bgPattern"></header>
 
-  We make your music sound extraordinary.
+    <!-- main content containing the 2 main sects os this LP -->
+  <main class="main">
 
-  A system audio equalizer specifically designed for Android and iOS. Freely tune the 
-  way your music sounds with a professional grade parametric EQ & volume mixer. Control 
-  bass, mids, treble, gain control, reverb, and more!
+    <!-- Sect 1 with the main txt content -->
+    <section class="main-sect1">
 
-  Premium EQ
+      <h1 class="main-sect1-title">We make your music sound extraordinary.</h1>
+      <p class="main-sect1-text">A system audio equalizer specifically designed for Android and iOS. Freely tune the way your music sounds with a professional grade parametric EQ & volume mixer. Control bass, mids, treble, gain control, reverb, and more!</p>
 
-  Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take 
-  your listening experience to a whole new level and access all our incredible features!
+    </section>
 
-  $4 / month
+    <!-- Sect 2 with the imgs and the price content.  -->
+    <section class="main-sect2">
+      <!-- Heare -->
+      <img src="./assets/illustration-app.png" alt="appIlustration" class="main-sect2-appIllustration" id="appIlustration">
 
-  iOS Download
-  Android Download
+      <img src="./assets/bg-pattern-2.svg" alt="bgPattern2" class="main-sect2-bgPattern2" id="bgPattern2">
 
-  All rights reserved © Equalizer 2021
-  Have any problems? Contact us via social media or email us at equalizer@example.com
+      <article class="main-sect2-article">
+
+        <header class="main-sect2-article-header">
+
+          <h2 class="main-sect2-article-header-title">Premium EQ</h2>
+
+        </header>
+
+        <main class="main-sect2-article-main">
+
+          <p class="main-sect2-article-main-text">Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take
+            your listening experience to a whole new level and access all our incredible features!</p>
+          <p class="main-sect2-article-main-price"><span>$4</span> / month</p>
+
+        </main>
+
+        <footer class="main-sect2-article-main">
+          <a href="" class="main-sect2-article-main-button">
+            <img src="./assets/icon-apple.svg" alt="icon-apple" class="main-sect2-article-main-button-img">
+            <span class="main-sect2-article-main-button-text">iOS Download</span>
+          </a>
+          <a href="" class="main-sect2-article-main-button">
+            <img src="./assets/icon-android.svg" alt="icon-android" class="main-sect2-article-main-button-img">
+            <span class="main-sect2-article-main-button-text">Android Download</span>
+          </a>
+        </footer>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <div class="footer-container-logo">
+
+        <img src="" alt="" class="footer-container-logo-img">
+
+      </div>
+
+      <div class="footer-container-address">
+
+        <ul class="footer-container-adress-list">
+          <li>All rights reserved © Equalizer 2021</li>
+          <li>Have any problems? Contact us via social media or email us at equalizer@example.com</li>
+        </ul>
+
+      </div>
+
+      <div class="footer-container-social">
+
+        <nav class="footer-container-social-navigation">
+          <ul class="footer-container-social-navigation-list">
+            <li><img src="./assets/icon-facebook.svg" alt="icon-facebook"></li>
+            <li><img src="./assets/icon-instagram.svg" alt="icon-instagram"></li>
+            <li><img src="./assets/icon-twitter.svg" alt="icon-twitter"></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </footer>  
 
 </body>
+
 </html>
