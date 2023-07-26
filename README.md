@@ -4,10 +4,16 @@ In this repository I'll try to assemble every project I make from the Frontend M
 
 ## Table of projects
 
+- [Equalizer - Landing Page](#equalizer)
 - [Skilled Learning - Landing Page](#skilled-learning)
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
 
+## Equalizer 
+
+
+- GitHub Repository: [Click Here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/skilled-elearning-landing-page) 
+- Live Site URL: [Click Here](https://skilled-elearning-kappa.vercel.app)
 
 ## Skilled Learning 
 

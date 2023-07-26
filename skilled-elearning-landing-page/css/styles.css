@@ -143,7 +143,7 @@ body a {
   max-width: 375px;
   height: 375px;
   margin-top: 46px;
-  background-image: url(../assets/image-hero-mobile.png);
+  background-image: url(../assets/image-hero-mobile.svg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -156,13 +156,14 @@ body a {
     height: 640px;
     top: -130px;
     right: -230px;
-    background-image: url(../assets/image-hero-tablet.png);
+    background-image: url(../assets/image-hero-tablet.svg);
     background-size: 110%;
     background-position: left bottom;
   }
 }
 @media (min-width: 1100px) {
   .banner-img-card {
+    background-image: url(../assets/image-hero-desktop.svg);
     max-width: 990px;
     width: 990px;
     height: 990px;
