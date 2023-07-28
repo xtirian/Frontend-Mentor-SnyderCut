@@ -9,11 +9,12 @@ In this repository I'll try to assemble every project I make from the Frontend M
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
 
-## Equalizer 
+## Equalizer
 
+In this project I continue my development with the mobile-first workflow and give a try to SASS.
 
-- GitHub Repository: [Click Here](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/skilled-elearning-landing-page) 
-- Live Site URL: [Click Here](https://skilled-elearning-kappa.vercel.app)
+- Solution URL: [Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/equalizer-landing-page)
+- Live Site URL: [Frontend Mentor - Equalizer landing page](https://equalizer-lp-xtirian.vercel.app)
 
 ## Skilled Learning 
 

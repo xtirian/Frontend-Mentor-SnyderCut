@@ -1,6 +1,6 @@
 # Frontend Mentor - Equalizer landing page
 
-This is a solution to the [Equalizer landing page on Frontend Mentor](https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu/hub). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Equalizer landing page on Frontend Mentor](https://www.frontendmentor.io/challenges/equalizer-landing-page-7VJ4gp3DE). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 
 ## Table of contents
@@ -21,13 +21,13 @@ This is a solution to the [Equalizer landing page on Frontend Mentor](https://ww
 
 ### Screenshot
 
-![](./screenshot.jpg)
+[![](./assets/results/result.png)](https://youtu.be/JVcSjRiDOEs)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/equalizer-landing-page)
+- Live Site URL: [Frontend Mentor - Equalizer landing page](https://equalizer-lp-xtirian.vercel.app)
 
 ## My process
 
@@ -41,10 +41,8 @@ This is a solution to the [Equalizer landing page on Frontend Mentor](https://ww
 
 ### What I learned
 
-### Continued development
-
-### Useful resources
+In this project I didn't applied anything new, just pratcied the same things form the others challenges
 
 ## Author
-
-## Acknowledgments
+- Linkedin - [Clique aqui](https://www.linkedin.com/in/mf-cunha/x)
+- GitHub - [Clique aqui](https://github.com/xtirian/)

@@ -1,0 +1,362 @@
+//IMPORTS
+@use 'variables'
+@use 'mixin'
+
+//RESETS
+*
+ margin: 0
+ padding: 0
+ box-izing: border-box
+ font-family: 'IBM Plex Sans', sans-serif
+
+html
+ font-size: 10px
+ background-color: #f2f2f2
+
+a
+ text-decoration: none
+
+
+ul
+ list-style-type: none
+
+//BASE STYLES
+body 
+ 
+ background-image: url(../assets/bg-main-mobile.png) 
+ background-position: top left
+ background-repeat: no-repeat
+
+ @include mixin.Tablet
+  background-image: url(../assets/bg-main-tablet.png) 
+  background-position: top -200px left -300px
+  background-size: 150%
+
+ @include mixin.DesktopS
+  background-image: url(../assets/bg-main-desktop.png) 
+  background-position: top -30rem left -40rem
+  background-size: 150%
+
+
+ 
+
+
+//HEADER
+header
+ position: relative
+ 
+ .bgPattern
+  display: none
+  position: absolute
+  top: -3.2rem
+  right: -3.567rem
+
+  @include mixin.Tablet
+   display: flex
+   height: 40rem
+   z-index: 0
+  
+  @include mixin.DesktopS
+   right: 0
+   top: -4rem
+   height: 46.8rem
+
+.header
+ display: flex
+ justify-content: left
+ align-items: center 
+
+ padding: 3.9rem 0
+
+ @include mixin.containerM
+
+ @include mixin.Tablet   
+   @include mixin.containerT
+
+   padding: 6.1rem 0
+
+ @include mixin.DesktopS
+  @include mixin.containerD
+  margin-bottom: 3.2rem
+
+
+ &-logo
+  height: 3.2rem
+
+
+.main
+
+ &-sect1
+  @include mixin.containerM
+  color: variables.$text-color1
+  padding-bottom: 16.6rem
+
+  @include mixin.Tablet   
+   @include mixin.containerT
+   padding-bottom: 24.9rem
+
+   &-title, &-text
+    width: 52rem
+  
+  @include mixin.DesktopS
+   @include mixin.containerD
+   padding-bottom: 32.1rem
+   
+  &-title
+   @include mixin.head1
+   margin-top: 2.5rem   
+
+   @include mixin.Tablet  
+    font-size: 6.4rem  
+    line-height: 6.4rem 
+
+    @include mixin.DesktopS
+     width: 85rem
+     font-size: 8.8rem  
+     line-height: 8.8rem
+  
+  &-text
+   @include mixin.body2
+   margin-top: 20px
+
+   @include mixin.Tablet 
+    margin-top: 28px
+    @include mixin.body1
+
+   @include mixin.DesktopS
+     width: 82.5rem
+     font-size: 2rem  
+     line-height: 3.4rem
+
+
+ &-sect2
+  background-color: variables.$text-color1
+  height: 60rem
+  border-radius: 1.2rem
+  margin-bottom: 39rem
+
+  position: relative
+
+  display: flex
+  flex-direction: column  
+  align-items: center
+
+  @include mixin.Tablet   
+   @include mixin.containerT
+   margin: 0 auto 18.3rem auto
+
+  @include mixin.DesktopS
+   @include mixin.containerD
+   margin: 0 auto 20.2rem auto 
+   align-items: flex-start
+
+  &-appIllustration
+   height: 430px
+
+   position: absolute
+   top: -9.8rem
+   //50 view width - 50% img width
+   left: calc( 50vw - 11rem )
+   z-index: 2
+
+   @include mixin.Tablet  
+    height: 55.6rem
+    top: -13.8rem
+    left: 6.4rem
+   
+   @include mixin.DesktopS
+    height: 64.2rem
+    top: -21.3rem
+    left: 10.2rem
+
+
+  &-bgPattern2
+   position: relative
+   z-index: inherit
+   height: 42rem
+   
+   @include mixin.DesktopS
+    height: 46.8rem
+    top: -4rem
+    left: 33.6rem
+
+
+  &-article
+   background-color: variables.$secondary-color
+   color: variables.$text-color2
+
+
+   width: 375px
+   padding: 48px 0
+   border-radius: 1.2rem
+   height: calc(54.6rem - (4.8rem * 2))
+
+   position: absolute
+   bottom: -32.6rem
+
+   @include mixin.Tablet 
+    bottom: auto
+    top: 15rem
+    right: 5.8rem
+    z-index: 3
+    width: 30.3rem
+    padding: 48px
+
+   @include mixin.DesktopS
+    top: 9rem
+    right: 9.5rem
+    width: calc( 44.6rem - (5.6rem * 2) )
+    height: calc( 62.5rem - (5.6rem * 2) )
+    padding: 5.6rem
+
+   &-header
+    @include mixin.containerM  
+
+    @include mixin.Tablet
+     margin: 0
+     width: 100%
+    
+     
+
+    &-title
+     @include mixin.head2
+     margin-bottom: 1.2rem
+
+    @include mixin.DesktopS
+     font-size: 4rem
+     margin-bottom: 2.2rem          
+
+   &-main
+    @include mixin.containerM  
+    @include mixin.Tablet
+     margin: 0
+     width: 100%
+
+    &-text
+     @include mixin.body1
+     margin-bottom: 3.6rem
+
+     @include mixin.DesktopS
+      font-size: 2rem
+      line-height: 3.4rem
+      margin-bottom: 3.9rem
+    
+    &-price
+     @include mixin.body1
+     margin-bottom: 3.2rem
+
+     span
+      font-size: 5.2rem
+      font-weight: bold
+
+     @include mixin.DesktopS
+      font-size: 2rem
+      line-height: 3.4rem
+      margin-bottom: 4.6rem
+      span
+       font-size: 5.2rem
+
+   &-footer
+    @include mixin.containerM
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @include mixin.Tablet
+     margin: 0
+     width: 100%
+
+    &-button1     
+     @include mixin.button(variables.$text-color1)
+     color: variables.$text-color2
+     margin-bottom: 1.6rem
+
+     @include mixin.DesktopS
+      width: 33.3rem
+
+     &:hover
+      background-color: variables.$primary-color
+     
+    
+    &-button2
+     @include mixin.button(variables.$text-color2)
+     color: variables.$text-color1
+     
+     @include mixin.DesktopS
+      width: 33.3rem
+
+     &:hover
+      background-color: variables.$tertiary-color
+
+
+.footer
+ @include mixin.containerM
+ color: variables.$text-color1
+ padding-bottom: 8rem
+
+ @include mixin.Tablet   
+  @include mixin.containerT
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: 36.6rem auto
+  grid-template-rows: 14.3rem
+  padding-bottom: 8.5rem
+ 
+ @include mixin.DesktopS
+  @include mixin.containerD
+  grid-template-columns: 65rem auto
+  grid-template-rows: 8rem
+  padding-bottom: 9.1rem
+
+ &-container
+  margin-bottom: 6.4rem
+  
+  @include mixin.Tablet
+   margin-bottom: 0
+  
+  @include mixin.DesktopS
+   width: 65rem
+   display: flex
+   gap: 13rem
+
+  &-logo-img
+   height: 3.2rem   
+   margin-bottom: 3.2rem
+
+  &-address-list
+   @include mixin.body2
+
+   a
+    color: variables.$secondary-color
+ 
+ &-social
+  @include mixin.Tablet
+   display: flex
+   justify-content: flex-end
+   align-items: flex-end
+  
+  @include mixin.DesktopS
+   align-items: center
+
+  &-navigation
+
+   &-list
+    display: flex
+    gap: 2rem
+
+    svg:hover path
+     fill: variables.$secondary-color
+
+
+    
+    
+
+
+
+
+   
+    
+   
+
+
+

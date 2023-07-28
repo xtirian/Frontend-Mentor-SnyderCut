@@ -1,0 +1,75 @@
+@use 'variables'
+
+//TYPOGRAPHY
+
+@mixin head1
+ font-size: 4rem
+ line-height: 4rem
+ letter-spacing: -1px
+
+ //TABLET font-size: 6.4rem  line-height: 6.4rem
+ 
+ //DESKTOP font-size: 8.8rem line-height: 8.8rem
+ 
+
+@mixin head2
+ font-size: 3.2rem
+ line-height: 4rem
+ 
+ //DESKTOP font-size: 4rem line-height: 5.2rem
+
+@mixin body1
+ font-size: 1.8rem
+ line-height: 2.8rem
+
+ //DESKTOP font-size: 2rem  line-height: 3.4rem
+
+@mixin body2
+ font-size: 1.6rem
+ line-height: 2.6rem
+
+
+//BASE STYLES
+@mixin containerM
+ width: calc( 100% * 0.872 )
+ max-width: 375px
+ margin: 0 auto 
+
+@mixin containerT
+ width: calc( 100% * 0.90625 )
+ max-width: 768px
+ margin: 0 auto 
+
+@mixin containerD
+ max-width: 1100px
+ margin: 0 auto 
+ 
+
+
+@mixin button($bgButton)
+ display: flex
+ justify-content: center
+ align-items: center 
+ 
+ border-radius: 1.2rem
+ background-color: $bgButton
+
+ width: 29.6rem
+ height: 6.1rem
+
+ font-size: 18px
+ font-weight: bold
+ img
+  margin-right: 0.8rem
+ 
+ //DESKTOP width: 33.3rem
+
+// since 768px 'til 1100px 
+@mixin Tablet
+ @media (min-width: 768px)
+  @content
+
+// since 768px 'til 1100px  
+@mixin DesktopS
+ @media (min-width: 1100px)
+  @content
