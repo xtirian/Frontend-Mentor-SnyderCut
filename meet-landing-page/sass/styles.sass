@@ -281,6 +281,11 @@ footer
  .footer__container  
   background-image: url(variables.$footer-bgM)
   background-size: 100%
+
+  @include mixin.queryTablet    
+   background-image: url(variables.$footer-bgT)
+  @include mixin.queryDesktop
+    background-image: url(variables.$footer-bgD)
   
 
   color: variables.$text3
@@ -294,7 +299,7 @@ footer
    @include mixin.queryTablet
     padding-bottom: 6.6rem
    
-   @include mixin.queryTablet
+   @include mixin.queryDesktop
     padding: 10.4rem 0 11.6rem 0 
    
 
