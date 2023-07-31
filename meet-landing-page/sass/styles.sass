@@ -1,0 +1,380 @@
+//IMPORTS
+@use 'variables'
+@use 'mixin'
+
+//RESETS
+
+*
+ margin: 0
+ padding: 0
+ box-sizing: border-box
+
+html
+ font-family: 'Red Hat Display', sans-serif
+ font-size: 10px
+
+body
+ overflow-x: hidden
+ background-color: #f2f2f2
+
+a
+ text-decoration: none
+
+ul
+ list-style-type: none
+
+
+//BASE STYLES
+
+
+
+
+//HEADER
+
+header
+
+ .container
+  @include mixin.container
+  padding: 4.8rem 0
+  text-align: center
+  
+  img
+   width: 11.9rem
+ 
+  @include mixin.queryDesktop
+   padding-top: 8rem
+   padding-bottom: 6.1rem
+
+
+
+//MAIN
+main
+
+ .sect1
+  display: flex
+  flex-wrap: wrap
+
+  @include mixin.queryDesktop
+   flex-wrap: nowrap
+   flex-direction: row
+   height: 35.8rem
+
+  &__bg1, &__bg2
+   display: block
+   width: 50%
+   min-height: 15.3rem
+   height: calc(100vw * 0.408)
+   max-height: 35.8rem
+   background-size: 100% 
+
+   //this position is important. in the figma layout is the difference from the padding of the header and the distance between the background and the logo, that's why this top 6px position
+
+   background-position: top 0.6rem left 0
+   background-repeat: no-repeat
+
+   @include mixin.queryDesktop
+    background-size: auto 90%
+    max-height: 358px
+
+
+  &__bg1
+   background-image: url(variables.$hero-bg1)
+
+   @include mixin.queryDesktop
+    background-position: top 0 left -4rem
+   
+
+  &__bg2
+   background-image: url(variables.$hero-bg2)
+
+   @include mixin.queryDesktop
+    order: 3
+
+    background-position: top 0 right -4rem
+
+ 
+  &__banner-content
+   @include mixin.container
+   padding: 4.8rem 0
+   text-align: center
+
+   @include mixin.queryTablet
+    padding: 7.2rem 0
+    max-width: 45.7rem
+
+   @include mixin.queryDesktop
+    order: 2
+
+    padding-top: 4.7rem
+    padding-bottom: 0
+
+
+   &__title
+    @include mixin.h1
+    color: variables.$text1
+    margin-bottom: 2.4rem
+
+    @include mixin.queryTablet
+     font-size: 4.8rem
+     line-height: 4.8rem
+    
+    @include mixin.queryDesktop
+     font-size: 6.4rem
+     line-height: 6.4rem
+     margin-bottom: 3.4rem
+           
+
+   &__text
+    @include mixin.bodyText
+    color: variables.$text2
+    margin-bottom: 1.6rem
+
+    @include mixin.queryDesktop
+     font-size: 1.8rem
+
+   &__buttonGrid    
+    
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1.6rem
+
+    // this sums with the margin bottom of the text so it become 32px and add 16 px inte the 48px of padding in the banner content making 64px distance of the last button from the element bellow
+    padding: 1.6rem 0
+
+    @include mixin.queryTablet
+     flex-direction: row
+     justify-content: center
+     padding-bottom: .8rem
+
+    &-button1, &-button2
+     @include mixin.bodyText
+     font-weight: 900
+
+    &-button1 
+     @include mixin.button(variables.$button1)
+     padding: 1.6rem 4rem   
+
+     span 
+      color: variables.$text5
+
+     &:hover
+      @include mixin.button(variables.$button1-hover)
+    
+     
+    &-button2
+     @include mixin.button(variables.$button2)
+     padding: 1.6rem 3rem
+
+     &:hover
+      @include mixin.button(variables.$button2-hover)
+
+
+
+ .sect2
+  padding-top: 20.4rem
+  position: relative
+
+  @include mixin.queryTablet
+   padding-top: 20.7rem
+
+  @include mixin.queryDesktop
+   margin-top: 11rem
+   
+
+  .bridge
+   @include mixin.bridge
+
+   span
+    @include mixin.bodyText
+    font-weight: 900
+    color: variables.$text2
+
+  &__container-grid
+   @include mixin.container
+   display: flex
+   flex-wrap: wrap
+   justify-content: center
+   gap: 2.5rem
+   margin-bottom: 6.4rem      
+
+   img
+    width: 46.17737%
+    border-radius: 1rem
+   
+   @include mixin.queryTablet
+    max-width: 89.7135417%
+    flex-wrap: nowrap
+    gap: 1.5965167%
+    margin-bottom: 4.8rem  
+
+    img
+     width: 23.8026125%
+     max-width: 25.5rem
+     border-radius: 1rem
+
+   @include mixin.queryDesktop
+    max-width: variables.$max-widthD
+    gap: 3rem
+    margin-bottom: 8rem  
+
+
+  &__container-sect
+   @include mixin.container
+   text-align: center
+   padding-bottom: 6.4rem
+
+   @include mixin.queryTablet
+    max-width: variables.$max-widthT
+    padding-bottom: 8rem
+   
+   @include mixin.queryDesktop
+    padding-bottom: 7.2rem
+
+   &-subtitle
+    @include mixin.overline
+
+    color: variables.$button1
+    
+
+   
+   &-title
+    @include mixin.h2
+
+    color: variables.$text1
+
+    margin: 2.4rem 0 3.2rem 0
+
+    @include mixin.queryTablet
+     font-size: 4rem
+     line-height: 4.4rem
+
+     margin: 1.6rem auto 3.2rem auto
+     width: 44.5rem
+
+   &-text
+    @include mixin.bodyText
+    color: variables.$text2
+
+    @include mixin.queryTablet
+     br
+      display: none
+
+    @include mixin.queryDesktop
+     font-size: 1.8rem
+
+
+footer 
+ position: relative
+
+ padding-top: 9.2rem
+
+ .bridge
+  @include mixin.bridge
+  top: -18px
+
+  span
+    @include mixin.bodyText
+    font-weight: 900
+    color: variables.$text2
+
+ .footer__container  
+  background-image: url(variables.$footer-bgM)
+  background-size: 100%
+  
+
+  color: variables.$text3
+  text-align: center
+
+
+  &-filter    
+   padding: 9.2rem 0 7.2rem 0 
+   background-color: variables.$footer-filter
+
+   @include mixin.queryTablet
+    padding-bottom: 6.6rem
+   
+   @include mixin.queryTablet
+    padding: 10.4rem 0 11.6rem 0 
+   
+
+  &-grid
+   height: 26.4rem
+   @include mixin.container
+   display: flex
+   flex-direction: column
+   justify-content: center
+
+   @include mixin.queryTablet
+    max-width: variables.$max-widthT
+
+   @include mixin.queryDesktop
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+    max-width: variables.$max-widthD
+    height: 8.8rem
+
+    
+     
+
+  &-sect h3
+   @include mixin.h2
+   margin-bottom: 2.4rem
+
+   @include mixin.queryTablet
+    margin: 0 auto 3.2rem auto
+    width: 45.7rem
+    font-size: 4rem
+    line-height: 4.4rem
+   
+   @include mixin.queryDesktop
+    width: 35rem
+    text-align: left
+    margin-bottom: 0
+
+
+  &-info p
+   @include mixin.bodyText
+   font-size: 1.8rem
+   margin-bottom: 3.2rem
+
+   @include mixin.queryTablet
+    margin-bottom: 4rem
+   
+   @include mixin.queryDesktop
+    width: 35rem
+    text-align: left
+    margin-bottom: 0
+  
+  &-button   
+   
+   
+   a
+    @include mixin.button(variables.$button2)
+    @include mixin.bodyText
+    padding: 1.6rem 4rem 
+    font-weight: 900
+    word-spacing: .4rem
+
+    &:hover
+     @include mixin.button(variables.$button2-hover)
+
+    span
+     color: variables.$text4
+
+.footer-author 
+  position: absolute
+  bottom: 0
+  left: calc(50% - (236px / 2))
+  font-size: 11px
+  text-align: center
+
+.footer-author a 
+  color: variables.$button2
+
+
+  
+   

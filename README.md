@@ -4,10 +4,18 @@ In this repository I'll try to assemble every project I make from the Frontend M
 
 ## Table of projects
 
+- [Meet - Landing Page](#meet)
 - [Equalizer - Landing Page](#equalizer)
 - [Skilled Learning - Landing Page](#skilled-learning)
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
+
+## Meet
+
+This project I still my development with SASS and mobile-first workflow, changing order of the elements when changes the device
+
+- Solution URL: [Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/meet-landing-page)
+- Live Site URL: [Frontend Mentor - Meet landing page](https://meet-landing-page-hazel.vercel.app/)
 
 ## Equalizer
 

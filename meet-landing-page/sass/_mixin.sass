@@ -1,0 +1,90 @@
+//IMPORTS
+@use 'variables'
+
+
+//BASE STYLES
+
+@mixin container
+ max-width: 87.2%
+ margin: 0 auto
+
+@mixin button($bg)
+ color: #fff
+ 
+ background-color: $bg
+
+ width: fit-content
+ border-radius: 3rem
+
+ cursor: pointer
+ 
+
+@mixin button2
+ color: #fff
+
+
+@mixin bridge
+ position: absolute
+ left: calc(50% - (56px / 2))
+ top: 0
+ z-index: 2
+ 
+
+ display: flex
+ flex-direction: column
+ align-items: center
+
+ &-draw1
+  height: 8.4rem
+  width: .1rem
+  background-color: #D8D8D8
+  border-color: variables.$text2
+
+ &-draw2
+  display: flex
+  justify-content: center
+  align-items: center
+
+  width: 5.6rem
+  height: 5.6rem
+  background-color: #f2f2f2
+  border: 1px solid #D8D8D8
+  border-radius: 2.8rem
+  
+   
+
+//TYPOGTAPHY
+// MOBILE VERSION
+
+@mixin h1
+ font-size: 4rem
+ line-height: 4.4rem
+ font-weight: 900
+ 
+@mixin h2 
+ font-size: 3.2rem
+ line-height: 3.6rem
+ font-weight: 900
+
+@mixin overline
+ font-size: 1.6rem
+ line-height: 2.6rem
+ font-weight: 900
+ letter-spacing: .4rem
+ text-transform: uppercase
+
+@mixin bodyText
+ font-size: 1.6rem
+ line-height: 2.6rem
+ font-weight: 500
+
+
+//QUERY
+
+@mixin queryTablet
+ @media (min-width: 768px)
+  @content 
+
+@mixin queryDesktop
+ @media (min-width: 1100px)
+  @content 

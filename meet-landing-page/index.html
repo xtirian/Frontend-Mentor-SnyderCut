@@ -1,31 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Meet landing page</title>
+
+  <title>Meet landing page | Frontend Mentor</title>
+
+  <!-- STYLE -->
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- FONTS GOOGLE  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
 
-  Download v1.3
-  What is it?
+  <header>
+    <div class="container"><img src="./assets/logo.svg" alt="container__logo" class="logo"></div>
+  </header>
 
-  01
-  Built for modern use
+  <main>
+    <!-- SECTION 1 1 -->
+    <div class="sect1">
+      <!-- BACKGROUNDS -->
+      <div class="sect1__bg1"></div>
+      <div class="sect1__bg2"></div>
+      <!-- REMEMBER TO USE ORDERING FLEXS  -->
 
-  Smarter meetings, all in one place
+      <!-- SECTION CONTENT -->
+      <section class="sect1__banner-content">
 
-  Send messages, share files, show your screen, and record your meetings — all in one 
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
+        <h1 class="sect1__banner-content__title">Group Chat <br>for Everyone</h1>
 
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+        <p class="sect1__banner-content__text">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
 
-  Download v1.3
+        <!-- BUTTONS GRID -->
+        <div class="sect1__banner-content__buttonGrid">
+
+          <a href="" class="sect1__banner-content__buttonGrid-button1">
+            Download <span>v1.3</span>
+          </a>
+          <a href="" class="sect1__banner-content__buttonGrid-button2">What is it?</a>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- SECTION 2 -->
+
+    <!-- BRIDGE BETWEEN SECTION -->
+    <div class="sect2">
+      <div class="bridge">
+        <div class="bridge-draw1"></div>
+        <div class="bridge-draw2">
+          <span>01</span>
+        </div>
+      </div>
+
+      <div class="sect2__container-grid">
+        <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="image-woman-in-videocall" class="sect2__container-grid-img1">
+        <img src="./assets/desktop/image-women-videochatting.jpg" alt="image-women-videochatting" class="sect2__container-grid-img2">
+        <img src="./assets/desktop/image-men-in-meeting.jpg" alt="image-men-in-meeting" class="sect2__container-grid-img3">
+        <img src="./assets/desktop/image-man-texting.jpg" alt="image-man-texting" class="sect2__container-grid-img4">
+      </div>
+
+      <section class="sect2__container-sect">
+        <span class="sect2__container-sect-subtitle"> Built for modern use
+        </span>
+        <h2 class="sect2__container-sect-title">Smarter meetings, all in one place</h2>
+        <p class="sect2__container-sect-text">Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with <br>invite-only team access, data encryption, and data export.</p>
+      </section>
+    </div>
+
+
+  </main>
+
+  <footer>
+
+    <div class="bridge">
+      <div class="bridge-draw1"></div>
+      <div class="bridge-draw2">
+        <span>02</span>
+      </div>
+    </div>
+
+
+    <div class="footer__container">
+      <div class="footer__container-filter">
+        <div class="footer__container-grid">
+          <section class="footer__container-sect">
+            <h3>Experience more together</h3>
+          </section>
+
+          <div class="footer__container-info">
+            <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+          </div>
+          <div class="footer__container-button">
+            <a href="">Download <span>v1.3</span></a>
+          </div>
+        </div>
+        <section class="footer-author">
+
+          Challenge by <a href="https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/xtirian" target="_blank">xTirian</a>.
+
+        </section>
+      </div>
+    </div>
+
+
+  </footer>
+
+
+
+
 </body>
+
 </html>
