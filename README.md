@@ -2,6 +2,8 @@
 
 In this repository I'll try to assemble every project I make from the Frontend Mentor. The decision to do in thi way, is because this project is only for me to pratice and my Git was become a little ugly as I update more and more repositories from my classes.
 
+Note (05 ago 23): I studied about git workflow, and take some references in [Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows), so I'll start to put my projects in different branchs to match with what I'm registranting in my Trello (I thought to use software JIRA as I'm studying about the methodologies Kanban and Scum, but my computer didn't handled to open Figma, JIRA, VScode and others thngs at the same time)
+
 ## Table of projects
 
 - [Pod Request - Landing Page](#pod-request)
@@ -13,7 +15,7 @@ In this repository I'll try to assemble every project I make from the Frontend M
 
 ## Pod Request
 
-This project is a early access landing page that includes a custom form validation
+This project is a early access landing page that includes a custom form validation.
 
 - Solution URL: [Git Repository](#)
 - Live Site URL: [Pod Request - Frontend Mentor](#)
