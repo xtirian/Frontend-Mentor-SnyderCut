@@ -27,6 +27,12 @@ body
   background: url(../../assets/tablet/image-host.jpg) no-repeat 
   background-position-x: 100%
   background-color: variables.$bg1
+
+  @include mixin.desktop
+   background: url(../../assets/desktop/image-host.jpg) no-repeat 
+   background-position-x: 100%
+   background-position-y: 130px
+   background-color: variables.$bg1
   
 
  
@@ -116,6 +122,14 @@ header
    justify-content: flex-start
    margin-left: 39px
 
+ @include mixin.desktop
+  padding: 102px 0 0 0
+  margin-bottom: 103px
+
+  .container
+   max-width: 1100px
+   margin-left: 149px
+
 //MAIN
 
 main
@@ -132,6 +146,13 @@ main
 
    margin-left: 39px
 
+  @include mixin.desktop 
+   max-width: 723px
+   margin-left:169px
+
+   padding-top: 88px
+
+
   .main-title
    @include mixin.heading
    text-align: center
@@ -146,6 +167,11 @@ main
     line-height: 56px
     text-align: left
     margin-bottom: 31px
+
+   @include mixin.desktop 
+    font-size: 52px
+    line-height: 62px
+    margin-bottom: 24px
 
   .main-text
    @include mixin.textBody
@@ -165,6 +191,9 @@ main
 
     margin-bottom: 40px
 
+   @include mixin.desktop 
+
+
   .main-brands-grid
    margin-bottom: 48px
 
@@ -178,13 +207,14 @@ main
 
    row-gap: 16px
 
+   position: relative
+
    @include mixin.tablet
     order: 1
 
     row-gap: 0
     flex-direction: row
     align-items: center
-    position: relative
 
     width: 427px
     height: 56px
@@ -226,12 +256,28 @@ main
  position: absolute
  bottom: 0
  left: 30px
+ 
+ @include mixin.desktop
+  left: auto
+  right: 0
+  top: 718px
 
  img
-  display: none
+  display: none 
 
   @include mixin.tablet
-  display: block
+   display: flex
+
+.validation-message
+ position: absolute
+ color: #FB3E3E
+ left: 32px
+ bottom: -20px
+ font-size: 12px
+
+.showValidation
+ display: none
+  
    
 
 

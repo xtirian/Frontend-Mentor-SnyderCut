@@ -21,6 +21,14 @@ body {
     background-color: #121725;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 1100px) {
+  body {
+    background: url(../../assets/desktop/image-host.jpg) no-repeat;
+    background-position-x: 100%;
+    background-position-y: 130px;
+    background-color: #121725;
+  }
+}
 
 body:before {
   content: "";
@@ -113,6 +121,16 @@ header .container .logo {
     margin-left: 39px;
   }
 }
+@media screen and (min-width: 1100px) {
+  header {
+    padding: 102px 0 0 0;
+    margin-bottom: 103px;
+  }
+  header .container {
+    max-width: 1100px;
+    margin-left: 149px;
+  }
+}
 
 main .container {
   display: flex;
@@ -126,6 +144,13 @@ main .container {
     background-color: #121725;
     padding-top: 93px;
     margin-left: 39px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  main .container {
+    max-width: 723px;
+    margin-left: 169px;
+    padding-top: 88px;
   }
 }
 main .container .main-title {
@@ -146,6 +171,13 @@ main .container .main-title span {
     line-height: 56px;
     text-align: left;
     margin-bottom: 31px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  main .container .main-title {
+    font-size: 52px;
+    line-height: 62px;
+    margin-bottom: 24px;
   }
 }
 main .container .main-text {
@@ -179,6 +211,7 @@ main .container form {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   main .container form {
@@ -186,7 +219,6 @@ main .container form {
     row-gap: 0;
     flex-direction: row;
     align-items: center;
-    position: relative;
     width: 427px;
     height: 56px;
     background-color: #2C344B;
@@ -225,9 +257,32 @@ main .container form button {
   bottom: 0;
   left: 30px;
 }
+@media screen and (min-width: 1100px) {
+  .bg-pattern {
+    left: auto;
+    right: 0;
+    top: 718px;
+  }
+}
 .bg-pattern img {
   display: none;
-  display: block;
+}
+@media screen and (min-width: 768px) {
+  .bg-pattern img {
+    display: flex;
+  }
+}
+
+.validation-message {
+  position: absolute;
+  color: #FB3E3E;
+  left: 32px;
+  bottom: -20px;
+  font-size: 12px;
+}
+
+.showValidation {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
