@@ -24,8 +24,9 @@ body
  font-family: 'Chivo', sans-serif
 
  @include mixin.tablet
-  background-size: 491px 767px
+  background: url(../../assets/tablet/image-host.jpg) no-repeat 
   background-position-x: 100%
+  background-color: variables.$bg1
   
 
  
@@ -113,6 +114,7 @@ header
   margin-bottom: 152px
   .container
    justify-content: flex-start
+   margin-left: 39px
 
 //MAIN
 
@@ -127,6 +129,8 @@ main
    max-width: 635px
    background-color: variables.$bg1
    padding-top: 93px
+
+   margin-left: 39px
 
   .main-title
    @include mixin.heading
@@ -166,6 +170,7 @@ main
 
    @include mixin.tablet
     order: 2
+    margin-bottom: 0
 
   form
    display: flex
@@ -186,6 +191,8 @@ main
     background-color: variables.$bg3
 
     border-radius: 28px
+
+    margin-bottom: 64px
 
 
    input, button
@@ -215,7 +222,16 @@ main
      width: 162px
      right: 5px
      
- 
+.bg-pattern
+ position: absolute
+ bottom: 0
+ left: 30px
+
+ img
+  display: none
+
+  @include mixin.tablet
+  display: block
    
 
 

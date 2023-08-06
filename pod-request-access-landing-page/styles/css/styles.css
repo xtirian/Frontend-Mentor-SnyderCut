@@ -16,8 +16,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   body {
-    background-size: 491px 767px;
+    background: url(../../assets/tablet/image-host.jpg) no-repeat;
     background-position-x: 100%;
+    background-color: #121725;
   }
 }
 
@@ -109,6 +110,7 @@ header .container .logo {
   }
   header .container {
     justify-content: flex-start;
+    margin-left: 39px;
   }
 }
 
@@ -123,6 +125,7 @@ main .container {
     max-width: 635px;
     background-color: #121725;
     padding-top: 93px;
+    margin-left: 39px;
   }
 }
 main .container .main-title {
@@ -169,6 +172,7 @@ main .container .main-brands-grid {
 @media screen and (min-width: 768px) {
   main .container .main-brands-grid {
     order: 2;
+    margin-bottom: 0;
   }
 }
 main .container form {
@@ -187,6 +191,7 @@ main .container form {
     height: 56px;
     background-color: #2C344B;
     border-radius: 28px;
+    margin-bottom: 64px;
   }
 }
 main .container form input, main .container form button {
@@ -213,6 +218,16 @@ main .container form button {
     width: 162px;
     right: 5px;
   }
+}
+
+.bg-pattern {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+}
+.bg-pattern img {
+  display: none;
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
