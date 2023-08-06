@@ -1,0 +1,146 @@
+//IMPORTS
+@use 'variables'
+@use 'mixin'
+
+
+// RESETS
+
+*
+ margin: 0
+ padding: 0
+ box-sizing: border-box
+
+a
+ text-decoration: none
+ 
+
+// BASE STYLES
+
+body
+ background-image: url(../../assets/mobile/image-host.jpg)
+ font-family: 'Chivo', sans-serif
+
+// this next, actually is a tip that I learned from my friend @Sazzadur Rahman. Thank you for that.
+
+body:before
+ content: ''
+ position: absolute
+ z-index: -1
+ inset: 0
+ background-color: variables.$bg1+e6
+
+
+//SVG STYLES 
+.main-brands-grid
+   display: grid
+   grid-auto-flow: column
+
+   .spotify
+    width: 56px
+    svg
+     transform: scale(0.5833333)
+
+   .applePodCast
+    width: 45px
+    svg
+     transform: scale(0.576923077)
+     
+   
+   .googlePodCast
+    padding-top: 5px
+    width: 73px
+    svg
+     transform: scale(0.584)
+     
+
+   .pocketCasts
+    width: 77px
+    svg
+     transform: scale(0.596899225)
+   
+   picture
+    
+    svg     
+     vertical-align: middle
+     transform-origin: center left
+     color: variables.$bg2
+
+
+//HEADER
+header
+ padding: 62px 0 57px 0 
+ .container
+  @include mixin.container
+  display: flex
+  justify-content: center
+
+  .logo
+   height: 56px
+
+
+//MAIN
+
+main
+ .container
+  @include mixin.container
+
+  .main-title
+   @include mixin.heading
+   text-align: center
+   color: variables.$text1
+   margin-bottom: 16px
+
+
+   span
+    color: #FFF
+
+  .main-text
+   @include mixin.textBody
+
+   color: variables.$text2
+
+   text-align: center
+   font-weight: 200
+   margin-bottom: 33px
+
+  .main-brands-grid
+   margin-bottom: 48px
+
+  form
+   display: flex
+   flex-direction: column
+
+   row-gap: 16px
+   input, button
+    outline: none
+
+    border: none
+    border-radius: 23px
+    height: 46px
+
+    width: 100%
+    @include mixin.form
+
+   input
+    background-color: variables.$bg3
+    
+    color: variables.$text2
+    
+    padding-left: 32px
+
+   button
+    background-color: variables.$text1
+    
+    color: variables.$bg1
+
+   
+
+
+
+  
+   
+    
+    
+    
+    
+    

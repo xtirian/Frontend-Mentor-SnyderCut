@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../../assets/mobile/image-host.jpg);
+  font-family: "Chivo", sans-serif;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-color: #121725e6;
+}
+
+.main-brands-grid {
+  display: grid;
+  grid-auto-flow: column;
+}
+.main-brands-grid .spotify {
+  width: 56px;
+}
+.main-brands-grid .spotify svg {
+  transform: scale(0.5833333);
+}
+.main-brands-grid .applePodCast {
+  width: 45px;
+}
+.main-brands-grid .applePodCast svg {
+  transform: scale(0.576923077);
+}
+.main-brands-grid .googlePodCast {
+  padding-top: 5px;
+  width: 73px;
+}
+.main-brands-grid .googlePodCast svg {
+  transform: scale(0.584);
+}
+.main-brands-grid .pocketCasts {
+  width: 77px;
+}
+.main-brands-grid .pocketCasts svg {
+  transform: scale(0.596899225);
+}
+.main-brands-grid picture svg {
+  vertical-align: middle;
+  transform-origin: center left;
+  color: #5a668a;
+}
+
+header {
+  padding: 62px 0 57px 0;
+}
+header .container {
+  max-width: 87.2%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+header .container .logo {
+  height: 56px;
+}
+
+main .container {
+  max-width: 87.2%;
+  margin: 0 auto;
+}
+main .container .main-title {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  color: #54e6af;
+  margin-bottom: 16px;
+}
+main .container .main-title span {
+  color: #FFF;
+}
+main .container .main-text {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 200;
+  color: #C2CBE5;
+  text-align: center;
+  font-weight: 200;
+  margin-bottom: 33px;
+}
+main .container .main-brands-grid {
+  margin-bottom: 48px;
+}
+main .container form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+main .container form input, main .container form button {
+  outline: none;
+  border: none;
+  border-radius: 23px;
+  height: 46px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+}
+main .container form input {
+  background-color: #2C344B;
+  color: #C2CBE5;
+  padding-left: 32px;
+}
+main .container form button {
+  background-color: #54e6af;
+  color: #121725;
+}
+
+/*# sourceMappingURL=styles.css.map */
