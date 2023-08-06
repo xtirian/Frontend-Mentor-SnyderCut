@@ -13,12 +13,12 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
 
-## Pod
+## Pod Request
 
 This project is a early access landing page that includes a custom form validation.
 
-- Solution URL: [Git Repository](#)
-- Live Site URL: [Pod Request - Frontend Mentor](https://pod-alpha.vercel.app)
+- Solution URL: [🎧 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/pod-request-access-landing-page)
+- Live Site URL: [🎧 Frontend Mentor - Pod](https://pod-alpha.vercel.app/)
 
 
 ## Meet
