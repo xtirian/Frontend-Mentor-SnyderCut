@@ -9,8 +9,16 @@ a {
 }
 
 body {
-  background-image: url(../../assets/mobile/image-host.jpg);
+  background: url(../../assets/mobile/image-host.jpg) no-repeat;
+  background-size: cover;
+  background-color: #121725;
   font-family: "Chivo", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-size: 491px 767px;
+    background-position-x: 100%;
+  }
 }
 
 body:before {
@@ -19,6 +27,11 @@ body:before {
   z-index: -1;
   inset: 0;
   background-color: #121725e6;
+}
+@media screen and (min-width: 768px) {
+  body:before {
+    position: static;
+  }
 }
 
 .main-brands-grid {
@@ -55,6 +68,27 @@ body:before {
   transform-origin: center left;
   color: #5a668a;
 }
+@media screen and (min-width: 768px) {
+  .main-brands-grid .spotify, .main-brands-grid .applePodCast {
+    width: 29px;
+  }
+  .main-brands-grid .spotify svg, .main-brands-grid .applePodCast svg {
+    transform: scale(1);
+  }
+  .main-brands-grid .googlePodCast {
+    padding-top: 5px;
+    width: 125px;
+  }
+  .main-brands-grid .googlePodCast svg {
+    transform: scale(1);
+  }
+  .main-brands-grid .pocketCasts {
+    width: 129px;
+  }
+  .main-brands-grid .pocketCasts svg {
+    transform: scale(1);
+  }
+}
 
 header {
   padding: 62px 0 57px 0;
@@ -68,10 +102,28 @@ header .container {
 header .container .logo {
   height: 56px;
 }
+@media screen and (min-width: 768px) {
+  header {
+    padding: 50px 0 0 0;
+    margin-bottom: 152px;
+  }
+  header .container {
+    justify-content: flex-start;
+  }
+}
 
 main .container {
+  display: flex;
+  flex-direction: column;
   max-width: 87.2%;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  main .container {
+    max-width: 635px;
+    background-color: #121725;
+    padding-top: 93px;
+  }
 }
 main .container .main-title {
   font-size: 26px;
@@ -85,6 +137,14 @@ main .container .main-title {
 main .container .main-title span {
   color: #FFF;
 }
+@media screen and (min-width: 768px) {
+  main .container .main-title {
+    font-size: 48px;
+    line-height: 56px;
+    text-align: left;
+    margin-bottom: 31px;
+  }
+}
 main .container .main-text {
   font-size: 15px;
   line-height: 25px;
@@ -94,13 +154,40 @@ main .container .main-text {
   font-weight: 200;
   margin-bottom: 33px;
 }
+@media screen and (min-width: 768px) {
+  main .container .main-text {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    max-width: 445px;
+    margin-bottom: 40px;
+  }
+}
 main .container .main-brands-grid {
   margin-bottom: 48px;
+}
+@media screen and (min-width: 768px) {
+  main .container .main-brands-grid {
+    order: 2;
+  }
 }
 main .container form {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  main .container form {
+    order: 1;
+    row-gap: 0;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 427px;
+    height: 56px;
+    background-color: #2C344B;
+    border-radius: 28px;
+  }
 }
 main .container form input, main .container form button {
   outline: none;
@@ -119,6 +206,13 @@ main .container form input {
 main .container form button {
   background-color: #54e6af;
   color: #121725;
+}
+@media screen and (min-width: 768px) {
+  main .container form button {
+    position: absolute;
+    width: 162px;
+    right: 5px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

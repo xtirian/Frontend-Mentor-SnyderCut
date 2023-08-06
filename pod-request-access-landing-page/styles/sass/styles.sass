@@ -17,17 +17,31 @@ a
 // BASE STYLES
 
 body
- background-image: url(../../assets/mobile/image-host.jpg)
+ background: url(../../assets/mobile/image-host.jpg) no-repeat 
+ background-size: cover
+ background-color: variables.$bg1
+
  font-family: 'Chivo', sans-serif
 
-// this next, actually is a tip that I learned from my friend @Sazzadur Rahman. Thank you for that.
+ @include mixin.tablet
+  background-size: 491px 767px
+  background-position-x: 100%
+  
 
+ 
+
+// this next, actually, is a tip that I learned from my friend @Sazzadur Rahman. Thank you for that.
 body:before
  content: ''
  position: absolute
  z-index: -1
  inset: 0
  background-color: variables.$bg1+e6
+
+ @include mixin.tablet
+  position: static
+
+
 
 
 //SVG STYLES 
@@ -57,13 +71,30 @@ body:before
     width: 77px
     svg
      transform: scale(0.596899225)
-   
+      
    picture
     
     svg     
      vertical-align: middle
      transform-origin: center left
      color: variables.$bg2
+
+   @include mixin.tablet
+    .spotify, .applePodCast
+     width: 29px
+     svg
+      transform: scale(1)
+
+    .googlePodCast
+     padding-top: 5px
+     width: 125px
+     svg
+      transform: scale(1)
+      
+    .pocketCasts
+     width: 129px
+     svg
+      transform: scale(1)
 
 
 //HEADER
@@ -77,12 +108,25 @@ header
   .logo
    height: 56px
 
+ @include mixin.tablet
+  padding: 50px 0 0 0
+  margin-bottom: 152px
+  .container
+   justify-content: flex-start
 
 //MAIN
 
 main
  .container
+  display: flex
+  flex-direction: column
+
   @include mixin.container
+
+  @include mixin.tablet
+   max-width: 635px
+   background-color: variables.$bg1
+   padding-top: 93px
 
   .main-title
    @include mixin.heading
@@ -90,9 +134,14 @@ main
    color: variables.$text1
    margin-bottom: 16px
 
-
    span
     color: #FFF
+
+   @include mixin.tablet
+    font-size: 48px
+    line-height: 56px
+    text-align: left
+    margin-bottom: 31px
 
   .main-text
    @include mixin.textBody
@@ -103,14 +152,42 @@ main
    font-weight: 200
    margin-bottom: 33px
 
+   @include mixin.tablet
+    font-size: 18px
+    line-height: 28px
+    text-align: left
+
+    max-width: 445px
+
+    margin-bottom: 40px
+
   .main-brands-grid
    margin-bottom: 48px
+
+   @include mixin.tablet
+    order: 2
 
   form
    display: flex
    flex-direction: column
 
    row-gap: 16px
+
+   @include mixin.tablet
+    order: 1
+
+    row-gap: 0
+    flex-direction: row
+    align-items: center
+    position: relative
+
+    width: 427px
+    height: 56px
+    background-color: variables.$bg3
+
+    border-radius: 28px
+
+
    input, button
     outline: none
 
@@ -119,7 +196,7 @@ main
     height: 46px
 
     width: 100%
-    @include mixin.form
+    @include mixin.form   
 
    input
     background-color: variables.$bg3
@@ -133,6 +210,12 @@ main
     
     color: variables.$bg1
 
+    @include mixin.tablet
+     position: absolute
+     width: 162px
+     right: 5px
+     
+ 
    
 
 
