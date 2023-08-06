@@ -244,13 +244,24 @@ main
 
    button
     background-color: variables.$text1
-    
+    cursor: pointer
     color: variables.$bg1
+
+    &:hover
+     background-color: #B3FFE2
+    
+    &:active
+     background-color: variables.$bg1
+     color: variables.$text1
+
+
 
     @include mixin.tablet
      position: absolute
      width: 162px
      right: 5px
+
+
      
 .bg-pattern
  position: absolute
@@ -277,6 +288,7 @@ main
 
 .showValidation
  display: none
+ transition: 0.5s
   
    
 

@@ -129,11 +129,14 @@
 
       </div>
 
-      <form action="" name="form" method="post">
-        <input type="text" placeholder="Email address">
-        <button type="submit">Request access</button>
-        
-        <span class="validation-message showValidation">Oops! Please check your email</span>
+      <form action="#" onsubmit="return validateForm()"  name="form" method="post">
+
+        <input type="text" id="emailInput" name="email" placeholder="Email address">
+
+        <button type="submit" value="submit">Request access</button>
+                
+        <span id="validationMessage" class="validation-message showValidation">Oops! Please check your email</span>
+
       </form>
       
 

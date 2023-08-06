@@ -242,7 +242,15 @@ main .container form input {
 }
 main .container form button {
   background-color: #54e6af;
+  cursor: pointer;
   color: #121725;
+}
+main .container form button:hover {
+  background-color: #B3FFE2;
+}
+main .container form button:active {
+  background-color: #121725;
+  color: #54e6af;
 }
 @media screen and (min-width: 768px) {
   main .container form button {
@@ -283,6 +291,7 @@ main .container form button {
 
 .showValidation {
   display: none;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=styles.css.map */
