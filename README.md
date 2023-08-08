@@ -6,12 +6,20 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 ## Table of projects
 
+- [BMI Calculator](#bmi-calculator)
 - [Pod Request - Landing Page](#pod-request)
 - [Meet - Landing Page](#meet)
 - [Equalizer - Landing Page](#equalizer)
 - [Skilled Learning - Landing Page](#skilled-learning)
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
+
+## BMI Calculator
+
+This body mass calculator index (BMI) tool will be fun to build, testing your layout, JS and HTML from skills.
+
+- Solution URL: [📏 Git Repository](#)
+- Live Site URL: [📏 Frontend Mentor - Pod](#)
 
 ## Pod Request
 
