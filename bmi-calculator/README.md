@@ -26,7 +26,7 @@ This is a solution to the [Body Mass Index Calculator on Frontend Mentor](https:
 
 ### Links
 
-- Solution URL: [📏 Git Repository](#)
+- Solution URL: [📏 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/feat/2-1/bmi-calculator)
 - Live Site URL: [📏 Body Mass Index Calculator - Frontend Mentor](#)
 
 ## My process
