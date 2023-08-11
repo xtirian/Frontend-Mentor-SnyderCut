@@ -41,7 +41,9 @@ This is a solution to the [Body Mass Index Calculator on Frontend Mentor](https:
 
 ### What I learned
 
+falar sobre o input appearance textfield
 
+falar sobre o radius
 
 ## Author
 - Linkedin - [Clique aqui](https://www.linkedin.com/in/mf-cunha/x)

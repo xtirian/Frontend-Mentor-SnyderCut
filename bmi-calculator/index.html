@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="styles/css/2.banner.css">
   <link rel="stylesheet" href="styles/css/3.info.css">
   <link rel="stylesheet" href="styles/css/4.benefits.css">
-  <link rel="stylesheet" href="styles/css/5.limitations.css">  
+  <link rel="stylesheet" href="styles/css/5.limitations.css">
 </head>
 
 <body>
@@ -46,16 +46,20 @@
             your overall health and well-being.
           </p>
         </section>
-        
+
         <section class="form absolute">
           <h3 class="form-title">Enter your details below</h3>
           <!-- COLOCAR O FORMULÁRIO DEPOIS -->
-          <form name="set-form">
-            <input type="radio" name="set-calc" id="metric" value="metric">
-            <label for="metric">Metric</label>
-            <input type="radio" name="set-calc" id="imperial" value="imperial">
-            <label for="imperial">Imperial</label>
+
+          <form name="set-form" class="set-form">
+            <label for="metric">
+              <input type="radio" name="set-calc" id="metric" value="metric" checked>
+              Metric</label>
+            <label for="imperial">
+              <input type="radio" name="set-calc" id="imperial" value="imperial">
+              Imperial</label>
           </form>
+
           <form name="calc-form-metric">
             <label for="height">Height
               <div>
