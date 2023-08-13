@@ -1,0 +1,33 @@
+@use 'mixin'
+@use 'variables'
+
+
+.info
+
+ &-img
+  margin-top: 72px
+
+ &-hero
+  width: 100%
+
+ &-content
+  padding-top: 48px
+  margin-bottom: 71.61px
+
+  img
+   display: none
+
+  &-title
+   font-size: 3.2em
+   font-weight: 600
+   line-height: 110%
+
+   color: variables.$gunmetal
+
+   margin-bottom: 32px
+
+  &-body
+   @include mixin.bodyM
+   align-text: left
+
+   color: variables.$dark-eletric-blue

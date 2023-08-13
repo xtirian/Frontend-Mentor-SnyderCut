@@ -1,3 +1,29 @@
-
+.info-img {
+  margin-top: 72px;
+}
+.info-hero {
+  width: 100%;
+}
+.info-content {
+  padding-top: 48px;
+  margin-bottom: 71.61px;
+}
+.info-content img {
+  display: none;
+}
+.info-content-title {
+  font-size: 3.2em;
+  font-weight: 600;
+  line-height: 110%;
+  color: #253347;
+  margin-bottom: 32px;
+}
+.info-content-body {
+  font-size: 1.6em;
+  line-height: 150%;
+  text-align: left;
+  align-text: left;
+  color: #5e6e85;
+}
 
 /*# sourceMappingURL=3.info.css.map */

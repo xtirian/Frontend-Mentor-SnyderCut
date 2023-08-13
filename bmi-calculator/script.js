@@ -1,8 +1,5 @@
 const setClassification = (BMI) => {
 
- let bmiNumber = BMI
- let status;
-
  if (BMI < 18.5) {
     return "Underweight";
   } else if (BMI >= 18.5 && BMI < 25) {
@@ -108,9 +105,6 @@ function setForm() {
   let BMI = calcBMI(formFlag).BMI;
   let idealWeight = calcBMI(formFlag).rangeResult
   let classification = setClassification(BMI);
-
-  console.log(idealWeight)
-  console.log(BMI)
 
   showResult(BMI,idealWeight,classification)
 }
