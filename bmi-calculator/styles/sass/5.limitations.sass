@@ -1,0 +1,80 @@
+@use 'mixin'
+@use 'variables'
+
+.limitations
+ margin-top: 72px
+
+ .container
+  display: flex
+  flex-direction: column
+  row-gap: 56px
+
+  .pattern2
+   display: none
+
+
+
+
+.limitations-content
+ display: flex
+ flex-direction: column
+ row-gap: 32px
+
+ &-title
+  @include mixin.headingL
+  font-size: 3.2em
+  text-align: center
+
+  color: variables.$gunmetal
+ &-body
+  @include mixin.bodyM
+  color: variables.$dark-eletric-blue
+  text-align: center
+
+
+.limitations-grid
+ display: flex
+ flex-direction: column
+ row-gap: 16px
+
+
+.limitations-card
+ padding: 24px
+
+ display: flex
+ flex-direction: column
+ row-gap: 16px
+
+ background-color: variables.$pure-white
+ border-radius: 16px
+ box-shadow: 16px 32px 56px variables.$shadow
+
+ div
+  display: flex
+  align-items: center
+
+  img
+   margin-right: 16px
+
+  h4
+   @include mixin.headingS
+   color: variables.$gunmetal
+
+ p
+  @include mixin.bodyM
+  color: variables.$dark-eletric-blue
+ 
+
+
+  
+// .card1
+//  z-index: 1
+// .card2
+//  z-index: 2
+// .card3
+//  z-index: 3
+// .card4
+//  z-index: 4
+// .card5
+//  z-index: 5
+

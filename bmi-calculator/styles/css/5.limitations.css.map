@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"5.limitations.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/5.limitations.sass","../sass/_mixin.sass","../sass/_variables.sass"],"names":[],"mappings":"AAGA;EACC;;AAEA;EACC;EACA;EACA;;AAEA;EACC;;;AAKH;EACC;EACA;EACA;;AAEA;ECRA;EACA;EACA;EDQC;EACA;EAEA,OExBS;;AFyBV;ECCA;EACA;EACA;EDDC,OE1BkB;EF2BlB;;;AAGF;EACC;EACA;EACA;;;AAGD;EACC;EAEA;EACA;EACA;EAEA,kBEzCY;EF0CZ;EACA;;AAEA;EACC;EACA;;AAEA;EACC;;AAED;EClCD;EACA;EACA;EDkCE,OEzDQ;;AF2DV;ECjCA;EACA;EACA;EDiCC,OE5DkB","file":"5.limitations.css"}

@@ -1,3 +1,69 @@
+.limitations {
+  margin-top: 72px;
+}
+.limitations .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 56px;
+}
+.limitations .container .pattern2 {
+  display: none;
+}
 
+.limitations-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.limitations-content-title {
+  font-size: 4.8em;
+  line-height: 110%;
+  letter-spacing: -5%;
+  font-size: 3.2em;
+  text-align: center;
+  color: #253347;
+}
+.limitations-content-body {
+  font-size: 1.6em;
+  line-height: 150%;
+  text-align: left;
+  color: #5e6e85;
+  text-align: center;
+}
+
+.limitations-grid {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.limitations-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.2509803922);
+}
+.limitations-card div {
+  display: flex;
+  align-items: center;
+}
+.limitations-card div img {
+  margin-right: 16px;
+}
+.limitations-card div h4 {
+  font-size: 2em;
+  line-height: auto;
+  letter-spacing: -5%;
+  color: #253347;
+}
+.limitations-card p {
+  font-size: 1.6em;
+  line-height: 150%;
+  text-align: left;
+  color: #5e6e85;
+}
 
 /*# sourceMappingURL=5.limitations.css.map */
