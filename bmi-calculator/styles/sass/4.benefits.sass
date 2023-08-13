@@ -1,0 +1,31 @@
+@use 'mixin'
+@use 'variables'
+
+
+.benefits
+ padding: 56px 0
+ background: linear-gradient(275deg, #d6e6fe -375%, #e6fcfe00 )
+
+ .cards-grid
+  display: flex
+  flex-direction: column
+  row-gap: 40px
+
+ &-card
+  display: flex
+  flex-direction: column
+  row-gap: 32px
+  img
+   width: 64px
+
+  &-title
+   @include mixin.headingM
+   color: variables.$gunmetal
+   text-align: left
+   margin-bottom: 24px
+
+  &-body
+   @include mixin.bodyM
+   color: variables.$dark-eletric-blue
+
+  
