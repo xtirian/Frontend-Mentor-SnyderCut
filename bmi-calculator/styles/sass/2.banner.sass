@@ -19,7 +19,7 @@ main
     color: variables.$dark-eletric-blue
     margin-bottom: 24px
 
-.form   
+.forms-container
  padding: 24px
 
  border-radius: 16px
@@ -79,10 +79,10 @@ main
 
 
   //O till é uum seletor de CSS que seleciona os elementos que sao IRMÃOS do elemento anterior, ou seja, compartilham o mesmo pai.
-  //Neste caso estou selecionando o .checkmark que estaja dentro do labe junto de um input. É uma forma de seletor que exclui um .checkmark que esteja em um pai que não tenha o irmão input. Interessante.
+  //Neste caso estou selecionando o .checkmark que estaja dentro do labe junto de um input. É uma forma de seletor que exclui um .checkmark que esteja em um pai que não tenha o irmão input. Interessante. Colocar isto no readme
 
 label:hover input ~ .checkmark
-  border-color: variables.$blue
+  border-color: variables.$blue  
 
 
 .checkmark:after
@@ -112,14 +112,123 @@ label input:checked ~ .checkmark:after
   background-color: variables.$blue
 
 
- 
+.calc-form
+
+  display: flex
+  flex-direction: column
+  row-gap: 16px
+  margin-bottom: 24px
+
+  label
+    @include mixin.bodyS
+    color: variables.$dark-eletric-blue
+    display: flex
+    flex-direction: column
+
+    .input-container
+      border: 1px solid variables.$border
+      padding: 20px 24px
+      border-radius: 12px
+
+      position: relative
+
+      @include mixin.headingM
+
+      input
+        font-size: 1em
+        line-height: 100%
+        font-weight: 600
+
+        color: variables.$gunmetal
+
+        width: 100%
+        text-align: left
+        line-height: 90%
 
 
+      input::placeholder
+        color: variables.$gunmetal
+        opacity: 25%
 
+
+      span
+        position: absolute
+        font-weight: 600
+        color: variables.$blue
+
+        // comportamente interessante, para retirar 50 % - metade do valor da font, só precisei usar o 0.5 em ao inves de 1 em, porque aqui, ao invesde considerar que o em é 10 px, na verdade ele vale 20px, porque o valor da fonte foi alterado na div
+        top: calc(50% - 0.5em)
+
+        //same value of the current right padding
+        right: 24px
+
+//Colocar no readme sobre estes seletores com operadors para deixar + específica a seleção
+.calc-form + #imperial-form
+  label    
+    .inputs-field
+      display: flex
+      gap: 16px
 
   
 
 
 
+//MESSAGE FROM FORM  
+.forms-container 
+
+ #message
+    padding: 32px
+    background: variables.$gradient2
+    color: variables.$pure-white
+
+    border-radius: 16px
+
+    #welcome
+      display: flex
+      flex-direction: column
+      row-gap: 24px
+
+      h3
+        @include mixin.headingM
+        text-align: left
 
 
+      p
+        @include mixin.bodyS
+        text-align: left
+
+    #result-message
+      display: flex
+      flex-direction: column
+      row-gap: 24px
+
+      .result-grid
+        display: flex
+        flex-direction: column        
+        row-gap: 8px
+        
+
+        span
+          @include mixin.bodyM
+          font-weight: bold
+          text-align: left
+
+        h2
+          font-size: 4.8em
+          line-height: 110%
+
+      .result-info
+        p
+          @include mixin.bodyS
+
+          #result-range
+            font-weight: 600
+
+.hide-form-info
+  display: none !important
+
+
+
+
+
+  
