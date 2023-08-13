@@ -39,15 +39,87 @@ main
 
  display: flex
  gap: 24px
-
+ 
  label
-  display: flex
-  align-items: center
-  gap: 18px
-  padding-right: 29px
-  
-
   @include mixin.bodyM
   font-weight: 600
 
+  height: 31px
+  padding-right: 29px
+  padding-left: calc( 31px + 18px )
+
+  margin-bottom: 24px  
+
+  color: variables.$gunmetal
+
+  display: block
+  vertical-align: middle
+
+  position: relative
+
+  //this property controls whether the user can select text. this will inability the user to interact with the span box, that server only to show like the radio box
+  user-select: none
+
+  //hide the browser's default radio button
+  input 
+    position: absolute
+    opacity: 0
+    height: 0
+    width: 0
+
+  .checkmark
+    position: absolute
+    top: 0
+    left: 0
+
+    width: 31px
+    height: 31px
+    border: 1px solid variables.$border
+    border-radius: 50%
+
+
+  //O till é uum seletor de CSS que seleciona os elementos que sao IRMÃOS do elemento anterior, ou seja, compartilham o mesmo pai.
+  //Neste caso estou selecionando o .checkmark que estaja dentro do labe junto de um input. É uma forma de seletor que exclui um .checkmark que esteja em um pai que não tenha o irmão input. Interessante.
+
+label:hover input ~ .checkmark
+  border-color: variables.$blue
+
+
+.checkmark:after
+  content: ""
+  position: absolute
+  display: none
+
+
+label input:checked ~ .checkmark
+  border: none
+  background-color: rgba(52, 95, 246, .15)
   
+
+
+label input:checked ~ .checkmark:after 
+  display: block
+
+.checkmark:after  
+  //discount 1 px from borders from the 31px Box-Model size and keep 29px for the calc
+  top: calc( (30px / 2) - (15px / 2) )
+  left: calc( ((30px / 2) - (15px / 2)) + 0.5px )
+  
+  width: 15px
+  height: 15px
+  border-width: 0
+  border-radius: 50%
+  background-color: variables.$blue
+
+
+ 
+
+
+
+
+  
+
+
+
+
+

@@ -52,15 +52,17 @@
           <!-- COLOCAR O FORMULÁRIO DEPOIS -->
 
           <form name="set-form" class="set-form">
-            <label for="metric">
-              <input type="radio" name="set-calc" id="metric" value="metric" checked>
-              Metric</label>
-            <label for="imperial">
+            <label>Metric              
+              <input class="checkbox" type="radio" name="set-calc" id="metric" value="metric" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+            <label>Imperial
               <input type="radio" name="set-calc" id="imperial" value="imperial">
-              Imperial</label>
+              <span class="checkmark"></span>
+            </label>
           </form>
 
-          <form name="calc-form-metric">
+          <form name="calc-form metric-form">
             <label for="height">Height
               <div>
                 <input type="number" placeholder="0" id="height" name="height">
@@ -75,7 +77,7 @@
             </label>
           </form>
 
-          <form name="calc-form-imperial">
+          <form name="calc-form imperial-form">
             <label for="ft-in">Height
               <div>
                 <input type="number" placeholder="0" id="ft-in" name="ft">

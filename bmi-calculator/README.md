@@ -45,6 +45,10 @@ falar sobre o input appearance textfield
 
 falar sobre o radius
 
+### Useful resources
+
+- [W3school](https://www.w3schools.com/howto/howto_css_custom_checkbox.asp) - This helped me in the solution about how change the content from place in the screen.
+
 ## Author
 - Linkedin - [Clique aqui](https://www.linkedin.com/in/mf-cunha/x)
 - GitHub - [Clique aqui](https://github.com/xtirian/)

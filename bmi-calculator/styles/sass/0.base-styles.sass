@@ -1,11 +1,16 @@
 @use 'variables'
 @use 'mixin'
 
-*, *:before,*:after
+*, *::before,*::after
  margin: 0
  padding: 0
  box-sizing: border-box
  font-family: 'Inter', sans-serif
+
+
+html
+  font-size: 10px
+  //this changes the default font-size of the browser for 10px and then I can use the em unity
 
 a
  text-decoration: none
@@ -19,7 +24,7 @@ form
   border: none
   appearance: textfield
 
- 
+
 
 
  
