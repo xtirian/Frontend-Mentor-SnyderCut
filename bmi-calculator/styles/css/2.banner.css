@@ -2,23 +2,39 @@ main .container {
   width: 87.2%;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  main .container {
+    width: 89.3229167%;
+  }
+}
 main .banner-content {
   padding: 24px 0;
+}
+@media screen and (min-width: 768px) {
+  main .banner-content {
+    padding: 40px 0;
+  }
 }
 main .banner-content-title {
   font-size: 4.8em;
   line-height: 110%;
+  letter-spacing: -5%;
   font-weight: 600;
   text-align: center;
   color: #253347;
   margin-bottom: 24px;
 }
+main .banner-content-title br {
+  display: none;
+  display: flex;
+}
 main .banner-content-body {
   font-size: 1.6em;
   line-height: 150%;
-  text-align: center;
+  text-align: left;
   color: #5e6e85;
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .forms-container {
@@ -27,22 +43,41 @@ main .banner-content-body {
   background-color: #ffffff;
   box-shadow: 16px 18px 56px rgba(143, 174, 207, 0.2509803922);
 }
+@media screen and (min-width: 768px) {
+  .forms-container {
+    padding: 32px;
+  }
+}
 .forms-container-title {
-  font-size: 2em;
+  font-size: 2.4em;
+  font-weight: 600;
   line-height: auto;
   text-align: center;
   color: #253347;
   margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .forms-container-title {
+    text-align: left;
+    margin-bottom: 32px;
+  }
 }
 
 .set-form {
   display: flex;
   gap: 24px;
 }
+@media screen and (min-width: 768px) {
+  .set-form {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 50% auto;
+  }
+}
 .set-form label {
   font-size: 1.6em;
   line-height: 150%;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
   height: 31px;
   padding-right: 29px;
@@ -53,6 +88,11 @@ main .banner-content-body {
   align-items: center;
   position: relative;
   user-select: none;
+}
+@media screen and (min-width: 768px) {
+  .set-form label {
+    margin-bottom: 32px;
+  }
 }
 .set-form label input {
   position: absolute;
@@ -105,6 +145,14 @@ label input:checked ~ .checkmark:after {
   row-gap: 16px;
   margin-bottom: 24px;
 }
+@media screen and (min-width: 768px) {
+  .calc-form {
+    flex-direction: row;
+    gap: 24px;
+    row-gap: 0;
+    margin-bottom: 32px;
+  }
+}
 .calc-form label {
   font-size: 1.4em;
   line-height: 150%;
@@ -112,12 +160,18 @@ label input:checked ~ .checkmark:after {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .calc-form label {
+    row-gap: 8px;
+  }
+}
 .calc-form label .input-container {
   border: 1px solid #d8e2e7;
   padding: 20px 24px;
   border-radius: 12px;
   position: relative;
-  font-size: 2em;
+  font-size: 2.4em;
+  font-weight: 600;
   line-height: auto;
   text-align: center;
 }
@@ -141,17 +195,33 @@ label input:checked ~ .checkmark:after {
   top: calc(50% - 0.5em);
   right: 24px;
 }
+@media screen and (min-width: 768px) {
+  .calc-form label .input-container span {
+    top: calc(50% - 0.4em);
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .calc-form + #imperial-form {
+    flex-wrap: wrap;
+    row-gap: 24px;
+  }
+}
 .calc-form + #imperial-form label .inputs-field {
   display: flex;
   gap: 16px;
+  gap: 24px;
 }
-
 .forms-container #message {
   padding: 32px;
   background: linear-gradient(90deg, #345ff6, #587dff);
   color: #ffffff;
   border-radius: 16px;
+}
+@media screen and (min-width: 768px) {
+  .forms-container #message {
+    border-radius: 16px 100px 100px 16px;
+  }
 }
 .forms-container #message #welcome {
   display: flex;
@@ -159,7 +229,8 @@ label input:checked ~ .checkmark:after {
   row-gap: 24px;
 }
 .forms-container #message #welcome h3 {
-  font-size: 2em;
+  font-size: 2.4em;
+  font-weight: 600;
   line-height: auto;
   text-align: center;
   text-align: left;
@@ -174,6 +245,14 @@ label input:checked ~ .checkmark:after {
   flex-direction: column;
   row-gap: 24px;
 }
+@media screen and (min-width: 768px) {
+  .forms-container #message #result-message {
+    display: grid;
+    grid-template-columns: 50% auto;
+    row-gap: 0;
+    gap: 24px;
+  }
+}
 .forms-container #message #result-message .result-grid {
   display: flex;
   flex-direction: column;
@@ -182,7 +261,7 @@ label input:checked ~ .checkmark:after {
 .forms-container #message #result-message .result-grid span {
   font-size: 1.6em;
   line-height: 150%;
-  text-align: center;
+  text-align: left;
   font-weight: bold;
   text-align: left;
 }

@@ -3,6 +3,7 @@
 
 .limitations
  margin-top: 72px
+ margin-bottom: 72px
 
  .container
   display: flex
@@ -11,6 +12,10 @@
 
   .pattern2
    display: none
+
+  @include mixin.Tablet
+   margin-top: 96px
+   margin-bottom: 96px
 
 
 
@@ -37,6 +42,13 @@
  flex-direction: column
  row-gap: 16px
 
+ @include mixin.Tablet
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  gap: 15px
+  row-gap: 24px
+
 
 .limitations-card
  padding: 24px
@@ -44,6 +56,9 @@
  display: flex
  flex-direction: column
  row-gap: 16px
+
+ @include mixin.Tablet
+  width: 48.9067055%
 
  background-color: variables.$pure-white
  border-radius: 16px

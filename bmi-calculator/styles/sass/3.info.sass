@@ -3,16 +3,17 @@
 
 
 .info
+ margin-top: 72px
+ margin-bottom: 71.61px
 
- &-img
-  margin-top: 72px
+ &-img 
 
  &-hero
-  width: 100%
+  width: 100%  
 
  &-content
   padding-top: 48px
-  margin-bottom: 71.61px
+  
 
   img
    display: none
@@ -21,6 +22,7 @@
    font-size: 3.2em
    font-weight: 600
    line-height: 110%
+   letter-spacing: -5%
 
    color: variables.$gunmetal
 
@@ -31,3 +33,33 @@
    align-text: left
 
    color: variables.$dark-eletric-blue
+
+ @include mixin.Tablet
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: 435px auto
+
+  width: 841px
+  margin: 96px 0
+  gap: 75px
+
+  position: relative
+
+  left: -116px
+
+  &-img
+   width: 100%
+
+  &-hero
+  min-width: 435px  
+  height: 411px
+
+  &-content
+   width: 331px
+   
+
+ 
+
+
+
+   

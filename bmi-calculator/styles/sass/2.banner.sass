@@ -4,20 +4,35 @@
 main
  .container
   @include mixin.conS
+
+  @include mixin.Tablet
+    @include mixin.conM
+
  .banner
 
   &-content
    padding: 24px 0
+
+   @include mixin.Tablet
+    padding: 40px 0
 
    &-title
     @include mixin.headingXL
     color: variables.$gunmetal
     margin-bottom: 24px
 
+    br
+      display: none
+
+      @include mixin.Tablet
+      display: flex
+      
+
    &-body
     @include mixin.bodyM
     color: variables.$dark-eletric-blue
     margin-bottom: 24px
+    text-align: center
 
 .forms-container
  padding: 24px
@@ -28,17 +43,30 @@ main
 
  box-shadow: 16px 18px 56px variables.$shadow
 
+ @include mixin.Tablet
+  padding: 32px
+
  &-title
   @include mixin.headingM
   color: variables.$gunmetal
   margin-bottom: 24px
+
+  @include mixin.Tablet
+    text-align: left
+    margin-bottom: 32px
+
 
   //Form 
 
 .set-form
 
  display: flex
- gap: 24px
+ gap: 24px 
+
+ @include mixin.Tablet
+  display: grid
+  gap: 0
+  grid-template-columns: 50% auto
  
  label
   @include mixin.bodyM
@@ -59,6 +87,9 @@ main
 
   //this property controls whether the user can select text. this will inability the user to interact with the span box, that server only to show like the radio box
   user-select: none
+
+  @include mixin.Tablet
+    margin-bottom: 32px  
 
   //hide the browser's default radio button
   input 
@@ -119,11 +150,21 @@ label input:checked ~ .checkmark:after
   row-gap: 16px
   margin-bottom: 24px
 
+  @include mixin.Tablet
+    flex-direction: row
+    gap: 24px
+    row-gap: 0
+    margin-bottom: 32px
+
+
   label
     @include mixin.bodyS
     color: variables.$dark-eletric-blue
     display: flex
     flex-direction: column
+
+    @include mixin.Tablet
+     row-gap: 8px
 
     .input-container
       border: 1px solid variables.$border
@@ -161,13 +202,30 @@ label input:checked ~ .checkmark:after
 
         //same value of the current right padding
         right: 24px
+        @include mixin.Tablet
+          top: calc(50% - 0.4em)
+        
 
 //Colocar no readme sobre estes seletores com operadors para deixar + específica a seleção
 .calc-form + #imperial-form
+  
+  @include mixin.Tablet
+    flex-wrap: wrap    
+    row-gap: 24px
+
   label    
     .inputs-field
       display: flex
       gap: 16px
+
+      @include mixin.Tablet
+      gap: 24px
+
+    
+
+       
+
+  
 
   
 
@@ -182,6 +240,9 @@ label input:checked ~ .checkmark:after
     color: variables.$pure-white
 
     border-radius: 16px
+
+    @include mixin.Tablet
+      border-radius: 16px 100px 100px 16px
 
     #welcome
       display: flex
@@ -201,6 +262,12 @@ label input:checked ~ .checkmark:after
       display: flex
       flex-direction: column
       row-gap: 24px
+
+      @include mixin.Tablet
+       display: grid
+       grid-template-columns: 50% auto
+       row-gap: 0
+       gap: 24px
 
       .result-grid
         display: flex

@@ -6,6 +6,9 @@
  padding: 56px 0
  background: linear-gradient(275deg, #d6e6fe -375%, #e6fcfe00 )
 
+ @include mixin.Tablet
+  padding: 60px 0
+
  .cards-grid
   display: flex
   flex-direction: column
@@ -17,6 +20,15 @@
   row-gap: 32px
   img
    width: 64px
+
+  @include mixin.Tablet
+   display: grid
+   grid-template-columns: 64px auto
+   gap: 40px
+
+   img
+    align-self: center
+
 
   &-title
    @include mixin.headingM

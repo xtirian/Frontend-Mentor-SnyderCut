@@ -1,12 +1,12 @@
-.info-img {
+.info {
   margin-top: 72px;
+  margin-bottom: 71.61px;
 }
 .info-hero {
   width: 100%;
 }
 .info-content {
   padding-top: 48px;
-  margin-bottom: 71.61px;
 }
 .info-content img {
   display: none;
@@ -15,6 +15,7 @@
   font-size: 3.2em;
   font-weight: 600;
   line-height: 110%;
+  letter-spacing: -5%;
   color: #253347;
   margin-bottom: 32px;
 }
@@ -24,6 +25,26 @@
   text-align: left;
   align-text: left;
   color: #5e6e85;
+}
+@media screen and (min-width: 768px) {
+  .info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 435px auto;
+    width: 841px;
+    margin-top: 96px;
+    gap: 75px;
+    position: relative;
+    left: -116px;
+    min-width: 435px;
+    height: 411px;
+  }
+  .info-img {
+    width: 100%;
+  }
+  .info-content {
+    width: 331px;
+  }
 }
 
 /*# sourceMappingURL=3.info.css.map */

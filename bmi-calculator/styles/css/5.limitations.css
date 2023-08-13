@@ -1,5 +1,6 @@
 .limitations {
   margin-top: 72px;
+  margin-bottom: 72px;
 }
 .limitations .container {
   display: flex;
@@ -8,6 +9,12 @@
 }
 .limitations .container .pattern2 {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .limitations .container {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
 }
 
 .limitations-content {
@@ -36,6 +43,15 @@
   flex-direction: column;
   row-gap: 16px;
 }
+@media screen and (min-width: 768px) {
+  .limitations-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    row-gap: 24px;
+  }
+}
 
 .limitations-card {
   padding: 24px;
@@ -45,6 +61,11 @@
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.2509803922);
+}
+@media screen and (min-width: 768px) {
+  .limitations-card {
+    width: 48.9067055%;
+  }
 }
 .limitations-card div {
   display: flex;
