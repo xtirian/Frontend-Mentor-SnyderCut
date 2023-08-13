@@ -1,15 +1,19 @@
 const setClassification = (BMI) => {
-  if (BMI < 18.5) {
+
+ let bmiNumber = BMI
+ let status;
+
+ if (BMI < 18.5) {
     return "Underweight";
-  } else if (18.5 >= BMI < 25) {
+  } else if (BMI >= 18.5 && BMI < 25) {
     return "Healthly Weight";
-  } else if (25 >= BMI < 30) {
-    return "Healthly Weight";
-  } else if (30 >= BMI < 35) {
+  } else if(BMI >= 25 && BMI < 30) {
+    return "OverWeight";
+  } else if (BMI >= 30 && BMI < 35) {
     return "Obesity 1st Class";
-  } else if (35 >= BMI < 40) {
+  } else if (BMI >= 35 && BMI < 40) {
     return "Obesity 2st Class";
-  } else if (40 >= BMI) {
+  } else if (BMI >= 40) {
     return "Extreme Obesity 3st Class";
   }
 };
@@ -34,11 +38,12 @@ const showResult = (result, weightRange, classification) => {
 
   //Here change the message from welcome to the result
   if(result !== 0){
+   if(result != Infinity){
    welcome.classList.add("hide-form-info");
    resultMessage.classList.remove("hide-form-info");
   } else if( result === 0){
    welcome.classList.remove("hide-form-info");
-   resultMessage.classList.add("hide-form-info");
+   resultMessage.classList.add("hide-form-info");}
   }
 
   //Set result and classification message
@@ -49,7 +54,6 @@ const showResult = (result, weightRange, classification) => {
   resultBMI.innerText = result
   resltClassification.innerText = classification
   resultWeightRange.innerText = weightRange
-
 
 };
 
@@ -82,7 +86,7 @@ function calcBMI(flag) {
 
    //first get st and lb and the continue the calc
     idealWeight = `${Math.floor(((((impHeight)**2)/703)*18.5)/14)}st ${Math.floor(((((((impHeight)**2)/703)*18.5)/14) - Math.floor(((((impHeight)**2)/703)*18.5)/14))*14)}lbs - ${Math.floor(((((impHeight)**2)/703)*24.9)/14)}st ${Math.floor(((((((impHeight)**2)/703)*24.9)/14) - Math.floor(((((impHeight)**2)/703)*24.9)/14))*14)}lbs`;
-  }
+  }   
 
   return {BMI: isNaN(result) ? 0 : result.toFixed(1),
    rangeResult: idealWeight,
