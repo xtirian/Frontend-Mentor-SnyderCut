@@ -1,21 +1,18 @@
 const setClassification = (BMI) => {
- if(BMI < 18.5){
-  return {"Underweight"}
- } else if (18.5 >= BMI < 25) {
-  return "Healthly Weight"
- } else if (25 >= BMI < 30){
-  return "Healthly Weight"
- } else if (30 >= BMI < 35){
-  return "Obesity 1st Class"
- } else if (35 >= BMI < 40){
-  return "Obesity 2st Class"
- } else if (40 >= BMI){
-  return "Extreme Obesity 3st Class"
- }
-
-}
-
-
+  if (BMI < 18.5) {
+    return "Underweight";
+  } else if (18.5 >= BMI < 25) {
+    return "Healthly Weight";
+  } else if (25 >= BMI < 30) {
+    return "Healthly Weight";
+  } else if (30 >= BMI < 35) {
+    return "Obesity 1st Class";
+  } else if (35 >= BMI < 40) {
+    return "Obesity 2st Class";
+  } else if (40 >= BMI) {
+    return "Extreme Obesity 3st Class";
+  }
+};
 
 const showForm = (flag) => {
   let metricForm = document.getElementById(`metric-form`);
@@ -31,18 +28,33 @@ const showForm = (flag) => {
   }
 };
 
-const showResult = (result, classification) => {
- let welcome = document.getElementById('welcome');
- let resultMessage = document.getElementById('result-message');
+const showResult = (result, weightRange, classification) => {
+  let welcome = document.getElementById("welcome");
+  let resultMessage = document.getElementById("result-message");
+
+  //Here change the message from welcome to the result
+  if(result !== 0){
+   welcome.classList.add("hide-form-info");
+   resultMessage.classList.remove("hide-form-info");
+  } else if( result === 0){
+   welcome.classList.remove("hide-form-info");
+   resultMessage.classList.add("hide-form-info");
+  }
+
+  //Set result and classification message
+  let resultBMI = document.getElementById("result");
+  let resltClassification = document.getElementById("result-classification");
+  let resultWeightRange = document.getElementById("result-range");
+
+  resultBMI.innerText = result
+  resltClassification.innerText = classification
+  resultWeightRange.innerText = weightRange
 
 
-
-}
-
-
+};
 
 function calcBMI(flag) {
-  let mt = Number(document.getElementById(`meter`).value);  
+  let mt = Number(document.getElementById(`meter`).value);
 
   let kg = Number(document.getElementById(`kilo`).value);
 
@@ -53,18 +65,28 @@ function calcBMI(flag) {
   let lbs = Number(document.getElementById(`lbs`).value);
 
   let result;
+  let idealWeight;
 
   if (flag === "metric") {
-    result = kg / (mt / 100) ** 2;
+    result = kg / ((mt / 100) ** 2);
+
+    idealWeight = `${Number(18.5 * ((mt/100)**2)).toFixed(1)}kgs - ${Number(24.9 * ((mt/100)**2)).toFixed(1)}kgs`;
+
+    
+
   } else if (flag === "imperial") {
     let impHeight = (ft * 12) + inc;
-    let impWeight = lbs + (st * 14);    
+    let impWeight = lbs + (st * 14);
 
-    result = 0 + (703 * (impWeight / impHeight ** 2));
+    result = 703 * (impWeight / impHeight ** 2);
 
+   //first get st and lb and the continue the calc
+    idealWeight = `${Math.floor(((((impHeight)**2)/703)*18.5)/14)}st ${Math.floor(((((((impHeight)**2)/703)*18.5)/14) - Math.floor(((((impHeight)**2)/703)*18.5)/14))*14)}lbs - ${Math.floor(((((impHeight)**2)/703)*24.9)/14)}st ${Math.floor(((((((impHeight)**2)/703)*24.9)/14) - Math.floor(((((impHeight)**2)/703)*24.9)/14))*14)}lbs`;
   }
 
-  return isNaN(result) ? 0 : result.toFixed(2)
+  return {BMI: isNaN(result) ? 0 : result.toFixed(1),
+   rangeResult: idealWeight,
+  };
 }
 
 function setForm() {
@@ -77,19 +99,17 @@ function setForm() {
     }
   }
 
-  showForm(formFlag)
+  showForm(formFlag);
 
-  let BMI = calcBMI(formFlag);
-  let classification = setClassification(BMI)
- 
+  let BMI = calcBMI(formFlag).BMI;
+  let idealWeight = calcBMI(formFlag).rangeResult
+  let classification = setClassification(BMI);
+
+  console.log(idealWeight)
+  console.log(BMI)
+
+  showResult(BMI,idealWeight,classification)
 }
-
-
-
- 
-  
-
-
 
 addEventListener("input", setForm);
 addEventListener("load", setForm);
