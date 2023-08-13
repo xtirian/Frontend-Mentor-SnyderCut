@@ -49,8 +49,8 @@ main .banner-content-body {
   padding-left: 49px;
   margin-bottom: 24px;
   color: #253347;
-  display: block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   position: relative;
   user-select: none;
 }
