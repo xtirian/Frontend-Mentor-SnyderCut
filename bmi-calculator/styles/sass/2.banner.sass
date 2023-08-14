@@ -140,8 +140,6 @@ main
     border-radius: 50%
 
 
-  //O till é uum seletor de CSS que seleciona os elementos que sao IRMÃOS do elemento anterior, ou seja, compartilham o mesmo pai.
-  //Neste caso estou selecionando o .checkmark que estaja dentro do labe junto de um input. É uma forma de seletor que exclui um .checkmark que esteja em um pai que não tenha o irmão input. Interessante. Colocar isto no readme
 
 label:hover input ~ .checkmark
   border-color: variables.$blue  
@@ -228,7 +226,6 @@ label input:checked ~ .checkmark:after
         font-weight: 600
         color: variables.$blue
 
-        // comportamente interessante, para retirar 50 % - metade do valor da font, só precisei usar o 0.5 em ao inves de 1 em, porque aqui, ao invesde considerar que o em é 10 px, na verdade ele vale 20px, porque o valor da fonte foi alterado na div
         top: calc(50% - 0.5em)
 
         //same value of the current right padding
@@ -237,7 +234,7 @@ label input:checked ~ .checkmark:after
           top: calc(50% - 0.4em)
         
 
-//Colocar no readme sobre estes seletores com operadors para deixar + específica a seleção
+
 .calc-form + #imperial-form
   
   @include mixin.Tablet
