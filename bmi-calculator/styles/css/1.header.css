@@ -1,5 +1,5 @@
 header .container {
-  width: 87.2%;
+  max-width: 87.2%;
   margin: 0 auto;
   padding-top: 32px;
   text-align: center;
@@ -9,7 +9,8 @@ header .container .logo {
 }
 @media screen and (min-width: 1160px) {
   header .container {
-    width: 80.5555556%;
+    width: 100%;
+    max-width: 1160px;
     margin: 0 auto;
     padding-top: 75px;
     text-align: left;
