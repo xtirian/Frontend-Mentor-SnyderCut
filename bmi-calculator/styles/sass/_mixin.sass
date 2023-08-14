@@ -1,10 +1,14 @@
 @mixin conS
  //container small / mobile
- width: 87.2%
+ max-width: 87.2%
  margin: 0 auto
 
 @mixin conM
- width: 89.3229167%
+ max-width: 89.3229167%
+ margin: 0 auto
+
+@mixin conL
+ max-width: 80.5555556%
  margin: 0 auto
 
 //Typography
@@ -46,6 +50,14 @@
 //QUERY
 @mixin Tablet
  @media screen and (min-width: 768px)
+  @content
+
+@mixin Desktop
+ @media screen and (min-width: 1160px)
+  @content
+
+@mixin DesktopL
+ @media screen and (min-width: 1860px)
   @content
  
  

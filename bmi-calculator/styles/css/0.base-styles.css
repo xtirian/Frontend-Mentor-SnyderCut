@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 input, label, a {
   cursor: pointer;
 }
@@ -32,6 +36,26 @@ form input[type=number] {
   position: absolute;
   top: 0;
   z-index: -1;
+}
+@media screen and (min-width: 1160px) {
+  .gradient-pattern {
+    min-width: 978px;
+    width: 67.9166667%;
+    left: 24px;
+    height: 737px;
+  }
+}
+
+.footer-author {
+  position: fixed;
+  bottom: 0;
+  left: calc(50% - 118px);
+  font-size: 11px;
+  text-align: center;
+}
+
+.footer-author a {
+  color: #345ff6;
 }
 
 /*# sourceMappingURL=0.base-styles.css.map */

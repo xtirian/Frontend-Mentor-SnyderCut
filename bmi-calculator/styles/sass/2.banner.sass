@@ -8,7 +8,14 @@ main
   @include mixin.Tablet
     @include mixin.conM
 
+  @include mixin.Desktop
+    @include mixin.conL
+
  .banner
+  .container
+    @include mixin.Desktop
+    position: relative
+
 
   &-content
    padding: 24px 0
@@ -16,10 +23,18 @@ main
    @include mixin.Tablet
     padding: 40px 0
 
+   @include mixin.Desktop
+    width: 564px
+    padding: 127px 100px 200px 0
+
    &-title
     @include mixin.headingXL
     color: variables.$gunmetal
     margin-bottom: 24px
+    
+    @include mixin.Desktop
+      text-align: left
+      margin-bottom: 35pxpx
 
     br
       display: none
@@ -34,6 +49,10 @@ main
     margin-bottom: 24px
     text-align: center
 
+    @include mixin.Desktop
+      text-align: left
+      margin-bottom: 0
+
 .forms-container
  padding: 24px
 
@@ -45,6 +64,18 @@ main
 
  @include mixin.Tablet
   padding: 32px
+  max-width: 564px
+  margin: 0 auto
+
+ @include mixin.Desktop
+  
+  position: absolute
+  left: 48.2638889%
+  top: 0
+
+ @include mixin.DesktopL
+  left: 55%
+
 
  &-title
   @include mixin.headingM
@@ -283,6 +314,10 @@ label input:checked ~ .checkmark:after
         h2
           font-size: 4.8em
           line-height: 110%
+
+          @include mixin.Desktop
+            @include mixin.headingXL
+            text-align: left
 
       .result-info
         p

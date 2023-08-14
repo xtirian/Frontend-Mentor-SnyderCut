@@ -17,6 +17,22 @@
    margin-top: 96px
    margin-bottom: 96px
 
+  @include mixin.Desktop
+   position: relative
+   margin-top: 120px
+   margin-bottom: 120px
+
+   .pattern2
+    display: flex
+    position: absolute
+    top: 0
+    left: calc(140px)
+    top: 225px
+    transform: rotate(120deg)
+  
+
+
+
 
 
 
@@ -25,16 +41,26 @@
  flex-direction: column
  row-gap: 32px
 
+ @include mixin.Desktop
+  width: 564px
+  transition: 0.5s ease-in-out
+  transition-delay: 0.3s
+
  &-title
   @include mixin.headingL
   font-size: 3.2em
   text-align: center
+
+  @include mixin.Desktop
+   text-align: left
 
   color: variables.$gunmetal
  &-body
   @include mixin.bodyM
   color: variables.$dark-eletric-blue
   text-align: center
+  @include mixin.Desktop
+   text-align: left
 
 
 .limitations-grid
@@ -60,6 +86,10 @@
  @include mixin.Tablet
   width: 48.9067055%
 
+ @include mixin.Desktop
+  width: 31.4655172%
+  max-width: 365px
+
  background-color: variables.$pure-white
  border-radius: 16px
  box-shadow: 16px 32px 56px variables.$shadow
@@ -80,16 +110,30 @@
   color: variables.$dark-eletric-blue
  
 
-
-  
-// .card1
-//  z-index: 1
-// .card2
-//  z-index: 2
-// .card3
-//  z-index: 3
-// .card4
-//  z-index: 4
-// .card5
-//  z-index: 5
+@include mixin.Desktop
+ .card1
+  position: absolute
+  z-index: 1
+  left: calc(140px + 50% )
+  top: 0
+ .card2
+  position: absolute
+  z-index: 2
+  left: calc(140px + 25% )
+  top: 264px
+ .card3
+  position: absolute
+  z-index: 3
+  left: calc(140px + 60% )
+  top: 264px
+ .card4
+  position: absolute
+  z-index: 4
+  left: calc(140px + 10% )
+  top: 480px
+ .card5
+  position: absolute
+  z-index: 5
+  left: calc(140px + 45% )
+  top: 480px
 

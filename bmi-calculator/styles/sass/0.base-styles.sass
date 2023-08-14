@@ -15,6 +15,9 @@ html
 a
  text-decoration: none
 
+body
+  overflow-x: hidden
+
 input, label, a
  cursor: pointer
 
@@ -39,3 +42,20 @@ form
   position: absolute
   top: 0
   z-index: -1
+
+  @include mixin.Desktop
+    min-width: 978px
+    width: 67.9166667%
+    left: 24px
+    height: 737px
+
+
+.footer-author 
+  position: fixed
+  bottom: 0
+  left: calc(50% - (236px / 2))
+  font-size: 11px
+  text-align: center
+
+.footer-author a 
+  color: variables.$blue

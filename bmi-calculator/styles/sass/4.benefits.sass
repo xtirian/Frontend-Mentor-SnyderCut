@@ -9,10 +9,21 @@
  @include mixin.Tablet
   padding: 60px 0
 
+ @include mixin.Desktop
+  padding: 72px 0 96px 0
+  max-width: 1440px
+  margin: 0 auto
+  border-radius: 35px
+
  .cards-grid
   display: flex
   flex-direction: column
   row-gap: 40px
+
+  @include mixin.Desktop
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 32px
 
  &-card
   display: flex
@@ -28,6 +39,13 @@
 
    img
     align-self: center
+
+  @include mixin.Desktop
+   display: flex
+   flex-direction: column
+   gap: 45px
+   img
+    align-self: flex-start
 
 
   &-title

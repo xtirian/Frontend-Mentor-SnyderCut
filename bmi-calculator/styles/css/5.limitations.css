@@ -16,11 +16,33 @@
     margin-bottom: 96px;
   }
 }
+@media screen and (min-width: 1160px) {
+  .limitations .container {
+    position: relative;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .limitations .container .pattern2 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 140px;
+    top: 225px;
+    transform: rotate(120deg);
+  }
+}
 
 .limitations-content {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+}
+@media screen and (min-width: 1160px) {
+  .limitations-content {
+    width: 564px;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.3s;
+  }
 }
 .limitations-content-title {
   font-size: 4.8em;
@@ -30,12 +52,22 @@
   text-align: center;
   color: #253347;
 }
+@media screen and (min-width: 1160px) {
+  .limitations-content-title {
+    text-align: left;
+  }
+}
 .limitations-content-body {
   font-size: 1.6em;
   line-height: 150%;
   text-align: left;
   color: #5e6e85;
   text-align: center;
+}
+@media screen and (min-width: 1160px) {
+  .limitations-content-body {
+    text-align: left;
+  }
 }
 
 .limitations-grid {
@@ -67,6 +99,12 @@
     width: 48.9067055%;
   }
 }
+@media screen and (min-width: 1160px) {
+  .limitations-card {
+    width: 31.4655172%;
+    max-width: 365px;
+  }
+}
 .limitations-card div {
   display: flex;
   align-items: center;
@@ -85,6 +123,39 @@
   line-height: 150%;
   text-align: left;
   color: #5e6e85;
+}
+
+@media screen and (min-width: 1160px) {
+  .card1 {
+    position: absolute;
+    z-index: 1;
+    left: calc(140px + 50%);
+    top: 0;
+  }
+  .card2 {
+    position: absolute;
+    z-index: 2;
+    left: calc(140px + 25%);
+    top: 264px;
+  }
+  .card3 {
+    position: absolute;
+    z-index: 3;
+    left: calc(140px + 60%);
+    top: 264px;
+  }
+  .card4 {
+    position: absolute;
+    z-index: 4;
+    left: calc(140px + 10%);
+    top: 480px;
+  }
+  .card5 {
+    position: absolute;
+    z-index: 5;
+    left: calc(140px + 45%);
+    top: 480px;
+  }
 }
 
 /*# sourceMappingURL=5.limitations.css.map */
