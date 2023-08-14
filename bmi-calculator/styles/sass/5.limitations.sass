@@ -50,7 +50,6 @@
 
  &-title
   @include mixin.headingL
-  font-size: 3.2em
   text-align: center
 
   @include mixin.Desktop
@@ -106,6 +105,9 @@
   h4
    @include mixin.headingS
    color: variables.$gunmetal
+   
+   @include mixin.Desktop
+    @include mixin.headingM
 
  p
   @include mixin.bodyM

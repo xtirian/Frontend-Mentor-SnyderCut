@@ -18,7 +18,7 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 This body mass calculator index (BMI) tool will be fun to build, testing your layout, JS and HTML from skills.
 
-- Solution URL: [📏 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/feat/2-1/bmi-calculator)
+- Solution URL: [📏 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/bmi-calculator)
 - Live Site URL: [📏 Body Mass Index Calculator - Frontend Mentor](https://bmi-calculator-blond-two.vercel.app/)
 
 ## Pod Request
