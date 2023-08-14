@@ -21,6 +21,7 @@
     position: relative;
     margin-top: 120px;
     margin-bottom: 120px;
+    min-height: 702px;
   }
   .limitations .container .pattern2 {
     display: flex;
@@ -128,31 +129,26 @@
 @media screen and (min-width: 1160px) {
   .card1 {
     position: absolute;
-    z-index: 1;
     left: calc(140px + 50%);
     top: 0;
   }
   .card2 {
     position: absolute;
-    z-index: 2;
     left: calc(140px + 25%);
     top: 264px;
   }
   .card3 {
     position: absolute;
-    z-index: 3;
     left: calc(140px + 60%);
     top: 264px;
   }
   .card4 {
     position: absolute;
-    z-index: 4;
     left: calc(140px + 10%);
     top: 480px;
   }
   .card5 {
     position: absolute;
-    z-index: 5;
     left: calc(140px + 45%);
     top: 480px;
   }
