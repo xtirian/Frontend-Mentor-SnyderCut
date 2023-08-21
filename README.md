@@ -6,6 +6,7 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 ## Table of projects
 
+- [Developer Portfolio](#developer-portfolio)
 - [BMI Calculator](#bmi-calculator)
 - [Pod Request - Landing Page](#pod-request)
 - [Meet - Landing Page](#meet)
@@ -13,6 +14,16 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 - [Skilled Learning - Landing Page](#skilled-learning)
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
+
+
+## Developer Portfolio
+
+This is a portfolio site made with React in NextJS, TyperScript, basic of JS for the form validation.
+
+Technologies: HTML, CSS, SASS and JavaScript
+
+- Solution URL: [📏 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/develop/sp-developer-portfolio)
+- Live Site URL: [📏 Body Mass Index Calculator - Frontend Mentor](#developer-portfolio)
 
 ## BMI Calculator
 

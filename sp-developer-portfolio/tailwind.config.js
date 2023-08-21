@@ -13,6 +13,10 @@ module.exports = {
         'Grey': '#d9d9d9',
         'White': '#ffffff',
       },
+      backgroundImage: {
+        'circle': "url(/public/imagem/bg/pattern-circle.svg",
+        'rings': "url(/public/imagem/bg/pattern-rings.svg",
+      },
     },
     fontSize: {
       'base' : '8px',
@@ -26,7 +30,7 @@ module.exports = {
         letterSpacing: '-0.1875rem',
         fontWeight: '700'
       }],
-      'm': ['3', {
+      'm': ['3rem', {
         lineHeight: '4rem',
         fontWeight: '700'
       }],
@@ -36,7 +40,7 @@ module.exports = {
       }],
     },
     container: {
-    }
+    },    
   },
   plugins: [],
 }
