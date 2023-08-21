@@ -36,11 +36,16 @@ module.exports = {
       }],
       'body': ['2.25rem', {
         lineHeight: '3.5rem',
-        fontWeight: '500'
+        fontWeight: '500',
       }],
-    },
-    container: {
-    },    
+    },   
+    screens: {      
+      'sm': '576px',
+
+      'md': '708px',
+
+      'lg': '1100px',  
+    }
   },
   plugins: [],
 }
