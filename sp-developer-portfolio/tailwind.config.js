@@ -14,8 +14,8 @@ module.exports = {
         'White': '#ffffff',
       },
       backgroundImage: {
-        'circle': "url(/public/imagem/bg/pattern-circle.svg",
-        'rings': "url(/public/imagem/bg/pattern-rings.svg",
+        'Circle': "url(/public/imagem/bg/pattern-circle.svg",
+        'Rings': "url(/public/imagem/bg/pattern-rings.svg",
       },
     },
     fontSize: {
