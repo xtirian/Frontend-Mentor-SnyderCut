@@ -24,7 +24,7 @@ export default function card(props: {
           </a>
         </div>
         <div className="flex border-b-2 border-b-Green pb-5">
-          <a target="_blank"
+          <a 
             href={props.code}
             className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem]"
           >

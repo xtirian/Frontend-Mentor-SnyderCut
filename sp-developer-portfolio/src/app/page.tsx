@@ -12,8 +12,6 @@ import frontIcon from "../images/icons/icon-frontend-mentor.svg";
 //main images
 import profileDesktop from "../images/profileImage/profile-desktop.jpg";
 
-import project1 from "../images/projects/thumbnail-project1.webp";
-
 export default function Home() {
   return (
     <div className="h-screen">
