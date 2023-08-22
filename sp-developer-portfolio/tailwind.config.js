@@ -14,9 +14,13 @@ module.exports = {
         'White': '#ffffff',
       },
       backgroundImage: {
-        'Circle': "url(/public/imagem/bg/pattern-circle.svg",
-        'Rings': "url(/public/imagem/bg/pattern-rings.svg",
-      },
+        'project1' : "url(../images/projects/thumbnail-project1.webp)",
+        'project2' : "url(../images/projects/thumbnail-project2.webp)",
+        'project3' : "url(../images/projects/thumbnail-project3.webp)",
+        'project4' : "url(../images/projects/thumbnail-project4.webp)",
+        'project5' : "url(../images/projects/thumbnail-project5.webp)",
+        'project6' : "url(../images/projects/thumbnail-project6.webp)",
+      }
     },
     fontSize: {
       'base' : '8px',
