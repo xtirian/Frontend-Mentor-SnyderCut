@@ -16,7 +16,7 @@ export default function card(props: {
         className={`relative w-[540px] h-[487px] flex flex-col items-center justify-center gap-y-[48px] bg-[rgba(0,0,0,0.80)] before:content-[""] before:bg-${props.src} before:inset-1 before:absolute hover:before:z-[-1] `}
       >
         <div className="flex border-b-2 border-b-Green pb-5">
-          <a
+          <a target="_blank"
             href={props.project}
             className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem]"
           >
@@ -24,7 +24,7 @@ export default function card(props: {
           </a>
         </div>
         <div className="flex border-b-2 border-b-Green pb-5">
-          <a
+          <a target="_blank"
             href={props.code}
             className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem]"
           >

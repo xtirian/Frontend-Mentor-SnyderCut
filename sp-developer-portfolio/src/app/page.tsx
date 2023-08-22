@@ -11,8 +11,6 @@ import frontIcon from "../images/icons/icon-frontend-mentor.svg";
 
 //main images
 import profileDesktop from "../images/profileImage/profile-desktop.jpg";
-import profileTablet from "../../public/profileImage/image-profile-tablet.webp";
-import profileMobile from "../images/bg/pattern-rings.svg";
 
 import project1 from "../images/projects/thumbnail-project1.webp";
 
@@ -26,17 +24,17 @@ export default function Home() {
         <nav className="mr-[29.51px]">
           <ul className="flex gap-[4rem]  ">
             <li>
-              <a href="https://github.com/xtirian">
+              <a target="_blank" href="https://github.com/xtirian">
                 <Image src={gitIcon} width={25} height={24} alt="gitIcon" />
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/mf-cunha/">
+              <a target="_blank" href="https://www.linkedin.com/in/mf-cunha/">
                 <Image src={frontIcon} width={25} height={24} alt="frontIcon" />
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/mf-cunha/">
+              <a target="_blank" href="https://www.linkedin.com/in/mf-cunha/">
                 <Image
                   src={linkedinIcon}
                   width={25}
