@@ -10,12 +10,12 @@ export default function Projects(){
             <div className="flex border-b-2 border-b-Green pb-5">
               <a
                 href=""
-                className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem]"
+                className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] hover:text-Green transition-colors ease-in duration-300"
               >
                 Contact me
               </a>
             </div>
-            <div className="w-full flex flex-wrap gap-x-[2.5rem] gap-y-[8.625rem] py-[80px]">
+            <div className="w-full flex flex-wrap md:gap-x-[3rem] md:gap-y-[14.75rem] lg:gap-x-[2.5rem] lg:gap-y-[8.625rem] md:py-[7.5rem] lg:py-[10rem] ">
               <Card src="project1" project="" code="" title="BMI CALCULATOR">
                 <p>HTML</p>
                 <p>SASS</p>

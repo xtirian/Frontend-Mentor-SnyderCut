@@ -2,11 +2,11 @@ import Header from "./header";
 
 export default function Footer() {
   return (
-    <footer className=" relative mt-[59px] pt-[84px] pb-[92px] bg-DarkGrey before:content-[''] before:inset-1 before:bg-rings before:bg-no-repeat before:bg-[top_327px_left_-205px] before:absolute">
-      <div className="container relative mx-auto border-b-2 border-b-[#979797] mb-[15px] flex justify-between">
+    <footer className=" relative md:mt-[100px] lg:mt-[59px] pt-[84px] md:pb-[60px] lg:pb-[92px] bg-DarkGrey before:content-[''] before:inset-1 before:bg-rings before:bg-no-repeat before:bg-[top_327px_left_-205px] before:absolute">
+      <div className="container relative mx-auto border-b-2 border-b-[#979797] mb-[15px] flex flex-col items-center lg:flex-row lg:justify-between text-center">
         <section className="max-w-[445px]">
-          <h2 className="text-White text-xl mb-[38px]">Contact</h2>
-          <p className="text-Grey text-body mb-[211px]">
+          <h2 className="text-White text-xl md:mb-[20px] lg:mb-[38px]">Contact</h2>
+          <p className="text-Grey text-body md:mb-[48px] lg:mb-[211px]">
             I would love to hear about your project and how I could help. Please
             fill in the form, and I’ll get back to you as soon as possible.
           </p>

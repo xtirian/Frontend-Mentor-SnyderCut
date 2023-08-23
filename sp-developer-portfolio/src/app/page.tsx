@@ -35,7 +35,7 @@ export default function Home() {
             <div className="inline border-b-2 border-b-Green pb-5">
               <a
                 href=""
-                className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem]"
+                className="text-White  text-[2rem]/[3.25rem] hover:text-Green transition-colors ease-in duration-300 uppercase tracking-[0.28625rem]"
               >
                 Contact me
               </a>
@@ -55,8 +55,8 @@ export default function Home() {
           </section>
         </div>
         {/* Depois ver a questão da query para acertar o max-width conforme a tela */}
-        <div className="bg-[url(../images/bg/pattern-rings.svg)] bg-no-repeat bg-[bottom_0_right_-256px] mb-[68px]">
-          <div className="container mx-auto border-t-2 border-t-[#979797] flex flex-wrap gap-x-[100px] gap-y-[58px] py-[9rem] ">
+        <div className="bg-[url(../images/bg/pattern-rings.svg)] bg-no-repeat bg-[bottom_0_right_-256px] md:mb-[6rem] lg:mb-[68px]">
+          <div className="container mx-auto border-t-2 border-t-[#979797] flex flex-wrap gap-x-[100px] md:gap-y-[6.5rem] lg:gap-y-[58px] md:py-[6.5rem] lg:py-[9rem] ">
             <div className="w-1/4">
               <p className="text-l text-White">HTML</p>
               <p className="text-body text-Grey">1 Years Experience</p>

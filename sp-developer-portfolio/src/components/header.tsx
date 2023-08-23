@@ -16,19 +16,19 @@ export default function Head() {
     <ul className="flex gap-[4rem]  ">
       <li>
         <a target="_blank" href="https://github.com/xtirian">
-          <Image src={gitIcon} className="w-[19px] h-[19px] md:w-[24px] md:h-[25px]" alt="gitIcon" />
+          <Image src={gitIcon} className="w-[19px] h-[19px] md:w-[24px] md:h-[25px] hover:scale-150 transition-transform duration-500 ease-in-out " alt="gitIcon" />
         </a>
       </li>
       <li>
         <a target="_blank" href="https://www.frontendmentor.io/profile/xtirian">
-          <Image src={frontIcon} className="w-[19px] h-[19px] md:w-[24px] md:h-[25px]" alt="frontIcon" />
+          <Image src={frontIcon} className="w-[19px] h-[19px] md:w-[24px] md:h-[25px] hover:scale-150 transition-transform duration-500 ease-in-out" alt="frontIcon" />
         </a>
       </li>
       <li>
         <a target="_blank" href="https://www.linkedin.com/in/mf-cunha/">
           <Image
             src={linkedinIcon}
-            className="w-[19px] h-[19px] md:w-[24px] md:h-[25px]"
+            className="w-[19px] h-[19px] md:w-[24px] md:h-[25px] hover:scale-150 transition-transform duration-500 ease-in-out"
             alt="linkedinIcon"
           />
         </a>
