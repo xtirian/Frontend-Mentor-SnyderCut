@@ -8,7 +8,7 @@ import frontIcon from "../images/icons/icon-frontend-mentor.svg";
 
 export default function Head() {
  return(
-  <div className="container mx-auto center py-16 flex justify-between relative">
+  <div className="container mx-auto center py-10 md:py-16  flex flex-col items-center gap-y-[20px] md:gap-y-0 md:flex-row md:justify-between relative">
   <header>
     <p className="text-White text-[3rem]/[4rem] md:text-[4rem]/[4rem] font-bold">xTirian</p>
   </header>
