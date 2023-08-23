@@ -45,7 +45,7 @@ export default function Home() {
             <div className={`trasition-all
             absolute bg-no-repeat before:content-['']  before:z-[-1] md:before:bg-profileTablet md:before:w-[322px] md:before:h-[600px]
             md:left-[417px] md:top-[-155px] 
-            lg:right-[445px] lg:top-[-198px] lg:before:w-[445px] lg:before:h-[720px] before:absolute 
+            lg:left-[665px] lg:top-[-198px] lg:before:w-[445px] lg:before:h-[720px] before:absolute 
             lg:before:bg-profileDesktop  after:content-[''] after:w-[129px] after:h-[129px] after:absolute after:z-1 
             md:after:top-[471px] md:after:left-[256px]
             lg:after:top-[521px] lg:after:left-[-64px] after:bg-circle `}>
