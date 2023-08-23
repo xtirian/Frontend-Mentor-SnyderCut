@@ -13,7 +13,8 @@ export default function card(props: {
   return (
     <div>
       <div
-        className={`relative w-[540px] h-[487px] flex flex-col items-center justify-center gap-y-[48px] bg-[rgba(0,0,0,0.80)] before:content-[""] before:bg-${props.src} before:inset-1 before:absolute hover:before:z-[-1] `}
+        className={`relative w-[540px] h-[487px] flex flex-col items-center justify-center gap-y-[48px] bg-[rgba(0,0,0,0.80)] before:content-[""] before:bg-${props.src} before:inset-1 before:absolute before:z-[-1] 
+        after:content-[""] after:bg-${props.src} after:inset-1 after:absolute after:z-1 hover:after:opacity-0 after:transition-opacity after:duration-500 after:ease-in-out`}
       >
         <div className="flex border-b-2 border-b-Green pb-5">
           <a target="_blank"

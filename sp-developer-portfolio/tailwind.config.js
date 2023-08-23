@@ -20,6 +20,8 @@ module.exports = {
         'project4' : "url(../images/projects/thumbnail-project4.webp)",
         'project5' : "url(../images/projects/thumbnail-project5.webp)",
         'project6' : "url(../images/projects/thumbnail-project6.webp)",
+        "rings" : "url(../images/bg/pattern-rings.svg)",
+
       }
     },
     fontSize: {
@@ -42,6 +44,11 @@ module.exports = {
         lineHeight: '3.5rem',
         fontWeight: '500',
       }],
+      'form': ['2rem', {
+        lineHeight: '3.25rem',
+        letterSpacing: '-0.0275rem',
+        fontWeight: '500',
+      }],
     },   
     screens: {      
       'sm': '576px',
@@ -51,6 +58,8 @@ module.exports = {
       'lg': '1100px',  
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 
