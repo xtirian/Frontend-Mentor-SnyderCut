@@ -1,31 +1,31 @@
 import "./globals.css";
+import Image, { StaticImageData } from "next/image";
 
-import Image from "next/image";
+
 
 //COMPONENTS
-import Head from "../components/header"
-import Projects from "../components/projects/projects"
-import Footer from "../components/footer"
+import Head from "../components/header";
+import Projects from "../components/projects/projects";
+import Footer from "../components/footer";
 
-
-//header images import
-import gitIcon from "../images/icons/icon-github.svg";
-import linkedinIcon from "../images/icons/icon-linkedin.svg";
-import frontIcon from "../images/icons/icon-frontend-mentor.svg";
 
 //main images
 import profileDesktop from "../images/profileImage/profile-desktop.jpg";
+import profileTablet from "../images/profileImage/profile-tablet.jpg";
+import profileMobile from "../images/profileImage/profile-tablet.jpg";
+
+
 
 export default function Home() {
   return (
     <div className="h-screen">
-      <Head /> 
+      <Head />
 
       <main>
-        <div className="bg-[url(../images/bg/pattern-rings.svg)] bg-no-repeat bg-[top_0_left_-256px] py-[95px] mb-[136px]">
+        <div className="md:bg-[url(../images/bg/pattern-rings.svg)] bg-no-repeat md:bg-[top_0_left_-256px] lg:bg-[top_0_left_-100px] md:py-[58px] lg:py-[95px] md:mb-[14px] lg:mb-[136px]">
           <section className="container mx-auto center relative">
-            <h1 className="text-xl text-White mb-[43px] max-w-[709px]">
-              Nice to meet you! I'm{" "}              
+            <h1 className=" text-White mb-[43px] md:text-[9rem]/[9rem] md:tracking-[-0.25625rem] md:max-w-[445px] lg:text-xl lg:max-w-[709px]">
+              Nice to <br className="lg:hidden"></br>meet you! I'm{" "}
               <span className="underline decoration-Green">Matheus</span>.
             </h1>
             <p className="text-Grey text-body max-w-[445px] mb-[66px]">
@@ -42,13 +42,15 @@ export default function Home() {
             </div>
 
             {/* Adicionar imagem profile e bg-pattern pelo after */}
-            <div className="absolute right-0 top-[-198px] z-[-1] after:content-[''] after:w-[129px] after:h-[129px] after:absolute after:bottom-[70px] after:left-[-64px] after:bg-[url(../images/bg/pattern-circle.svg)] ">
-              <Image
-                src={profileDesktop}
-                width={445}
-                height={720}
-                alt="Profile png"
-              />
+            <div className={`trasition-all
+            absolute bg-no-repeat before:content-['']  before:z-[-1] md:before:bg-profileTablet md:before:w-[322px] md:before:h-[600px]
+            md:left-[417px] md:top-[-155px] 
+            lg:right-[445px] lg:top-[-198px] lg:before:w-[445px] lg:before:h-[720px] before:absolute 
+            lg:before:bg-profileDesktop  after:content-[''] after:w-[129px] after:h-[129px] after:absolute after:z-1 
+            md:after:top-[471px] md:after:left-[256px]
+            lg:after:top-[521px] lg:after:left-[-64px] after:bg-circle `}>
+              
+
             </div>
           </section>
         </div>
@@ -82,7 +84,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Projects />        
+        <Projects />
       </main>
       <Footer />
     </div>

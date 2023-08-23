@@ -17,7 +17,7 @@ export default function Footer() {
           </label>
 
           <label className="w-full h-[43px] pb-[2rem] border-b-2 border-[#979797] focus-within:border-Green">
-            <input type="email" name="email" className="text-form text-White bg-transparent w-full focus:ring-0 border-0 uppercase" id="emailInput" required />
+            <input type="email" name="email" placeholder="email" className="text-form text-White bg-transparent w-full focus:ring-0 border-0 uppercase" id="emailInput" required />
           </label>
 
           <label className="w-full pb-[2rem] h-[107px] border-b-2 border-[#979797] focus-within:border-Green">
@@ -27,12 +27,13 @@ export default function Footer() {
               cols={30}
               rows={3}
               className="text-form text-White bg-transparent w-full focus:ring-0 border-0 uppercase"
+              placeholder="message" 
             ></textarea>
           </label>
 
           <div className="flex border-b-2 border-b-Green pb-5 w-content">
             <button
-              className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem]"
+              className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] cursor-pointer hover:text-Green"
               type="submit"
               value="submit"
             >
