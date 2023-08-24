@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import Header from "./header";
 
 
-import errorIcon from '../images/icons/error.svg'
+import errorIcon from '/images/icons/error.svg'
 
 
 export default function Footer() {
