@@ -101,7 +101,7 @@ export default function Footer() {
             fill in the form, and I’ll get back to you as soon as possible.
           </p>
         </section>
-        <form action="https://formspree.io/f/mgejklpd" className="flex flex-wrap justify-end md:w-[445px] gap-y-[32px] mb-[87px] md:mb-[92px]" method='POST'>
+        <form action="https://formspree.io/f/mgejklpd" id="contactForm" className="flex flex-wrap justify-end md:w-[445px] gap-y-[32px] mb-[87px] md:mb-[92px]" method='POST'>
           <label className="w-full h-[43px] pb-[2rem] border-b-2 border-[#979797] focus-within:border-Green" id="nameLabel">
             <input type="text" name="name" className="text-form text-White bg-transparent w-full focus:ring-0 border-0 uppercase" placeholder="NAME" id="nameInput" minLength={3} required />
           </label>

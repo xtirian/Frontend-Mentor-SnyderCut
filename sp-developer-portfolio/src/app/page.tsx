@@ -28,7 +28,7 @@ export default function Home() {
           after:absolute  after:bg-no-repeat after:w-[129px] after:h-[129px]  after:top-[162px] after:left-[209px]  md:after:top-[375px] md:after:left-[256px] lg:after:top-[421px] lg:after:left-[-64px] after:bg-circle `}
             ></div>
             <h1 className=" text-White text-[5rem]/[5rem] text-center mb-[24px] md:text-left md:mb-[43px] md:text-[9rem]/[9rem] md:tracking-[-0.25625rem] md:max-w-[445px] lg:text-xl lg:max-w-[709px]">
-              Nice to <br className="sm:hidden md:inline lg:hidden"></br>meet you! I'm<span className="underline decoration-Green">Matheus</span>.
+              Nice to <br className="sm:hidden md:inline lg:hidden"></br>meet you! I'm <span className="underline decoration-Green">Matheus</span>.
             </h1>
             <p className="text-Grey text-body text-center md:text-left max-w-[445px] mb-[24px] md:mb-[66px]">
               Based in the RJ, I'm a front-end developer passionate about
@@ -36,7 +36,7 @@ export default function Home() {
             </p>
             <div className="inline border-b-2 border-b-Green pb-5 md:mb-0 md:mx-0">
               <a
-                href=""
+                href="#contactForm"
                 className="text-White  text-[2rem]/[3.25rem] hover:text-Green transition-colors ease-in duration-300 uppercase tracking-[0.28625rem] "
               >
                 Contact me

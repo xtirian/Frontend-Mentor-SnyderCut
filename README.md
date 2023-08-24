@@ -20,10 +20,10 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 This is a portfolio site made with React in NextJS, TyperScript, basic of JS for the form validation.
 
-Technologies: HTML, CSS, SASS and JavaScript
+Technologies: Typesript, React, HTML
 
-- Solution URL: [🧔🏻 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/develop/sp-developer-portfolio)
-- Live Site URL: [🧔🏻 Body Mass Index Calculator - Frontend Mentor](#developer-portfolio)
+- Solution URL: [🧔🏻 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/sp-developer-portfolio)
+- Live Site URL: [🧔🏻 Body Mass Index Calculator - Frontend Mentor](https://xtirian-portifolio.vercel.app/)
 
 ## BMI Calculator
 
