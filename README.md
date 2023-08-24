@@ -22,8 +22,8 @@ This is a portfolio site made with React in NextJS, TyperScript, basic of JS for
 
 Technologies: HTML, CSS, SASS and JavaScript
 
-- Solution URL: [📏 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/develop/sp-developer-portfolio)
-- Live Site URL: [📏 Body Mass Index Calculator - Frontend Mentor](#developer-portfolio)
+- Solution URL: [🧔🏻 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/develop/sp-developer-portfolio)
+- Live Site URL: [🧔🏻 Body Mass Index Calculator - Frontend Mentor](#developer-portfolio)
 
 ## BMI Calculator
 

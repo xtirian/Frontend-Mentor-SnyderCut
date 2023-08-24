@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="h-screen">
       <Head />
-      
+            
       <main>
         <div className="md:bg-[url(../images/bg/pattern-rings.svg)] bg-no-repeat md:bg-[top_0_left_-256px] lg:bg-[top_0_left_-100px] md:py-[58px] lg:py-[95px] md:mb-[14px] lg:mb-[136px]">
           <section className="container mx-auto relative pt-[331px] md:pt-0 mb-[60px] md:mb-0 flex flex-col justify-center items-center md:block">
