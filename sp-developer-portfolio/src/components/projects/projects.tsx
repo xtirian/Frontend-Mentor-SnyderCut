@@ -5,17 +5,17 @@ import Card from './cards'
 export default function Projects(){
  return (
   <div>
-          <section className="container mx-auto flex justify-between items-center flex-wrap">
-            <h2 className="text-White text-xl">Projects</h2>
+          <section className="container mx-auto flex justify-between items-center flex-wrap mb-[92px] md:mb-0">
+            <h2 className="text-White text-[5rem]/[5rem] text-center md:text-left md:text-xl">Projects</h2>
             <div className="flex border-b-2 border-b-Green pb-5">
               <a
                 href=""
-                className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem]"
+                className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] hover:text-Green transition-colors ease-in duration-300"
               >
                 Contact me
               </a>
             </div>
-            <div className="w-full flex flex-wrap gap-x-[2.5rem] gap-y-[8.625rem] py-[80px]">
+            <div className="w-full flex flex-wrap gap-y-[12.25rem] md:gap-x-[3rem] md:gap-y-[14.75rem] lg:gap-x-[2.5rem] lg:gap-y-[8.625rem] py-[5rem] md:py-[7.5rem] lg:py-[10rem] ">
               <Card src="project1" project="" code="" title="BMI CALCULATOR">
                 <p>HTML</p>
                 <p>SASS</p>

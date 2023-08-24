@@ -24,7 +24,7 @@ module.exports = {
         "circle" : "url(../images/bg/pattern-circle.svg)",
         "profileDesktop" : "url(../images/profileImage/profile-desktop.jpg)",
         "profileTablet" : "url(../images/profileImage/profile-tablet.jpg)",
-        "profileMobile" : "url(../images/profileImage/profile-desktop.jpg)",
+        "profileMobile" : "url(../images/profileImage/profile-mobile.png)",
 
       }
     },
@@ -55,7 +55,7 @@ module.exports = {
       }],
     },   
     screens: {      
-      'sm': '576px',
+      'sm': '343px',
 
       'md': '708px',
 
