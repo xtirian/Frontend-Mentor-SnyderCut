@@ -1,4 +1,5 @@
 import "./globals.css";
+import React from "react";
 import Image, { StaticImageData } from "next/image";
 
 //COMPONENTS
@@ -12,7 +13,7 @@ export default function Home() {
       <Head />
 
       <main>
-        <div className="md:bg-[url(../images/bg/pattern-rings.svg)] bg-no-repeat md:bg-[top_0_left_-256px] lg:bg-[top_0_left_-100px] md:py-[58px] lg:py-[95px] md:mb-[14px] lg:mb-[136px]">
+        <div className="md:bg-rings bg-no-repeat md:bg-[top_0_left_-256px] lg:bg-[top_0_left_-100px] md:py-[58px] lg:py-[95px] md:mb-[14px] lg:mb-[136px]">
           <section className="container mx-auto relative pt-[331px] md:pt-0 mb-[60px] md:mb-0 flex flex-col justify-center items-center md:block">
             <div
               className={`
@@ -45,7 +46,7 @@ export default function Home() {
         </div>
 
         
-        <div className="bg-[url(../images/bg/pattern-rings.svg)] bg-no-repeat bg-[bottom_0_right_-344px] md:bg-[bottom_0_right_-256px] pb-[10rem] md:mb-[6rem] lg:mb-[68px]">
+        <div className="bg-rings bg-no-repeat bg-[bottom_0_right_-344px] md:bg-[bottom_0_right_-256px] pb-[10rem] md:mb-[6rem] lg:mb-[68px]">
           <div className="container mx-auto border-y-2 border-y-[#979797] md:border-b-transparent flex flex-col items-center md:items-start md:flex-row md:flex-wrap py-[5rem] gap-y-[24px] md:gap-x-[100px] md:gap-y-[6.5rem] lg:gap-y-[58px] md:py-[6.5rem] lg:py-[9rem] ">
             <div className="md:w-1/4">
               <p className="text-l text-center md:text-left text-White">HTML</p>
