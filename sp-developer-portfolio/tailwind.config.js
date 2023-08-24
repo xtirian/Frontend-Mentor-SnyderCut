@@ -14,17 +14,17 @@ module.exports = {
         'White': '#ffffff',
       },
       backgroundImage: {
-        'project1' : "url(../images/projects/thumbnail-project1.webp)",
-        'project2' : "url(../images/projects/thumbnail-project2.webp)",
-        'project3' : "url(../images/projects/thumbnail-project3.webp)",
-        'project4' : "url(../images/projects/thumbnail-project4.webp)",
-        'project5' : "url(../images/projects/thumbnail-project5.webp)",
-        'project6' : "url(../images/projects/thumbnail-project6.webp)",
-        "rings" : "url(../images/bg/pattern-rings.svg)",
-        "circle" : "url(../images/bg/pattern-circle.svg)",
-        "profileDesktop" : "url(../images/profileImage/profile-desktop.jpg)",
-        "profileTablet" : "url(../images/profileImage/profile-tablet.jpg)",
-        "profileMobile" : "url(../images/profileImage/profile-mobile.png)",
+        'project1' : "url(/images/projects/thumbnail-project1.webp)",
+        'project2' : "url(/images/projects/thumbnail-project2.webp)",
+        'project3' : "url(/images/projects/thumbnail-project3.webp)",
+        'project4' : "url(/images/projects/thumbnail-project4.webp)",
+        'project5' : "url(/images/projects/thumbnail-project5.webp)",
+        'project6' : "url(/images/projects/thumbnail-project6.webp)",
+        "rings" : "url(/images/bg/pattern-rings.svg)",
+        "circle" : "url(/images/bg/pattern-circle.svg)",
+        "profileDesktop" : "url(/images/profileImage/profile-desktop.jpg)",
+        "profileTablet" : "url(/images/profileImage/profile-tablet.jpg)",
+        "profileMobile" : "url(/images/profileImage/profile-mobile.png)",
 
       }
     },
@@ -64,6 +64,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 }
 

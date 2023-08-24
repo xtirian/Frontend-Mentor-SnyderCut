@@ -5,8 +5,6 @@ import React, { useEffect } from 'react'
 import Header from "./header";
 
 
-import errorIcon from '../images/icons/error.svg'
-
 
 export default function Footer() {
 
@@ -46,9 +44,7 @@ export default function Footer() {
       emailAlert.classList.remove("flex")
       emailAlert.classList.add("hidden")
       }
-
-      console.log(email.validity.typeMismatch)
-      console.log(errorIcon.classList)
+      
     })
 
     //name and textarea verification
@@ -112,7 +108,7 @@ export default function Footer() {
 
           <label id='emailLabel' className="relative w-full h-[43px] pb-[2rem] border-b-2 border-[#979797] focus-within:border-Green ">
             <input type="email" name="email" placeholder="email" className="text-form text-White bg-transparent w-full focus:ring-0 border-0 uppercase" id="emailInput" required  />
-            <Image src={errorIcon} className="w-auto h-auto absolute top-0 right-0 hidden" alt="error icon" id="errorIcon" />
+            <img src="/images/icons/icon-error.svg" className="w-auto h-auto absolute top-0 right-0 hidden" alt="error icon" id="errorIcon" />
             <span className="text-[12px]/[16px] text-500 text-[#FF6F5B] absolute bottom-[-25px] right-0 hidden" id="emailAlert">Sorry, invalid format here</span>
           </label>
 

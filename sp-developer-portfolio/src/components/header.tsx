@@ -1,9 +1,7 @@
-import Image from "next/image";
+import React from "react";
 
 //header images import
-import gitIcon from "../images/icons/icon-github.svg";
-import linkedinIcon from "../images/icons/icon-linkedin.svg";
-import frontIcon from "../images/icons/icon-frontend-mentor.svg";
+
 
 
 export default function Head() {
@@ -16,18 +14,18 @@ export default function Head() {
     <ul className="flex gap-x-[4rem] justify-center ">
       <li>
         <a target="_blank" href="https://github.com/xtirian">
-          <Image src={gitIcon} className="w-[19px] h-[19px] md:w-[24px] md:h-[25px] hover:scale-150 transition-transform duration-500 ease-in-out " alt="gitIcon" />
+          <img src="/images/icons/icon-github.svg" className="w-[19px] h-[19px] md:w-[24px] md:h-[25px] hover:scale-150 transition-transform duration-500 ease-in-out " alt="gitIcon" />
         </a>
       </li>
       <li>
         <a target="_blank" href="https://www.frontendmentor.io/profile/xtirian">
-          <Image src={frontIcon} className="w-[19px] h-[19px] md:w-[24px] md:h-[25px] hover:scale-150 transition-transform duration-500 ease-in-out" alt="frontIcon" />
+          <img src="/images/icons/icon-frontend-mentor.svg" className="w-[19px] h-[19px] md:w-[24px] md:h-[25px] hover:scale-150 transition-transform duration-500 ease-in-out" alt="frontIcon" />
         </a>
       </li>
       <li>
         <a target="_blank" href="https://www.linkedin.com/in/mf-cunha/">
-          <Image
-            src={linkedinIcon}
+          <img
+            src="/images/icons/icon-linkedin.svg"
             className="w-[19px] h-[19px] md:w-[24px] md:h-[25px] hover:scale-150 transition-transform duration-500 ease-in-out"
             alt="linkedinIcon"
           />
