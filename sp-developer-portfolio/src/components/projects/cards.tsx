@@ -13,7 +13,7 @@ export default function card(props: {
   return (
     <div>
       <div
-        className={`relative md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
+        className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
         before:content-[""] before:bg-${props.src} before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
