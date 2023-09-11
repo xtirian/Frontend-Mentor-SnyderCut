@@ -6,6 +6,7 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 ## Table of projects
 
+- [Art Gallery](#art-gallery)
 - [Developer Portfolio](#developer-portfolio)
 - [BMI Calculator](#bmi-calculator)
 - [Pod Request - Landing Page](#pod-request)
@@ -15,6 +16,14 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
 
+## Art Gallery
+
+This is a two-parte art gallery project with interesting layout design integrated with leafletjs to the map in second page
+
+Technologies: ViteJs, JavaScript, Sass
+
+- Solution URL: [🎨 Git Repository]()
+- Live Site URL: [🎨 Not done yet]()
 
 ## Developer Portfolio
 
