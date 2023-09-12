@@ -50,7 +50,17 @@ Users should be able to:
 
 ### What I learned
 
-
+> uses of @import in css to import fonts from google fonts
+> passsing children
+```jsx
+const ButtonR = ({children}) => {
+  return (
+    <div>
+      <Link to={`/location`}>{children}</Link>
+    </div>
+  )
+}
+```
 
 
 ### Continued development

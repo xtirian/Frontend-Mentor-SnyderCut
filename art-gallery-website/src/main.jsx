@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-//Style import
+//Styles and Fonts import
 import './index.scss';
 
 //Views Import
