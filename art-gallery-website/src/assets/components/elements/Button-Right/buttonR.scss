@@ -1,9 +1,12 @@
-@use '../../../sass/mixins';
+@use "../../../sass/mixins";
+@use "../../../sass/variables";
 
 @include mixins.Button;
 
 .button_container {
- .arrow-hold{
-  order:2
- } 
+  .arrow-hold {
+    order: 2;
+  }
 }
+
+

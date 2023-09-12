@@ -81,6 +81,19 @@
       font-weight: 900;
     }
   }
+
+  .button_container:hover {
+   background-color: $primary-color;
+ 
+   transition: ease-in-out .3s;
+   
+ 
+   .arrow-hold {
+    background-color: $secondary-color;
+ 
+    transition: ease-in-out .5s;
+   }
+ }
 }
 
 //QUERY
