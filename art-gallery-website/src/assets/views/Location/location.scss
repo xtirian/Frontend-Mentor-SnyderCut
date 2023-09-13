@@ -1,0 +1,39 @@
+@use "../../sass/variables" as *;
+@use "../../sass/mixins";
+
+.location_container {
+  background-color: $secondary-color;
+  color: $pure-white;
+  padding: 4.8rem 0;
+
+  &-sect {
+    @include mixins.conM;
+
+    &_title {
+      font-family: "Big Shoulders Display", cursive;
+      font-size: 5rem;
+      line-height: 4.5rem;
+      font-weight: 900;
+
+      margin-bottom: 4.8rem;
+    }
+    &_grid {
+      display: flex;
+      flex-direction: column;
+
+      row-gap: 20px;
+
+      @include mixins.BS;
+
+      span {
+        color: $primary-color;
+        font-family: "Big Shoulders Display", cursive;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        font-weight: 900;
+
+        text-transform: uppercase;
+      }
+    }
+  }
+}

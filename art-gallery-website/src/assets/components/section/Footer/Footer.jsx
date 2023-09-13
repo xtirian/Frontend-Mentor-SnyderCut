@@ -24,13 +24,13 @@ const Footer = (props) => {
 
         <p className="footer-content">
           The Modern Art Gallery is free to all visitors and open seven days a
-          week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+          week from 8am to 9pm. Find us at America Avenue, RJ, BR.
         </p>
 
         <nav>
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/mf-cunha/" target="_blank">
+              <a href="https://www.linkedin.com/in/mf-cunha/" target="_blank" title="All the links here are from author's social media">
                 <FaLinkedin className={theme == 'dark'? "iconDark": "iconLight"} size={20} />
               </a>
             </li>

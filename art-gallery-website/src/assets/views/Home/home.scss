@@ -10,15 +10,23 @@ main {
   row-gap: 12rem;
 }
 
+%space{display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;  }
+
 .home_container {
   @include mixins.conM;
 
-  display: flex;
-  flex-direction: column;
-  row-gap: 3.2rem;
+  @extend %space ;
+
+  
 
   &-hero_container {
     height: 240px;
+  }
+
+  section{
+    @extend %space ;
   }
 
   &-title {
@@ -28,10 +36,32 @@ main {
   }
 
   &-content {
-    @include mixins.BM;
+    @include mixins.BS;
+  }  
+
+  @include mixins.tablet{
+    @include mixins.conT;
+
+    flex-direction: row;
+    align-items: center;
+
+    &-hero_container{
+      height: 700px;
+      width: 437px;
+    }
+
+    section{
+      max-width: 339px;
+    }
+
+    &-title {
+      @include mixins.HL;
+
+    }
   }
 }
 
+//HERO IMAGE
 .hero-img {
   position: absolute;
   top: 0;
@@ -43,6 +73,20 @@ main {
   background-image: url("/images/mobile/image-hero@2x.jpg");
   background-size: cover;
   background-position: center;
+
+  @include mixins.tablet{
+    background-image: url("/images/tablet/image-hero@2x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+
+  height: 700px;
+  width: 56.9014vw;
+
+
+    left: 0;
+    z-index: -1;
+  }
 }
 
 //GALLERY BANNER
@@ -86,7 +130,7 @@ main {
     }
 
     &-content {
-      @include mixins.BM;
+      @include mixins.BS;
     }
   }
 }
@@ -124,7 +168,7 @@ main {
     }
 
     &-content {
-      @include mixins.BM;
+      @include mixins.BS;
     }
   }
 }

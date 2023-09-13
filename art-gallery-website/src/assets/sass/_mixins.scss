@@ -39,7 +39,7 @@
   font-weight: 900;
 }
 
-@mixin BM {
+@mixin BS {
   font-family: "Outfit", sans-serif;
   font-size: 1.8rem;
   line-height: 2.8rem;
@@ -47,8 +47,13 @@
 }
 
 //CONTAINERS
-@mixin conM {
+@mixin conM { //mobile
   max-width: 91.466666667%;
+  margin: 0 auto;
+}
+
+@mixin conT { //tablet
+  max-width: 89.7135417%;
   margin: 0 auto;
 }
 
@@ -108,3 +113,9 @@
    @content;
  }
 }
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+ }

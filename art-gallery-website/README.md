@@ -62,11 +62,14 @@ const ButtonR = ({children}) => {
 }
 ```
 
+> instructions for the LeafLet instalation in react with Node packages
+
 
 ### Continued development
 
 ### Useful resources
 
+- LeafLet Tytorial from [Alejandro AO - Software & Ai](https://www.youtube.com/watch?v=jD6813wGdBA) Youtube Channel. really complete and worth.
 
 ## Author
 

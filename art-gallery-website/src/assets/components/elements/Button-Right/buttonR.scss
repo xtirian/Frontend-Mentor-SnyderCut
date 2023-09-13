@@ -4,9 +4,16 @@
 @include mixins.Button;
 
 .button_container {
+  .text-hold {
+    text-transform: uppercase;
+  }
+}
+
+.buttonR {
+  // position: sticky;
+  // top: 0;
+
   .arrow-hold {
     order: 2;
   }
 }
-
-
