@@ -64,6 +64,8 @@ const ButtonR = ({children}) => {
 
 > instructions for the LeafLet instalation in react with Node packages
 
+>talk about the webkit and the background clip to make the effect in the h1
+
 
 ### Continued development
 

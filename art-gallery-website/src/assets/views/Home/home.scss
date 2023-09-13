@@ -52,6 +52,8 @@ main {
     @include mixins.BS;
   }
 
+  //HOME BANNER QUERY
+
   @include mixins.tablet {
     @include mixins.conT;
 
@@ -118,12 +120,10 @@ main {
       
 
       background: -webkit-linear-gradient( 0deg, #fff 58%, #151515 58%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-
-
-    
+    }  
 
 
   }
@@ -158,6 +158,8 @@ main {
     z-index: -1;
   }
 
+  //HERO QUERY
+
   @include mixins.desktopM {
     height: 800px;
     width: 540px;
@@ -178,17 +180,26 @@ main {
   text-transform: uppercase;
 }
 
+//GALLERY CONTAINER
 .gallery_container {
   @include mixins.conM;
 
   .gallery-card {
     box-shadow: 1px 1px 5px rgba($color: #151515, $alpha: 0.5);
   }
+  //CONTAINER QUERY
 
   @include mixins.tablet {
     @include mixins.conT;
   }
+
+  @include mixins.desktopM {
+    width:100%;
+    @include mixins.conMD;
+  }
 }
+
+//GALLERY BANNER 
 
 .gallery_container-line1 {
   margin-bottom: 32px;
@@ -216,6 +227,8 @@ main {
     }
   }
 
+  //GALLERY  QUERY
+
   @include mixins.tablet {
     display: grid;
     grid-auto-flow: column;
@@ -239,6 +252,31 @@ main {
         margin-bottom: 24px;
       }
     }
+  }
+
+  @include mixins.desktopM{
+    margin-bottom: 30px;
+
+    grid-template-columns: auto 57.7272727%;
+
+    .gallery_grid1 {     
+      background-image: url("/images/desktop/image-grid-1@2x.jpg");
+    }
+
+    .gallery_grid-sect1 {
+      padding-top: 46px;
+      padding-right: 125px;
+
+      &-title {
+        @include mixins.HM;
+        margin-bottom: 32px;
+      }
+
+      &-content{
+        @include mixins.BM
+      }
+    }
+
   }
 }
 
@@ -286,6 +324,8 @@ main {
     }
   }
 
+  //GALLERY QUERY
+
   @include mixins.tablet {
     display: grid;
     grid-auto-flow: column;
@@ -312,5 +352,42 @@ main {
     .gallery_grid-sect2 {
       padding: 85px 28px;
     }
+  }
+
+
+  @include mixins.desktopM{
+    grid-template-columns: 57.7272727% auto;
+    gap: 30px;
+
+    .gallery_grid2 {
+      height: 720px;
+      background-image: url("/images/desktop/image-grid-2@2x.jpg");
+    }
+
+    .gallery_container-line2_column {
+      display: grid;
+      gap: 11px;
+      grid-template-rows: 313px auto;
+    }
+
+    .gallery_grid3 {
+      height: 100%;
+
+      background-image: url("/images/desktop/image-grid-3@2x.jpg");
+    }
+
+    .gallery_grid-sect2 {
+      padding: 65px 46.5px;
+  
+      &-title {
+        @include mixins.HM;
+        margin-bottom: 32px
+      }
+  
+      &-content {
+        @include mixins.BM;
+      }
+    }
+
   }
 }
