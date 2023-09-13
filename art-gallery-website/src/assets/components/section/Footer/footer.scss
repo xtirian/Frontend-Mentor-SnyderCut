@@ -21,7 +21,8 @@
     }
 
     @include mixins.desktopM{
-      @include mixins.conMD
+      @include mixins.conMD;
+      padding: 80px 0;
     }
   }
 

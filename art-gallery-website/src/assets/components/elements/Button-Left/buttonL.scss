@@ -21,4 +21,7 @@
  @include mixins.tablet{
   left: 39px;
  }
+ @include mixins.desktopM{
+  left: 156px;
+ }
 }

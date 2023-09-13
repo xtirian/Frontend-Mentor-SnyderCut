@@ -49,4 +49,32 @@
       grid-template-columns: 32.3657475% auto ;
     }
   }
+
+  @include mixins.desktopM{
+    padding: 10.4rem 0;
+
+    &-sect {
+      @include mixins.conMD;
+
+      grid-template-columns: 31.8181818% 40.4545455% ;
+      gap: 220px;
+
+      &_title {
+        @include mixins.HL
+      }
+
+      &_grid {
+        row-gap: 32px;
+  
+        @include mixins.BM;
+  
+        span {
+          @include mixins.HS;
+  
+          text-transform: uppercase;
+        }
+      }
+    }
+
+  }
 }
