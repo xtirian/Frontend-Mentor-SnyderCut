@@ -1,4 +1,17 @@
+@use "../../../sass/mixins";
+@use "../../../sass/variables";
+
 .leaflet-container {
  height: 550px;
  width: 100%;
+
+ @include mixins.tablet{
+  height: 600px;
+
+ }
 }
+
+.leaflet-control-zoom {
+ display: none;
+}
+

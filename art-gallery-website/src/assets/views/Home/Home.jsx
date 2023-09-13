@@ -42,14 +42,16 @@ const Home = () => {
 
         <div className="gallery_container-line2">
           <div className="gallery_grid2 gallery-card"></div>
-          <div className="gallery_grid3 gallery-card"></div>
-          <section className="gallery_grid-sect2">
-            <h3 className="gallery_grid-sect2-title">Come & be Inspired</h3>
-            <p className="gallery_grid-sect2-content">
-              We’re excited to welcome you to our gallery and see how our
-              collections influence you.
-            </p>
-          </section>
+          <div className="gallery_container-line2_column">
+            <div className="gallery_grid3 gallery-card"></div>
+            <section className="gallery_grid-sect2">
+              <h3 className="gallery_grid-sect2-title">Come & be Inspired</h3>
+              <p className="gallery_grid-sect2-content">
+                We’re excited to welcome you to our gallery and see how our
+                collections influence you.
+              </p>
+            </section>
+          </div>
         </div>
       </div>
 

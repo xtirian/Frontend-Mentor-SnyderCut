@@ -10,23 +10,23 @@ main {
   row-gap: 12rem;
 }
 
-%space{display: flex;
+%space {
+  display: flex;
   flex-direction: column;
-  row-gap: 3.2rem;  }
+  row-gap: 3.2rem;
+}
 
 .home_container {
   @include mixins.conM;
 
-  @extend %space ;
-
-  
+  @extend %space;
 
   &-hero_container {
     height: 240px;
   }
 
-  section{
-    @extend %space ;
+  section {
+    @extend %space;
   }
 
   &-title {
@@ -37,26 +37,25 @@ main {
 
   &-content {
     @include mixins.BS;
-  }  
+  }
 
-  @include mixins.tablet{
+  @include mixins.tablet {
     @include mixins.conT;
 
     flex-direction: row;
     align-items: center;
 
-    &-hero_container{
+    &-hero_container {
       height: 700px;
       width: 437px;
     }
 
-    section{
+    section {
       max-width: 339px;
     }
 
     &-title {
       @include mixins.HL;
-
     }
   }
 }
@@ -74,15 +73,14 @@ main {
   background-size: cover;
   background-position: center;
 
-  @include mixins.tablet{
+  @include mixins.tablet {
     background-image: url("/images/tablet/image-hero@2x.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
 
-  height: 700px;
-  width: 56.9014vw;
-
+    height: 700px;
+    width: 56.9014vw;
 
     left: 0;
     z-index: -1;
@@ -97,8 +95,6 @@ main {
   line-height: 4.5rem;
   font-weight: 900;
 
-  margin-bottom: 21px;
-
   text-transform: uppercase;
 }
 
@@ -107,6 +103,10 @@ main {
 
   .gallery-card {
     box-shadow: 1px 1px 5px rgba($color: #151515, $alpha: 0.5);
+  }
+
+  @include mixins.tablet {
+    @include mixins.conT;
   }
 }
 
@@ -126,14 +126,42 @@ main {
 
   .gallery_grid-sect1 {
     &-title {
-     @extend %gallery-title
+      @extend %gallery-title;
+
+      margin-bottom: 21px;
     }
 
     &-content {
       @include mixins.BS;
     }
   }
+
+  @include mixins.tablet {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 57.7648766%;
+
+    margin-bottom: 11px;
+    vertical-align: middle;
+
+    .gallery_grid1 {
+      height: 400px;
+      background-image: url("/images/tablet/image-grid-1@2x.jpg");
+      order: 1;
+      margin-bottom: auto;
+    }
+
+    .gallery_grid-sect1 {
+      padding-top: 46px;
+      padding-right: 68px;
+
+      &-title {
+        margin-bottom: 24px;
+      }
+    }
+  }
 }
+
 .gallery_container-line2 {
   display: flex;
   flex-direction: column;
@@ -146,6 +174,12 @@ main {
     background-image: url("/images/mobile/image-grid-2@2x.jpg");
     background-size: cover;
     background-position: center;
+  }
+
+  .gallery_container-line2_column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
   }
 
   .gallery_grid3 {
@@ -164,11 +198,39 @@ main {
     padding: 48px 24px;
 
     &-title {
-     @extend %gallery-title;
+      @extend %gallery-title;
     }
 
     &-content {
       @include mixins.BS;
+    }
+  }
+
+  @include mixins.tablet {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 57.7648766% auto;
+    gap: 11px;
+
+    .gallery_grid2{
+      height: 720px;
+      background-image: url("/images/tablet/image-grid-2@2x.jpg");
+    }
+
+    .gallery_container-line2_column{
+      display: grid;
+      gap: 11px;
+      grid-template-rows: 313px auto;
+    }
+
+    .gallery_grid3 {
+      height: 100%;
+  
+      background-image: url("/images/tablet/image-grid-3@2x.jpg");
+    }
+
+    .gallery_grid-sect2 {
+      padding: 85px 28px;
     }
   }
 }

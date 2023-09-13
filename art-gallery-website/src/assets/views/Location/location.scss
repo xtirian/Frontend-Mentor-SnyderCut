@@ -36,4 +36,17 @@
       }
     }
   }
+
+  @include mixins.tablet{
+    padding: 8.8rem 0;
+
+    &-sect {
+      @include mixins.conT;
+
+      display: grid;
+      grid-auto-flow: column;
+      gap: 68px;
+      grid-template-columns: 32.3657475% auto ;
+    }
+  }
 }
