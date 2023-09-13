@@ -8,18 +8,31 @@ main {
   flex-direction: column;
 
   row-gap: 12rem;
+
+  @include mixins.desktopM {
+
+    row-gap: 18rem;
+  }
 }
 
 %space {
   display: flex;
   flex-direction: column;
   row-gap: 3.2rem;
+
+  @include mixins.desktopM{
+    row-gap: 6.4rem;
+  }
 }
 
 .home_container {
   @include mixins.conM;
 
   @extend %space;
+
+  .hero-desktop-pattern{
+    display: none;
+  }
 
   &-hero_container {
     height: 240px;
@@ -58,6 +71,63 @@ main {
       @include mixins.HL;
     }
   }
+
+  @include mixins.desktopM {
+
+
+    .hero-desktop-pattern{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 800px;
+      width: 450px;
+      left: 0;
+
+      background-color: #151515;
+    }
+    &-hero_container {
+      height: 800px;
+      width: 540px;
+    }
+
+    section {      
+      max-width: 350px;
+      position: relative;
+      left: calc(100% - 780px);
+    }  
+    &-title {
+      @include mixins.HXL;      
+      width: 450px;
+
+      br{
+        display: none;
+      }      
+    }
+    .title-desktop{
+      display: none;
+    }
+    &-content {
+      @include mixins.BM;
+      
+    }
+    .pattern-desktop{
+      height: 264px;
+      position: absolute;
+      left: 186px;                  
+      
+
+      background: -webkit-linear-gradient( 0deg, #fff 58%, #151515 58%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+
+    
+
+
+  }
+
 }
 
 //HERO IMAGE
@@ -81,9 +151,19 @@ main {
 
     height: 700px;
     width: 56.9014vw;
+    max-width: 540px;
+
 
     left: 0;
     z-index: -1;
+  }
+
+  @include mixins.desktopM {
+    height: 800px;
+    width: 540px;
+    left: 450px;
+
+    background-image: url("/images/desktop/image-hero@2x.jpg");
   }
 }
 
@@ -212,12 +292,12 @@ main {
     grid-template-columns: 57.7648766% auto;
     gap: 11px;
 
-    .gallery_grid2{
+    .gallery_grid2 {
       height: 720px;
       background-image: url("/images/tablet/image-grid-2@2x.jpg");
     }
 
-    .gallery_container-line2_column{
+    .gallery_container-line2_column {
       display: grid;
       gap: 11px;
       grid-template-rows: 313px auto;
@@ -225,7 +305,7 @@ main {
 
     .gallery_grid3 {
       height: 100%;
-  
+
       background-image: url("/images/tablet/image-grid-3@2x.jpg");
     }
 

@@ -10,10 +10,15 @@ const Home = () => {
     <main>
       <div className="home_container">
         <aside className="home_container-hero_container">
+          <div className="hero-desktop-pattern">
+          <h1 className="home_container-title pattern-desktop">
+            Modern <br /> Art Gallery
+          </h1>
+          </div>
           <div className="hero-img"></div>
         </aside>
         <section>
-          <h1 className="home_container-title">
+          <h1 className="home_container-title title-desktop">
             Modern <br /> Art Gallery
           </h1>
           <p className="home_container-content">

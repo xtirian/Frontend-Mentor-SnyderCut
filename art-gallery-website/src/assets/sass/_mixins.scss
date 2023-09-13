@@ -36,7 +36,7 @@
   font-family: "Outfit", sans-serif;
   font-size: 2.2rem;
   line-height: 3.2rem;
-  font-weight: 900;
+  font-weight: 300;
 }
 
 @mixin BS {
@@ -47,13 +47,21 @@
 }
 
 //CONTAINERS
-@mixin conM { //mobile
+@mixin conM {
+  //mobile
   max-width: 91.466666667%;
   margin: 0 auto;
 }
 
-@mixin conT { //tablet
+@mixin conT {
+  //tablet
   max-width: 89.7135417%;
+  margin: 0 auto;
+}
+
+@mixin conMD {
+  //tablet
+  max-width: 76.3888888888889%;
   margin: 0 auto;
 }
 
@@ -88,17 +96,16 @@
   }
 
   .button_container:hover {
-   background-color: $primary-color;
- 
-   transition: ease-in-out .3s;
-   
- 
-   .arrow-hold {
-    background-color: $secondary-color;
- 
-    transition: ease-in-out .5s;
-   }
- }
+    background-color: $primary-color;
+
+    transition: ease-in-out 0.3s;
+
+    .arrow-hold {
+      background-color: $secondary-color;
+
+      transition: ease-in-out 0.5s;
+    }
+  }
 }
 
 //QUERY
@@ -109,13 +116,19 @@
 }
 
 @mixin mobile {
- @media screen and (min-width: $L-mobile) {
-   @content;
- }
+  @media screen and (min-width: $L-mobile) {
+    @content;
+  }
 }
 
 @mixin tablet {
   @media screen and (min-width: $tablet) {
     @content;
   }
- }
+}
+
+@mixin desktopM {
+  @media screen and (min-width: $M-desktop) {
+    @content;
+  }
+}
