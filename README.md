@@ -29,10 +29,10 @@ Technologies: ViteJs, JavaScript, Sass
 
 This is a portfolio site made with React in NextJS, TyperScript, basic of JS for the form validation.
 
-Technologies: HTML, CSS, SASS and JavaScript
+Technologies: Typesript, React, HTML
 
-- Solution URL: [🧔🏻 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/develop/sp-developer-portfolio)
-- Live Site URL: [🧔🏻 Body Mass Index Calculator - Frontend Mentor](#developer-portfolio)
+- Solution URL: [🧔🏻 Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/sp-developer-portfolio)
+- Live Site URL: [🧔🏻 Body Mass Index Calculator - Frontend Mentor](https://xtirian-portfolio.vercel.app/)
 
 ## BMI Calculator
 

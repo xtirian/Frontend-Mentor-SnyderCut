@@ -11,7 +11,7 @@ export default function Projects() {
         </h2>
         <div className="flex border-b-2 border-b-Green pb-5">
           <a
-            href=""
+            href="#contactForm"
             className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] hover:text-Green transition-colors ease-in duration-300"
           >
             Contact me
@@ -223,7 +223,7 @@ export default function Projects() {
       >
         <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
           <a target="_blank"
-            href="https://xtirian-portifolio.vercel.app/"
+            href="https://xtirian-portfolio.vercel.app/"
             className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
           >
             View Project
