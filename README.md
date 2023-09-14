@@ -22,8 +22,8 @@ This is a two-parte art gallery project with interesting layout design integrate
 
 Technologies: ViteJs, JavaScript, Sass
 
-- Solution URL: [🎨 Git Repository]()
-- Live Site URL: [🎨 Not done yet]()
+- Solution URL: [ Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/art-gallery-website)
+- Live Site URL: [ Modern Art](https://modern-art.vercel.app/)
 
 ## Developer Portfolio
 
