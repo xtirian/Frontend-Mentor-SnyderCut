@@ -1,0 +1,27 @@
+@use "../../../sass/mixins";
+@use "../../../sass/variables";
+
+@include mixins.Button;
+
+.button_container {
+  
+
+  .text-hold{
+   text-transform: uppercase;
+  }
+}
+
+.buttonL {
+
+ position: fixed;
+ z-index: 9999;
+ top: 0;
+ left: 0;
+
+ @include mixins.tablet{
+  left: 39px;
+ }
+ @include mixins.desktopM{
+  left: 156px;
+ }
+}

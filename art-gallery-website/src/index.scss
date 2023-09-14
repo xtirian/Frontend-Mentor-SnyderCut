@@ -1,0 +1,36 @@
+@use "./assets/sass/mixins";
+
+/* Fazer aqui os resets */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #FCFAF9;
+
+  @include mixins.mobile {
+   background-color: #fff;
+  }
+}
+
+/* Fazer aqui os temas */
+
+/*  */

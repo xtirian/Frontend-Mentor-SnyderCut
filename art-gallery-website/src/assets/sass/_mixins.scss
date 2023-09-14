@@ -1,0 +1,134 @@
+@use "./variables" as *;
+
+// import fonts
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@300&display=swap");
+
+// TYPOGRAPHY
+@mixin HXL {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 8.8rem;
+  line-height: 9.6rem;
+  font-weight: 900;
+}
+
+@mixin HL {
+  font-size: 7rem;
+  line-height: 7rem;
+  font-weight: 900;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+@mixin HM {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: 900;
+}
+
+@mixin HS {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+}
+
+@mixin BM {
+  font-family: "Outfit", sans-serif;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  font-weight: 300;
+}
+
+@mixin BS {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 300;
+}
+
+//CONTAINERS
+@mixin conM {
+  //mobile
+  max-width: 91.466666667%;
+  margin: 0 auto;
+}
+
+@mixin conT {
+  //tablet
+  max-width: 89.7135417%;
+  margin: 0 auto;
+}
+
+@mixin conMD {
+  //tablet
+  max-width: 76.3888888888889%;
+  margin: 0 auto;
+}
+
+//GLOBAL COMPONENTS
+@mixin Button {
+  .button_container {
+    display: flex;
+    width: 260px;
+    background-color: $secondary-color;
+    color: $pure-white;
+
+    .arrow-hold {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 72px;
+      background-color: $primary-color;
+    }
+
+    .text-hold {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 204px;
+
+      font-family: "Big Shoulders Display", cursive;
+      font-size: 2rem;
+      letter-spacing: 0.364rem;
+      font-weight: 900;
+    }
+  }
+
+  .button_container:hover {
+    background-color: $primary-color;
+
+    transition: ease-in-out 0.3s;
+
+    .arrow-hold {
+      background-color: $secondary-color;
+
+      transition: ease-in-out 0.5s;
+    }
+  }
+}
+
+//QUERY
+@mixin desktop-L {
+  @media screen and (min-width: $L-desktop) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: $L-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktopM {
+  @media screen and (min-width: $M-desktop) {
+    @content;
+  }
+}
