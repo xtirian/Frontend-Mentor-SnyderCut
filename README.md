@@ -6,6 +6,7 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 ## Table of projects
 
+- [Github User Search](#github)
 - [Art Gallery](#art-gallery)
 - [Developer Portfolio](#developer-portfolio)
 - [BMI Calculator](#bmi-calculator)
@@ -15,6 +16,15 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 - [Skilled Learning - Landing Page](#skilled-learning)
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
+
+## Github
+
+Project using the Github User search API
+
+Technologies: React, ViteJS, Typescript, Sass
+
+- Solution URL: [ Git Repository]() //Not done yet
+- Live Site URL: [ Modern Art]() //Not done yet
 
 ## Art Gallery
 
