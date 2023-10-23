@@ -7,7 +7,7 @@ import  { spaceGrotesk } from './fonts'
 export const metadata: Metadata = {
 
   //Colocar sobre os metadatas no README
-  title: '🧔🏻 xTirian Portfolio',
+  title: 'xTirian Portfolio',
   description: "Hi! 👋 I'm Matheus, and I'm passionate about web programming. I'm currently studying to become a full-stack developer 🚀, and I'm excited to share my projects with you !",
 }
 

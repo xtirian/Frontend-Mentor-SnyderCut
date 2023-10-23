@@ -15,7 +15,7 @@ module.exports = {
       },
       backgroundImage: {
         'project1' : "url(/images/projects/thumbnail-project1.webp)",
-        'project2' : "url(/images/projects/thumbnail-project2.webp)",
+        'project2' : "url(/images/projects/thumbnail-project7.webp)",
         'project3' : "url(/images/projects/thumbnail-project3.webp)",
         'project4' : "url(/images/projects/thumbnail-project4.webp)",
         'project5' : "url(/images/projects/thumbnail-project5.webp)",
