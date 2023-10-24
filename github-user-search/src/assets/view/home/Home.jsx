@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import handleFetch from "./HandleFetch";
+import handleAPI from "../../service/HandleFetch";
 import "./Home.scss";
 
 //IMAGES
@@ -16,7 +16,12 @@ const Home = () => {
   /**Vou fazer uma parte simples para pegar o valor do input e jogar no serviço de fetch
    * Depois preciso criar uma variável
    */
+  let [userInput, setUserInput] = useState("");
   let [userInfo, setUserInfo] = useState("");
+
+  useEffect(() => {
+    console.log(userInfo);
+  }, [userInfo]);
 
   return (
     <main className={`mainContainer theme-${theme}`}>
@@ -33,19 +38,25 @@ const Home = () => {
       </header>
       <h1>{userInfo.login}</h1>
 
-      <label className="input-container">
-        <BsSearch />
-        <input type="text" placeholder="Search GitHub username…" />
-        <span>No results</span>
-        <button
-          onClick={() => {
-            setUserInfo(handleFetch("xTirian"));
-            console.log(userInfo);
-          }}
-        >
-          Search
-        </button>
-      </label>
+      <form onSubmit={async (e) => {
+              e.preventDefault()
+
+              const userFetchedInfo = await handleAPI.handleFetch(userInput);
+
+                if(userFetchedInfo != Object){
+                  return e
+                }
+              //setUserInfo(userFetchedInfo);
+            }} >
+        <label className="input-container">
+          <BsSearch />
+          <input type="text" placeholder="Search GitHub username…" />
+          <span>No results</span>
+          <button >
+            Search
+          </button>
+        </label>
+      </form>
     </main>
   );
 };
