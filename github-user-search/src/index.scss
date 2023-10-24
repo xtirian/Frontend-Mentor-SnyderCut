@@ -1,0 +1,62 @@
+@use "./assets/sass/variables";
+@use "./assets/sass/mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+html {
+  font-size: 10px;
+  font-family: "Space Mono", monospace;
+
+  background-color: #f6f8ff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.theme-light {
+  .head-container {
+    h1 {
+      color: variables.$primaryColor;
+    }
+    button {
+      color: variables.$lightButton;
+    }
+  }
+
+  .input-container{
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: variables.$buttonNoTheme;
+    }
+    button{
+      background-color: variables.$buttonNoTheme;
+    }
+  }
+}
+
+.theme-dark {
+  .head-container {
+    h1,button,h2,h3,p {
+      color: variables.$pureWithe;
+    }
+  }
+}

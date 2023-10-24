@@ -1,0 +1,14 @@
+@use "./variables" as *;
+
+
+//TIPHOGRAPHY
+@mixin H1 {
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+}
+
+@mixin H4 {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 400;
+}

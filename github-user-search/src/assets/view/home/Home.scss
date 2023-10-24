@@ -1,0 +1,40 @@
+@use "../../sass/mixin";
+@use "../../sass/variables";
+
+.mainContainer {
+  margin: 31px 0;
+}
+
+.head-container {
+  max-width: variables.$w-mobile;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  h1 {
+    @include mixin.H1;
+  }
+  button{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    background-color: transparent;
+    border: none;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.input-container{
+  display: block;
+  max-width: variables.$w-mobile;
+  margin: 36px auto;
+}
+
+
