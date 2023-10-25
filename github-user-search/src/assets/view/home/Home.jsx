@@ -13,21 +13,21 @@ import { BsSearch } from "react-icons/bs";
 const Home = () => {
   const [theme, setTheme] = useState("light");
 
-  /**Vou fazer uma parte simples para pegar o valor do input e jogar no serviço de fetch
-   * Depois preciso criar uma variável
-   */
-
+ 
   let [userInput, setUserInput] = useState("");
   let [userInfo, setUserInfo] = useState("");
   let [errMsgForm, setErrMsgForm] = useState("");
 
   //setar o valor default que irá aparecer no inicio.
   let defaultUser = async () => {
+    //APAGAR: depois preciso resetar para atender as regras de negócio
     let result = await handleAPI.handleFetch("1");
     setUserInfo(result);
   };
+  //Este Hook irá renderizar o usuário default quando a página inicia
+  //a forma como foi feita está desta forma pois estava dando um loop infinito de Fetchs
+  //
   useEffect(() => {
-    console.log(typeof userInfo);
     if (typeof userInfo === "string") {
       defaultUser();
       console.log(userInfo);
@@ -38,7 +38,7 @@ const Home = () => {
     }
   }, []);
 
-  //APAGAR: apenas para acompanhar as mudanças ods usuários
+  //APAGAR: apenas para acompanhar as mudanças dos usuários
   useEffect(() => {
     console.log(userInfo);
   }, [userInfo]);
@@ -65,14 +65,19 @@ const Home = () => {
       <form
         action=""
         onSubmit={async (e) => {
+          //Previne que o formulário dê refresh na página
           e.preventDefault();
 
+          //Valida o usuário foi pesquisado com sucesso, para previnir qualquer retorno inesperado
           const validateUser = await handleAPI.ConsultAPI(userInput);
 
-          if (validateUser == true) {
+          //verifica se, além de válido, se foi digitado algum valor
+          if (userInput !== "" && validateUser == true) {
+            //Se estiver tudo okay, ele renderiza a página
             const userResult = await handleAPI.handleFetch(userInput);
             setUserInfo(userResult);
           } else {
+            //se não estiver okay, chama a mensagem de erro e não renderiza a página.
             setErrMsgForm("No results");
           }
         }}
@@ -83,14 +88,14 @@ const Home = () => {
             type="text"
             placeholder="Search GitHub username…"
             onChange={(t) => {
+              //Ao mexer no input, ele reseta a mensagem de erro
+              //E atualiza o valor da Variável de Estado do Input
               setErrMsgForm("");
               setUserInput(t.target.value);
-
-              console.log(userInput);
             }}
           />
           <span>{errMsgForm}</span>
-          <button>Search</button>
+          <button type="submit">Search</button>
         </label>
       </form>
     </main>

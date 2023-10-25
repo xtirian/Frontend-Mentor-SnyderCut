@@ -33,7 +33,7 @@ export default class handleAPI {
     ).then((response) => {
       if (response.ok) {
         return true;
-      } else {
+      } else if (!response.ok || user == "") {
         return false;
       }
     });
