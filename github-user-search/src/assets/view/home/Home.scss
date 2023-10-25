@@ -2,7 +2,8 @@
 @use "../../sass/variables";
 
 .mainContainer {
-  margin: 31px 0;
+  padding: 31px 0;
+  height: 100%;
 }
 
 .head-container {
@@ -13,11 +14,10 @@
   justify-content: space-between;
   align-items: center;
 
-
   h1 {
     @include mixin.H1;
   }
-  button{
+  button {
     display: flex;
     align-items: center;
     gap: 1.6rem;
@@ -31,10 +31,15 @@
   }
 }
 
-.input-container{
+.input-container {
   display: block;
   max-width: variables.$w-mobile;
   margin: 36px auto;
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  button{
+    background-color: variables.$buttonNoTheme;
+  }
 }
-
-

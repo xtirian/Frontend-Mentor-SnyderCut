@@ -6,8 +6,11 @@
 html {
   font-size: 10px;
   font-family: "Space Mono", monospace;
+  
+}
 
-  background-color: #f6f8ff;
+#root, html, body{
+  height: 100%;
 }
 
 *,
@@ -31,7 +34,9 @@ ul {
   list-style-type: none;
 }
 
-.theme-light {
+.theme-light {   
+  background-color: #f6f8ff;
+  
   .head-container {
     h1 {
       color: variables.$primaryColor;
@@ -43,20 +48,22 @@ ul {
 
   .input-container{
     svg {
-      width: 2rem;
-      height: 2rem;
       color: variables.$buttonNoTheme;
     }
-    button{
-      background-color: variables.$buttonNoTheme;
-    }
+    
   }
 }
 
 .theme-dark {
+  background-color: #141D2F;
   .head-container {
     h1,button,h2,h3,p {
       color: variables.$pureWithe;
     }
+  }
+
+  .input-container{
+    color: variables.$pureWithe;
+   
   }
 }
