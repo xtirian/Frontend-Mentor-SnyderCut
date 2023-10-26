@@ -22,36 +22,45 @@ export const Links = ({ city, blog, linkedin, company }) => {
   return (
     <>
       <div className="link__container">
+        <p>
         <FaLocationDot className="icon" />
         {userCity != "" ? (
           userCity
         ) : (
           <span className="errMsg__notAvailable">Not Available</span>
         )}
+        </p>
       </div>
       <div className="link__container">
+      <p>
         <ImLink className="icon" />
+
         {userBlog != "" ? (
           userBlog
         ) : (
           <span className="errMsg__notAvailable">Not Available</span>
         )}
+        </p>
       </div>
       <div className="link__container">
+      <p>
         <FaLinkedinIn className="icon" />
         {userLinkedin != "" ? (
           userLinkedin
         ) : (
           <span className="errMsg__notAvailable">Not Available</span>
         )}
+        </p>
       </div>
       <div className="link__container">
+      <p>
         <BsBuildingsFill className="icon" />
         {userCompany != "" ? (
           userCompany
         ) : (
           <span className="errMsg__notAvailable">Not Available</span>
         )}
+        </p>
       </div>
     </>
   );

@@ -12,3 +12,35 @@
   line-height: 2rem;
   font-weight: 400;
 }
+
+@mixin theme-color( $light-theme: true){
+  @if $light-theme {
+    background-color:#f6f8ff;
+    .container{
+      background-color: $pureWithe;
+    }
+    h1,button,h3,p,span,svg,input {
+      color: $lightTextColor;
+    };
+
+    h2{
+      color: #2B3442
+    }    
+  } @else{
+    background-color:#141D2F;
+    h1,button,h2,h3,p,span,svg,input {
+      color: $pureWithe;
+    };
+    .container{
+      background-color: #1E2A47;
+    }
+  }
+}
+
+
+//SPECIAL COISAS
+@mixin profileQuery {
+  @media screen and (min-width:840px) {
+    @content    
+  }
+}

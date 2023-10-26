@@ -17,12 +17,13 @@ const Card = ({ userData }) => {
   }, [user, userData]);
 
   return (
-    <div className="cards_infoContainer">
+    <div className="cards_infoContainer container">
+      <img src="/Oval.jpg" alt="profileImg" className="image_card" />
       <Profile
-        userImg=""
+        userImg="/Oval.jpg"
         userName="Matheus"
         userTag="xtirian"
-        userDate="25/10/2022"
+        userDate={"2023-10-28T21:12:30Z"}
       />
       <Bio bioMsg="" />
       <Followers repos="8" nFers="3938" nFing="9" />

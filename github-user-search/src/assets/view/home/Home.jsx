@@ -80,7 +80,7 @@ const Home = () => {
           }
         }}
       >
-        <label className="input-container">
+        <label className="input-container container">
           <BsSearch />
           <input
             type="text"

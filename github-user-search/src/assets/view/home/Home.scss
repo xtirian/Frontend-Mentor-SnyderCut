@@ -32,14 +32,51 @@
 }
 
 .input-container {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: variables.$w-mobile;
-  margin: 36px auto;
+  margin: 36px auto 16px auto;
+  padding:7px;
+  border-radius: 1.5rem;
+  
   svg {
+    margin-left: 10px;
+    color: variables.$buttonNoTheme;
     width: 2rem;
     height: 2rem;
   }
   button{
+    border: none;
+    border-radius: 1rem;
     background-color: variables.$buttonNoTheme;
+
+    height: 5rem ;
+    width: 26.8370607%;
+    max-width: 106px;
+
+    color:variables.$pureWithe;
+    @include mixin.H4;
+    font-weight: bold;
+
+    &:hover{
+      background-color: variables.$buttonNoThemeHover;
+    }
   }
+
+  input{    
+    margin-left: 8px;
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+    @include mixin.H4;
+    min-width: 18.4rem;
+    outline: none;
+    caret-color: variables.$buttonNoTheme;
+  }
+
+  
+
+
+
 }
