@@ -1,0 +1,24 @@
+@use '../../sass/mixin';
+@use '../../sass/variables';
+
+.follow__container{
+  margin-top: 23px;
+  padding: 18px 15px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  border-radius: 10px;
+
+  span{
+    font-size: 11px;
+    p{
+      @include mixin.H3;
+      color: variables.$strongTextColor;
+      font-weight: 700;
+      margin-top: 8px ;
+    }
+  }
+}
+
+

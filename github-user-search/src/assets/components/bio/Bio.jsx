@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
+import './bio.scss'
+
 const Bio = ({
   bioMsg
 }) => {
@@ -11,7 +13,7 @@ const Bio = ({
   }, [content, bioMsg]);
 
   return (
-    <div>
+    <div className='bio__container'>
       {content !== ""? content: <span className='errMsg__notAvailable'>Not Available</span>}
     </div>
   )

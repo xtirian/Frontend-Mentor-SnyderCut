@@ -92,7 +92,7 @@ const Home = () => {
               setUserInput(t.target.value);
             }}
           />
-          <span>{errMsgForm}</span>
+          <span className="errMsg__NoResult">{errMsgForm}</span>
           <button type="submit">Search</button>
         </label>
       </form>

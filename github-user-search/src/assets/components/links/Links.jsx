@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import './links.scss';
+
 //ICONS
 import { FaLocationDot } from "react-icons/fa6";
 import { ImLink } from "react-icons/im";
@@ -20,48 +22,47 @@ export const Links = ({ city, blog, linkedin, company }) => {
   }, [userCity, city]);
 
   return (
-    <>
+    <div className="links_grid">
       <div className="link__container">
-        <p>
-        <FaLocationDot className="icon" />
+        <p>        
         {userCity != "" ? (
-          userCity
+          <span><FaLocationDot className="icon" />{userCity}</span>
         ) : (
-          <span className="errMsg__notAvailable">Not Available</span>
+          <span className="errMsg__notAvailable"><FaLocationDot className="icon" />Not Available</span>
         )}
         </p>
       </div>
       <div className="link__container">
       <p>
-        <ImLink className="icon" />
-
         {userBlog != "" ? (
-          userBlog
+          <span><ImLink className="icon" /> {userBlog}</span>
         ) : (
-          <span className="errMsg__notAvailable">Not Available</span>
+          <span className="errMsg__notAvailable"><ImLink className="icon" />Not Available</span>
         )}
         </p>
       </div>
       <div className="link__container">
       <p>
-        <FaLinkedinIn className="icon" />
+        
         {userLinkedin != "" ? (
-          userLinkedin
+          <span><FaLinkedinIn className="icon" />{userLinkedin}</span>
         ) : (
-          <span className="errMsg__notAvailable">Not Available</span>
+          <span className="errMsg__notAvailable"><FaLinkedinIn className="icon" />Not Available</span>
         )}
         </p>
       </div>
       <div className="link__container">
       <p>
-        <BsBuildingsFill className="icon" />
+        
         {userCompany != "" ? (
-          userCompany
+          <span>
+            <BsBuildingsFill className="icon" />
+            {userCompany}</span>
         ) : (
-          <span className="errMsg__notAvailable">Not Available</span>
+          <span className="errMsg__notAvailable"><BsBuildingsFill className="icon" />Not Available</span>
         )}
         </p>
       </div>
-    </>
+    </div>
   );
 };

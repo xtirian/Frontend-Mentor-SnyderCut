@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+
+import './followers.scss';
 
 const Followers = ({
   repos,
@@ -18,7 +20,7 @@ const Followers = ({
 
 
   return (
-    <div className='follow__container'>
+    <div className='follow__container contrast_container '>
       <span>Repos
         <p>{nRepos}</p>
       </span>

@@ -1,0 +1,10 @@
+@use '../../sass/mixin';
+
+.bio__container{
+  margin-top: 33px;
+
+  @include mixin.H4;
+
+
+}
+

@@ -34,9 +34,15 @@ ul {
   list-style-type: none;
 }
 
+
+//COLORS AND THEMES
+
 .theme-light {   
+  &, .contrast_container{
   @include mixin.theme-color(true);
-  
+  }
+
+
   .head-container {
     h1 {
       color: variables.$primaryColor;
@@ -51,6 +57,20 @@ ul {
   }
 }
 .theme-dark {
-  @include mixin.theme-color(false);    
+
+  &, .contrast_container{
+    @include mixin.theme-color(false);
+    }
+
   
+}
+
+.errMsg{
+  &__notAvailable{
+  filter: opacity(.5);
+  }
+
+  &__NoResult{
+    color: variables.$errMsg2 !important;
+  }
 }

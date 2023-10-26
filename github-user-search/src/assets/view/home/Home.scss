@@ -39,6 +39,8 @@
   margin: 36px auto 16px auto;
   padding:7px;
   border-radius: 1.5rem;
+
+  position: relative;
   
   svg {
     margin-left: 10px;
@@ -70,12 +72,23 @@
     background-color: transparent;
     border: none;
     @include mixin.H4;
-    min-width: 18.4rem;
+    width: 100%;
     outline: none;
     caret-color: variables.$buttonNoTheme;
   }
 
   
+  
+
+
+}
+
+.errMsg__NoResult{
+  @include mixin.H4;
+  font-weight: 700;
+  
+  position: absolute;
+  right: min(24%, 130px );
 
 
 
