@@ -1,0 +1,7 @@
+@use '../../sass/variables';
+
+.cards_infoContainer{
+  max-width: variables.$w-mobile;
+  margin: 0 auto;
+  padding: 3.3rem 2.4rem;
+}

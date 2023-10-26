@@ -42,7 +42,7 @@ ul {
       color: variables.$primaryColor;
     }
     button {
-      color: variables.$lightButton;
+      color: variables.$lightTextColor;
     }
   }
 
@@ -51,6 +51,9 @@ ul {
       color: variables.$buttonNoTheme;
     }
     
+  }
+  .icon{
+    color: variables.$lightTextColor
   }
 }
 

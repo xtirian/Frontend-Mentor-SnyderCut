@@ -8,12 +8,12 @@ import Sun from "/icon/icon-sun.svg";
 import Moon from "/icon/icon-moon.svg";
 
 //ICONS
-import { BsSearch } from "react-icons/bs";
+import { BsSearch,BsBuildingsFill } from "react-icons/bs";
+import Card from "../../components/card/Card";
 
 const Home = () => {
   const [theme, setTheme] = useState("light");
 
- 
   let [userInput, setUserInput] = useState("");
   let [userInfo, setUserInfo] = useState("");
   let [errMsgForm, setErrMsgForm] = useState("");
@@ -61,9 +61,7 @@ const Home = () => {
           </button>
         </div>
       </header>
-
       <form
-        action=""
         onSubmit={async (e) => {
           //Previne que o formulário dê refresh na página
           e.preventDefault();
@@ -98,6 +96,8 @@ const Home = () => {
           <button type="submit">Search</button>
         </label>
       </form>
+
+      <Card userData={userInfo} />
     </main>
   );
 };
