@@ -1,0 +1,48 @@
+@use '../../sass/variables';
+@use '../../sass/mixin';
+
+.profile__user{
+  color: #0079FF !important;
+}
+
+.profile__container{
+  display: flex;
+  gap: 20px;     
+  
+}
+
+.profile__infos{
+
+  .profile__name{
+    @include mixin.H3;    
+  }
+  .profile__user, .profile__acCreate{
+    @include mixin.H4;
+    font-weight: bold;
+    
+  }
+  
+  p{
+    margin-top: 5px;
+  }
+
+
+  @include mixin.profileQuery{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include mixin.tablet{
+    .profile__name{
+      @include mixin.H1;   
+      font-weight: bold; 
+      margin-bottom: 2px
+    }
+    .profile__user, .profile__acCreate{
+      @include mixin.H3;
+      
+    }
+  }
+}
+

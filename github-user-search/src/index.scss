@@ -1,0 +1,92 @@
+@use "./assets/sass/variables";
+@use "./assets/sass/mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+html {
+  font-size: 10px;
+  font-family: "Space Mono", monospace;
+  
+}
+
+#root, html, body{
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+//COLORS AND THEMES
+
+.theme-light {   
+  &, .contrast_container{
+  @include mixin.theme-color(true);
+  }
+  .head-container {
+    h1 {
+      color: variables.$primaryColor;
+    }
+    button {
+      color: variables.$lightTextColor;
+    }
+  }  
+  .follow__container{
+    p{
+      color: variables.$strongTextColor !important;
+    }
+  }
+  .icon{
+    color: variables.$lightTextColor
+  }
+  .container{
+    box-shadow: 0px 10px 50px #4B6A9B33
+  }
+}
+
+.theme-dark {
+  &, .contrast_container{
+    @include mixin.theme-color(false);
+    }  
+
+    .container{
+      box-shadow: 0px 10px 50px #00000033
+    }
+}
+.errMsg{
+  &__notAvailable{
+  filter: opacity(.5);
+  }
+
+  &__NoResult{
+    color: variables.$errMsg2 !important;
+  }
+}
+
+@include mixin.darkMode{
+  .contrast_container{
+    @include mixin.theme-color(false);
+    }  
+    .container{
+      box-shadow: 0px 10px 50px #00000033
+    }
+}
+
