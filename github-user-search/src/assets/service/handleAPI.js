@@ -3,7 +3,7 @@ export default class handleAPI {
     return new Promise((resolve, reject) => {
       //depois preciso corrigir o fetch, coloquei op place holder para testar o comportamento
       fetch(
-        /*`https://api.github.com/users/${user}`*/ `https://jsonplaceholder.typicode.com/posts/${user}`,
+        `https://api.github.com/users/${user}`,
         {
           method: "GET",
         }
@@ -26,7 +26,7 @@ export default class handleAPI {
 
   static ConsultAPI(user) {
     return fetch(
-      /*`https://api.github.com/users/${user}`*/ `https://jsonplaceholder.typicode.com/posts/${user}`,
+      `https://api.github.com/users/${user}`,
       {
         method: "GET",
       }

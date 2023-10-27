@@ -55,7 +55,7 @@ const Profile = ({ userImg, userName, userTag, userDate }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="profile__user">@{user}</span>
+            <span className="profile__user clickable">@{user}</span>
           </a>
         </div>
         <p className="profile__acCreate">Joined {date}</p>

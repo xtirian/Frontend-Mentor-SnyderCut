@@ -18,20 +18,21 @@ const Card = ({ userData }) => {
 
   return (
     <div className="cards_infoContainer container">
-      <img src="/Oval.jpg" alt="profileImg" className="image_card" />
+      <img src={user.avatar_url} alt="profileImg" className="image_card" />
       <Profile
-        userImg="/Oval.jpg"
-        userName="Matheus"
-        userTag="xtirian"
-        userDate={"2023-10-28T21:12:30Z"}
+        userImg={user.avatar_url}
+        userName={user.name}
+        userTag={user.login}
+        userDate={user.created_at}
       />
-      <Bio bioMsg="" />
-      <Followers repos="8" nFers="3938" nFing="9" />
+      <Bio bioMsg={user.bio} />
+
+      <Followers repos={user.public_repos} nFers={user.followers} nFing={user.following} />
       <Links 
-        city="RJ" 
-        blog =""
-        linkedin=""
-        company=""
+        city={user.location} 
+        blog ={user.blog}
+        twitter={user.twitter_username}
+        company={user.company}
       />
     </div>
   );

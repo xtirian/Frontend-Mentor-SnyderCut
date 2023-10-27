@@ -3,58 +3,57 @@ import React, { useEffect, useState } from "react";
 import './links.scss';
 
 //ICONS
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 import { ImLink } from "react-icons/im";
-import { FaLinkedinIn } from "react-icons/fa";
 import { BsBuildingsFill } from "react-icons/bs";
 
-export const Links = ({ city, blog, linkedin, company }) => {
+export const Links = ({ city, blog, twitter, company }) => {
   const [userCity, setUserCity] = useState(city);
   const [userBlog, setUserBlog] = useState(blog);
-  const [userLinkedin, setUserLinkedin] = useState(linkedin);
+  const [userTwitter, setUserTwitter] = useState(twitter);
   const [userCompany, setUserCompany] = useState(company);
 
   useEffect(() => {
     setUserCity(city);
     setUserBlog(blog);
-    setUserLinkedin(linkedin);
+    setUserTwitter(twitter);
     setUserCompany(company);
   }, [userCity, city]);
 
   return (
     <div className="links_grid">
-      <div className="link__container">
+      <div className="link__container link__container-1">
         <p>        
-        {userCity != "" ? (
+        {userCity != null ? (
           <span><FaLocationDot className="icon" />{userCity}</span>
         ) : (
           <span className="errMsg__notAvailable"><FaLocationDot className="icon" />Not Available</span>
         )}
         </p>
       </div>
-      <div className="link__container">
+      <div className="link__container link__container-2">
       <p>
         {userBlog != "" ? (
-          <span><ImLink className="icon" /> {userBlog}</span>
+          <span className="clickable" ><ImLink className="icon" /><a href={userBlog} target="_blank"> Click Here </a></span>
         ) : (
           <span className="errMsg__notAvailable"><ImLink className="icon" />Not Available</span>
         )}
         </p>
       </div>
-      <div className="link__container">
+      <div className="link__container link__container-3">
       <p>
         
-        {userLinkedin != "" ? (
-          <span><FaLinkedinIn className="icon" />{userLinkedin}</span>
+        {userTwitter != null ? (
+          <span><FaXTwitter className="icon" />{userTwitter}</span>
         ) : (
-          <span className="errMsg__notAvailable"><FaLinkedinIn className="icon" />Not Available</span>
+          <span className="errMsg__notAvailable"><FaXTwitter className="icon" />Not Available</span>
         )}
         </p>
       </div>
-      <div className="link__container">
+      <div className="link__container link__container-4">
       <p>
         
-        {userCompany != "" ? (
+        {userCompany != null ? (
           <span>
             <BsBuildingsFill className="icon" />
             {userCompany}</span>

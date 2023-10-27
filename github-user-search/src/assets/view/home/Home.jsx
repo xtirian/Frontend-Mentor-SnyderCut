@@ -21,7 +21,7 @@ const Home = () => {
   //setar o valor default que irá aparecer no inicio.
   let defaultUser = async () => {
     //APAGAR: depois preciso resetar para atender as regras de negócio
-    let result = await handleAPI.handleFetch("1");
+    let result = await handleAPI.handleFetch("Octocat");
     setUserInfo(result);
   };
   //Este Hook irá renderizar o usuário default quando a página inicia

@@ -41,8 +41,6 @@ ul {
   &, .contrast_container{
   @include mixin.theme-color(true);
   }
-
-
   .head-container {
     h1 {
       color: variables.$primaryColor;
@@ -50,21 +48,29 @@ ul {
     button {
       color: variables.$lightTextColor;
     }
+  }  
+  .follow__container{
+    p{
+      color: variables.$strongTextColor !important;
+    }
   }
-  
   .icon{
     color: variables.$lightTextColor
   }
+  .container{
+    box-shadow: 0px 10px 50px #4B6A9B33
+  }
 }
-.theme-dark {
 
+.theme-dark {
   &, .contrast_container{
     @include mixin.theme-color(false);
+    }  
+
+    .container{
+      box-shadow: 0px 10px 50px #00000033
     }
-
-  
 }
-
 .errMsg{
   &__notAvailable{
   filter: opacity(.5);
@@ -74,3 +80,13 @@ ul {
     color: variables.$errMsg2 !important;
   }
 }
+
+@include mixin.darkMode{
+  .contrast_container{
+    @include mixin.theme-color(false);
+    }  
+    .container{
+      box-shadow: 0px 10px 50px #00000033
+    }
+}
+

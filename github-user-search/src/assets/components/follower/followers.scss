@@ -1,7 +1,7 @@
-@use '../../sass/mixin';
-@use '../../sass/variables';
+@use "../../sass/mixin";
+@use "../../sass/variables";
 
-.follow__container{
+.follow__container {
   margin-top: 23px;
   padding: 18px 15px;
   display: grid;
@@ -10,15 +10,28 @@
   text-align: center;
   border-radius: 10px;
 
-  span{
+  span {
     font-size: 11px;
-    p{
+    p {
       @include mixin.H3;
-      color: variables.$strongTextColor;
       font-weight: 700;
-      margin-top: 8px ;
+      margin-top: 8px;
+    }
+  }
+
+  @include mixin.tablet {
+    .follow__container {
+      margin-top: 32px;
+      padding: 15px 32px;
+      gap: 82px;
+    }
+    span {
+      font-size: 13px;
+      p {
+        @include mixin.H2;
+        font-weight: 700;
+        margin-top: 1px;
+      }
     }
   }
 }
-
-

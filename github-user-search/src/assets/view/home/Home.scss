@@ -4,10 +4,18 @@
 .mainContainer {
   padding: 31px 0;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .head-container {
+  width: 100%;
   max-width: variables.$w-mobile;
+  @include mixin.tablet {
+    max-width: variables.$w-tablet;
+  }
   margin: 0 auto;
 
   display: flex;
@@ -32,41 +40,62 @@
 }
 
 .input-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: variables.$w-mobile;
+  max-width: variables.$w-mobile;  
   margin: 36px auto 16px auto;
-  padding:7px;
+  padding: 7px;
   border-radius: 1.5rem;
 
+  @include mixin.tablet {
+    max-width: variables.$w-tablet;
+    margin: 36px auto 24px auto;
+  }
+
   position: relative;
-  
+  @include mixin.tablet {
+    padding: 10px;
+  }
+
   svg {
     margin-left: 10px;
     color: variables.$buttonNoTheme;
     width: 2rem;
     height: 2rem;
+
+    @include mixin.tablet {
+      width: 2.2rem;
+      height: 2.2rem;
+      margin-left: 22px;
+      margin-right: 24px;
+    }
   }
-  button{
+  button {
     border: none;
     border-radius: 1rem;
     background-color: variables.$buttonNoTheme;
 
-    height: 5rem ;
+    height: 5rem;
     width: 26.8370607%;
     max-width: 106px;
 
-    color:variables.$pureWithe;
+    color: variables.$pureWithe;
     @include mixin.H4;
     font-weight: bold;
 
-    &:hover{
+    @include mixin.tablet {
+      @include mixin.H3;
+      font-weight: bold;
+    }
+
+    &:hover {
       background-color: variables.$buttonNoThemeHover;
     }
   }
 
-  input{    
+  input {
     margin-left: 8px;
     font-family: inherit;
     background-color: transparent;
@@ -75,21 +104,18 @@
     width: 100%;
     outline: none;
     caret-color: variables.$buttonNoTheme;
+
+    @include mixin.tablet {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+    }
   }
-
-  
-  
-
-
 }
 
-.errMsg__NoResult{
+.errMsg__NoResult {
   @include mixin.H4;
   font-weight: 700;
-  
+
   position: absolute;
-  right: min(24%, 130px );
-
-
-
+  right: min(24%, 130px);
 }

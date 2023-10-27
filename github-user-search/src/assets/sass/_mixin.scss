@@ -5,6 +5,11 @@
 @mixin H1 {
   font-size: 2.6rem;
   line-height: 3.8rem;
+
+}
+@mixin H2 {
+  font-size: 2.2rem;
+  line-height: 3.3rem;
 }
 
 @mixin H3 {
@@ -56,4 +61,10 @@
   @media screen and (min-width:840px) {
     @content;
   }
+}
+
+@mixin darkMode {
+    @media(prefers-color-scheme: dark){
+      @content;
+    }
 }
