@@ -15,7 +15,7 @@ const Bio = ({ bioMsg }) => {
         {content !== null ? (
           content
         ) : (
-          <span className="errMsg__notAvailable">Not Available</span>
+          <span className="errMsg__notAvailable">This profile has no bio</span>
         )}
       </p>
     </div>

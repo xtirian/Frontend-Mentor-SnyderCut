@@ -27,7 +27,7 @@ const Card = ({ userData }) => {
       />
       <Bio bioMsg={user.bio} />
 
-      <Followers repos={user.public_repos} nFers={user.followers} nFing={user.following} />
+      <Followers repos={user.public_repos} nFers={user.followers} nFing={user.following} user={user.login} />
       <Links 
         city={user.location} 
         blog ={user.blog}

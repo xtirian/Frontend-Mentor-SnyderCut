@@ -30,18 +30,10 @@ const Home = () => {
   useEffect(() => {
     if (typeof userInfo === "string") {
       defaultUser();
-      console.log(userInfo);
-      console.log("preenchido 1 vez");
-    } else {
-      console.log(userInfo);
-      console.log("Não preenchido novamente");
     }
   }, []);
 
-  //APAGAR: apenas para acompanhar as mudanças dos usuários
-  useEffect(() => {
-    console.log(userInfo);
-  }, [userInfo]);
+
 
   return (
     <main className={`mainContainer theme-${theme}`}>
