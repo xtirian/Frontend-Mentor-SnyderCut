@@ -6,7 +6,6 @@ const Profile = ({ userImg, userName, userTag, userDate }) => {
   let formatDate = (dateFunction) => {
     const d = new Date(dateFunction);
 
-    console.log(d);
     const monthList = [
       "Jan",
       "Feb",
@@ -23,11 +22,8 @@ const Profile = ({ userImg, userName, userTag, userDate }) => {
     ];
 
     let day = d.getDate();
-    console.log(day);
     let month = monthList[d.getMonth()];
-    console.log(month);
     let year = d.getFullYear();
-    console.log(year);
 
     return `${day} ${month} ${year}`;
   };
