@@ -1,11 +1,9 @@
 @use "./variables" as *;
 
-
 //TIPHOGRAPHY
 @mixin H1 {
   font-size: 2.6rem;
   line-height: 3.8rem;
-
 }
 @mixin H2 {
   font-size: 2.2rem;
@@ -24,33 +22,66 @@
   font-weight: 400;
 }
 
-@mixin theme-color( $light-theme: true){
+@mixin theme-color($light-theme: true) {
   @if $light-theme {
-    background-color:#f6f8ff;
-    .container{
+    background-color: #f6f8ff;
+    .container {
       background-color: $pureWithe;
     }
-    h1,button,h3,p,span,svg,input {
+    h1,
+    button,
+    h3,
+    p,
+    span,
+    svg,
+    input {
       color: $lightTextColor;
-    };
+    }
 
-    h2{
-      color: #2B3442
-    }    
-  } @else{
-    background-color:#141D2F;
-    h1,button,h2,h3,p,span,svg,input {
+    h2 {
+      color: #2b3442;
+    }
+    .head-container {
+      h1 {
+        color: $primaryColor;
+      }
+      button {
+        color: $lightTextColor;
+      }
+    }
+    .follow__container {
+      p {
+        color: $strongTextColor;
+      }
+    }
+    .icon {
+      color: $lightTextColor;
+    }
+    .container {
+      box-shadow: 0px 10px 50px #4b6a9b33;
+    }
+  } @else {
+    background-color: #141d2f;
+    h1,
+    button,
+    h2,
+    h3,
+    p,
+    span,
+    svg,
+    input {
       color: $pureWithe;
-    };
-    .container{
-      background-color: #1E2A47;
+    }
+    .container {
+      background-color: #1e2a47;
+      box-shadow: 0px 10px 50px #00000033;
     }
   }
 }
 
 //Queries
 
-@mixin tablet{
+@mixin tablet {
   @media screen and (min-width: 768px) {
     @content;
   }
@@ -58,13 +89,19 @@
 
 //SPECIAL COISAS
 @mixin profileQuery {
-  @media screen and (min-width:840px) {
+  @media screen and (min-width: 840px) {
     @content;
   }
 }
 
 @mixin darkMode {
-    @media(prefers-color-scheme: dark){
-      @content;
-    }
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+@mixin lightMode {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
 }

@@ -24,7 +24,7 @@ export default class handleAPI {
     });
   }
 
-  static ConsultAPI(user) {
+  static async ConsultAPI(user) {
     return fetch(
       `https://api.github.com/users/${user}`,
       {

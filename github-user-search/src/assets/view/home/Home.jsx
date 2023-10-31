@@ -14,6 +14,7 @@ import Card from "../../components/card/Card";
 const Home = () => {
   const [theme, setTheme] = useState("light");
 
+
   let [userInput, setUserInput] = useState("");
   let [userInfo, setUserInfo] = useState("");
   let [errMsgForm, setErrMsgForm] = useState("");
@@ -32,6 +33,18 @@ const Home = () => {
       defaultUser();
     }
   }, []);
+
+  useEffect(() => {
+    const darkThemeMatch = window.matchMedia("(prefers-color-scheme:dark)");
+
+    if(darkThemeMatch.matches){
+      setTheme("dark");
+    } else{
+       setTheme("light");
+    } 
+    
+  }, [])
+  
 
 
 
