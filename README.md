@@ -6,6 +6,7 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 ## Table of projects
 
+- [Typemaster pre-launch landing page](#typemaster-pre-launch)
 - [Github User Search](#github)
 - [Art Gallery](#art-gallery)
 - [Developer Portfolio](#developer-portfolio)
@@ -17,14 +18,23 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
 
+## Typemaster pre-launch
+
+Landing page for presentation of Typemaster Keyboard
+
+Technologies: React, ViteJS, Typescript, Sass
+
+- Solution URL: [ Git Repository]() //Not done yet
+- Live Site URL: [ Typemaster pre-launch]() //Not done yet
+
 ## Github
 
 Project using the Github User search API
 
 Technologies: React, ViteJS, Typescript, Sass
 
-- Solution URL: [ Git Repository]() //Not done yet
-- Live Site URL: [ Modern Art]() //Not done yet
+- Solution URL: [ Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/github-user-search)
+- Live Site URL: [ GitHub User App](https://github-user-search-pi-fawn.vercel.app/) 
 
 ## Art Gallery
 
