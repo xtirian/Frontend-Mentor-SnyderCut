@@ -1,0 +1,34 @@
+@use "../../sass/mixin";
+@use "../../sass/var" as *;
+
+%button {
+  height: 58px;
+  width: 175px;
+  border-radius: 8px;
+  @include mixin.typo-mobile-body;
+  text-transform: uppercase;
+  border: none
+}
+
+.button-orange {
+  @extend %button;
+
+  background-color: $theme-color;
+  color: $pure-white;
+
+  &:hover {
+    background-color: $theme-color-hover;
+  }
+}
+
+.button-blue {
+  @extend %button;
+
+  background-color: $pattern-color;
+  color: $title-color;
+
+  &:hover {
+    background-color: $title-color;
+    color: $pure-white;
+  }
+}
