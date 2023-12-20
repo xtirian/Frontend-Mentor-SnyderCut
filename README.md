@@ -24,7 +24,7 @@ Landing page for presentation of Typemaster Keyboard
 
 Technologies: React, ViteJS, Typescript, Sass
 
-- Solution URL: [ Git Repository]() //Not done yet
+- Solution URL: [ Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/typemaster-keyboard-landing-page) //Not done yet
 - Live Site URL: [ Typemaster pre-launch]() //Not done yet
 
 ## Github
