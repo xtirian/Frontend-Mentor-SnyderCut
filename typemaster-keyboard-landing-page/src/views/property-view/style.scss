@@ -45,6 +45,9 @@
     padding-top: 142px;
 
     width: $container-tablet;
+    flex-wrap: wrap;
+
+    flex-direction: row;
 
     
     row-gap: 72px;
@@ -55,6 +58,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 44.5324881%;
+
 
     h3, p {
       text-align: left;
@@ -72,7 +76,6 @@
     width: $container-desktop;
     max-width: $container-desktop-max;
 
-    flex-direction: row;
     justify-content: center;
   }
 

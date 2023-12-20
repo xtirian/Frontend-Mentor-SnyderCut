@@ -99,12 +99,7 @@
 
     position: relative;
 
-    width: $container-desktop;
-
-    .pattern_hero{
-      top:0;
-      right: -270px;
-    }
+    width: $container-desktop;    
   }
 
   .hero_banner-content {
@@ -126,10 +121,24 @@
     .hero_banner-button_grid {
       justify-content: flex-start;
       gap: 40px;
-
     }
 
   }
+
+  .hero_banner-image{
+    height: 480px;
+    width: 540px;
+
+    img{
+      left: 0;
+    }
+
+    .pattern_hero{
+      top:0;
+      right: -280px
+    }
+  }
+
 
   
   

@@ -8,7 +8,7 @@ const Button = ({buttonType = 1} : buttonInterface) => {
   
   return (
     <button type='button' className={`button-container ${buttonType == 2? "button-blue": "button-orange" }`}>
-      Pré-order now
+      Pre-order now
     </button>
   )
 }
