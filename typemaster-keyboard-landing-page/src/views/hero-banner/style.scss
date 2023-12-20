@@ -1,0 +1,137 @@
+@use "../../sass/mixin";
+@use "../../sass/var" as *;
+
+.hero_banner-container {
+  margin: 0 auto;
+  width: $container-mobile;
+  padding-top: 64px;
+
+}
+
+.hero_banner-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  h1 {
+    @include mixin.typo-mobile-H1;
+    color: $title-color;
+  }
+
+  p {
+    @include mixin.typo-mobile-body;
+    color: $text-color;
+  }
+
+  .hero_banner-button_grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      @include mixin.typo-mobile-body;
+      color: $text-color;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.hero_banner-image {
+  position: relative;
+  margin-top: 64px;
+  height: 331px;
+
+  img {
+    border-radius: 20px;
+    position: absolute;
+    left: 6.4%;
+    width: 99.2%;
+    height: 331px;
+    object-fit: cover;
+  }
+}
+
+@include mixin.query-tablet {
+  .hero_banner-container {
+    display: flex;
+    align-items: center;
+    padding-top: 62px;
+    gap: 69px;
+
+    width: $container-tablet;
+  }
+
+  .hero_banner-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+    max-width: 445px;
+    width: 50.6726457%;
+    min-width: 339px;
+  }
+
+  .hero_banner-image {
+    position: relative;
+    height: 425px;
+    width: 478px;
+    margin-top: 0;
+
+    img {
+      border-radius: 20px;
+      position: absolute;
+      left: 6.4%;
+      width: 100%;
+      min-width: 478px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@include mixin.query-desktop {
+  .hero_banner-container {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 83px;
+    gap: 125px;
+
+    position: relative;
+
+    width: $container-desktop;
+
+    .pattern_hero{
+      top:0;
+      right: -270px;
+    }
+  }
+
+  .hero_banner-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+    max-width: 445px;
+    width: 40.0900901%;
+    min-width: 339px;
+
+    h1{
+      @include mixin.typo-desk-H1;
+    }
+
+    p{
+      padding-right: 20px;
+    }
+
+    .hero_banner-button_grid {
+      justify-content: flex-start;
+      gap: 40px;
+
+    }
+
+  }
+
+  
+  
+
+}

@@ -1,0 +1,91 @@
+@use "../../sass//var" as *;
+@use "../../sass//mixin";
+
+//TODO: LEMBRAR DE COLOCAR O WRAP PARA MODIFICAR AUTOMATICAMENTE
+.propert_view-container {
+  padding-top: 111px;
+
+  width: $container-mobile;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 64px;
+}
+
+.card_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 24px;
+
+  img {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    @include mixin.typo-mobile-H3;
+    color: $title-color;
+    text-align: center;
+  }
+
+  p {
+    @include mixin.typo-mobile-body;
+    color: $text-color;
+    text-align: center;
+  }
+}
+
+@include mixin.query-tablet {
+  .propert_view-container {
+    padding-top: 142px;
+
+    width: $container-tablet;
+
+    
+    row-gap: 72px;
+    gap: 69px;
+  }
+
+  .card_container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 44.5324881%;
+
+    h3, p {
+      text-align: left;
+    }
+  }
+
+}
+
+@include mixin.query-desktop {
+
+  .propert_view-container {
+    padding-top: 168px;
+    gap: 30px;
+
+    width: $container-desktop;
+    max-width: $container-desktop-max;
+
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card_container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 21.6216216%;
+    max-width: 255px;
+
+    h3, p {
+      text-align: left;
+    }
+  }
+
+
+}
