@@ -1,22 +1,41 @@
-@use '../../sass/mixin';
-@use '../../sass/var' as *;
+@use "../../sass/mixin";
+@use "../../sass/var" as *;
 
-.header_container{
+.header_container {
   padding-top: 23px;
 
-  header{
-    margin: 0 auto;  
-    width: $container-mobile; 
+  header {
+    margin: 0 auto;
+    width: $container-mobile;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    img{
+    img {
       height: 40px;
       width: 40px;
     }
-
   }
 }
 
+@include mixin.query-tablet {
+  .header_container {
+    padding-top: 40px;
+
+    header {
+      width: $container-tablet;
+    }
+  }
+}
+
+@include mixin.query-desktop {
+  .header_container {
+    padding-top: 40px;
+
+    header {
+      width: $container-desktop;
+      max-width: $container-desktop-max ;
+    }
+  }
+}
