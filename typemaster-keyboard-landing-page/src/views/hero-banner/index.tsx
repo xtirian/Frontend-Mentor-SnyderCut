@@ -5,6 +5,8 @@ import Button from "@/components/button";
 const HeroBanner = () => {
   return (
     <section className="hero_banner-container">
+
+      <div className="pattern_hero"></div>
       <div className="hero_banner-content">
         <h1>Typermaster Keyboard</h1>
         <p>
