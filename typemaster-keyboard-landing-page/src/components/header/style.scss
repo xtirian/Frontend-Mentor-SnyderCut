@@ -1,0 +1,22 @@
+@use '../../sass/mixin';
+@use '../../sass/var' as *;
+
+.header_container{
+  padding-top: 23px;
+
+  header{
+    margin: 0 auto;  
+    width: $container-mobile; 
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+      height: 40px;
+      width: 40px;
+    }
+
+  }
+}
+

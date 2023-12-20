@@ -10,7 +10,9 @@ $pure-white: #FFFFFF;
 
 
 // CONTAINERS
-$container-desktop: 1110px;
-$container-tablet: 689px;
-$container-mobile: 327px;
+//TODO LEMBRAR DE COLOCAR O DESKTO WIDTH E MAX WIDTH COMO 1440PX
+$container-desktop-max:1440px;
+$container-desktop: 77.0833333%;
+$container-tablet: 89.7135417%;
+$container-mobile: 87.2%;
 

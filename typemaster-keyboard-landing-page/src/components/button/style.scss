@@ -2,12 +2,23 @@
 @use "../../sass/var" as *;
 
 %button {
-  height: 58px;
-  width: 175px;
+  height: 48px;
+  width: 150px;
   border-radius: 8px;
   @include mixin.typo-mobile-body;
   text-transform: uppercase;
   border: none
+}
+
+@include mixin.query-tablet{
+  %button {
+    height: 58px;
+    width: 175px;
+    border-radius: 8px;
+    @include mixin.typo-mobile-body;
+    text-transform: uppercase;
+    border: none
+  }
 }
 
 .button-orange {
