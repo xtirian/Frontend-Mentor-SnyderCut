@@ -18,14 +18,24 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
 
+## Frontend quiz app
+
+Quizz app about frontend and web development.
+
+Technologies: React, ViteJS, Typescript, Sass
+
+- Solution URL: [ Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/typemaster-keyboard-landing-page) 
+- Live Site URL: [ Typemaster pre-launch](https://typemaster-keyboard-landing-page-3hcidephw-xtirian.vercel.app/) 
+
+
 ## Typemaster pre-launch
 
 Landing page for presentation of Typemaster Keyboard
 
 Technologies: React, ViteJS, Typescript, Sass
 
-- Solution URL: [ Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/typemaster-keyboard-landing-page) //Not done yet
-- Live Site URL: [ Typemaster pre-launch]() //Not done yet
+- Solution URL: [ Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/typemaster-keyboard-landing-page) 
+- Live Site URL: [ Typemaster pre-launch](https://typemaster-keyboard-landing-page-3hcidephw-xtirian.vercel.app/) 
 
 ## Github
 
