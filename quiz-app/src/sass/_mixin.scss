@@ -1,0 +1,52 @@
+@use './var' as *;
+
+@mixin display{
+  /* Display */
+  font-size: 144px;
+  font-weight: 500;
+  line-height: 100%; /* 144px */
+}
+
+@mixin hl-b{ // It's hl with bold
+  /* Heading L (Bold) */
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 100%; /* 64px */
+} 
+
+@mixin hl{
+
+  /* Heading L (Regular) */
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 100%; /* 64px */
+}
+
+@mixin hm{
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 120%; /* 43.2px */
+}
+
+@mixin hs{
+  font-size: 28px;
+   font-weight: 500;
+  line-height: 100%; /* 28px */
+}
+ 
+@mixin bm{
+
+  /* Body M */
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+
+@mixin bm-i{ //it's bm with italic
+
+  /* Body S */
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
