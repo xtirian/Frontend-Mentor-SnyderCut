@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import ToggleButton from "../button-toggle";
+import './style.scss';
 
 interface headerTypes {
   headerIcon?: String;
@@ -7,18 +9,26 @@ interface headerTypes {
 
 const Header = ({ headerIcon, callChangeTheme }: headerTypes) => {
   
+  const [HeaderType, setHeaderType] = useState<string|undefined>(undefined)
+
+  useEffect(() => {
+    if(headerIcon){
+      setHeaderType(headerIcon?HeaderType:undefined)
+    }
+  }, [headerIcon])
+  
 
   const headerSet = () => {
     if (headerIcon) {
       return (
-        <header>
-          <img src="" alt="" />
+        <header className="header-container">
+          <img src={headerIcon?HeaderType:undefined} alt="icon escolhido" />
           <ToggleButton changeTheme={callChangeTheme} />
         </header>
       );
     } else {
       return (
-        <header>
+        <header className="header-container">
           <ToggleButton changeTheme={callChangeTheme}  />
         </header>
       );
