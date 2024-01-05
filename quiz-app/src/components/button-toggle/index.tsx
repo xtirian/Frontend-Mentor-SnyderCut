@@ -22,7 +22,7 @@ const ToggleButton = ({ changeTheme }: ToggleButtonType) => {
 
   return (
     <div className="toggle_button-container">
-      <img src="/icon-sun-dark.svg" alt="icon-sun" />
+      <img src={`/icon-sun-${actualTheme=="dark"?"light":"dark"}.svg`} alt="icon-sun" />
       <div
         className={`toggle_button-button ${isToggled ? "dark" : "light"} ${
           isToggled !== undefined ? "toggle_animation" : ""
@@ -41,7 +41,7 @@ const ToggleButton = ({ changeTheme }: ToggleButtonType) => {
           }
         }}
       ></div>
-      <img src="/icon-moon-dark.svg" alt="" />
+      <img src={`/icon-moon-${actualTheme=="dark"?"light":"dark"}.svg`} alt="" />
     </div>
   );
 };
