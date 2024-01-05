@@ -1,0 +1,28 @@
+@use '../../sass/var' as *;
+
+
+.title {
+  width: 87.2%;
+  margin: 0 auto;
+  padding-top: 32px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 100%; /* 40px */
+    position: relative;
+    span {
+      margin-top: 8px;
+      font-weight: 500;
+    }
+  }
+
+  p {
+    margin-top: 16px;
+    color: $grey-navy;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
