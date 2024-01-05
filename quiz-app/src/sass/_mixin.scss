@@ -50,3 +50,17 @@
   font-weight: 400;
   line-height: 150%; /* 18px */
 }
+
+//THEME
+@mixin darkmode{
+  @media (prefers-color-scheme: dark){
+    @content;
+  }
+}
+
+//QUERY
+@mixin tablet-query{
+  @media screen and (min-width: $base-tablet){
+    @content;
+  }
+}

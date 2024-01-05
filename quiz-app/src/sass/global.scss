@@ -1,9 +1,12 @@
+@use './mixin';
+@use './var' as *;
+
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
-// THEME CHANGE
 
-@media (prefers-color-scheme: dark) {
-}
+
+// THEME CHANGE
 
 *, *::after,*::before{
   padding: 0;
@@ -19,6 +22,10 @@ html{
 body{
   height: 100dvh;
   overflow: hidden;
+}
+
+#root{
+  height: 100%;
 }
 
 a{
