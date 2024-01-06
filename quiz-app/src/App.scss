@@ -11,20 +11,27 @@
   width: 100%;
 }
 
+.app-container{
+  position: relative;
+}
+
 .app-container.light {
   height: 100%;
   background-color: $light-grey;
+  color: $dark-navy;
 }
 
 .app-container.light::before {
   @extend %after_extent;
   background-image: url("/ellipse_pattern.png");
   z-index: 0;
+  background-repeat: no-repeat;
 }
 
 .app-container.dark {
   height: 100%;
   background-color: $dark-navy;
+  color: $pure-white;
 }
 
 .app-container.dark::before {
@@ -32,4 +39,5 @@
 
   z-index: 0;
   background-image: url("/ellipse_pattern_dark.svg");
+  background-repeat: no-repeat;
 }

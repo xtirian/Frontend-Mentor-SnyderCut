@@ -1,47 +1,38 @@
-import { useEffect, useState } from 'react'
-import Header from './components/header/index.tsx'
-import { handleTheme } from './service/handleTheme.ts'
-import './App.scss'
+import { useState } from "react";
+import Header from "./components/header/index.tsx";
+import "./App.scss";
+import { QuizGridTitle } from "./views/quizz-grid-title.view.tsx";
+import { HandleTheme } from "./services/handleTheme.ts";
 
 function App() {
+  //HANDLE SUBJECT OF THE QUIZZ
 
+  //START THE GAME
+  const [isStarted, setIsStarted] = useState(false);
 
+  //TO DEFINE THE SUBJECT OF THE GAME
+  const [subject, setSubject] = useState<string | undefined>(undefined);
 
   const imgUrl = [
-    'icon-accessibility.svg',
-    'icon-css.svg',
-    'icon-html.svg',
-    'icon-js.svg'
-  ]
+    "icon-accessibility.svg",
+    "icon-css.svg",
+    "icon-html.svg",
+    "icon-js.svg",
+  ];
 
-  const [mainTheme, setMainTheme] = useState<String>('light')
+ 
 
-  useEffect(() => {
+  const {theme} = HandleTheme.useTheme()
 
-    setMainTheme(handleTheme.getPreferredTheme())
   
-    
-  }, [])
 
-  function changeTheme(newTheme:string){
-    setMainTheme(newTheme)
-    handleTheme.setStoredTheme(newTheme);
-  }
-  
-  /*
-  TODO:
-  1 - refazer a lógica do theme
-  2 - o theme vai ser tratado no App.tsx
-  3- cada componentirá herdar este theme do App.tsx, pois esta é a forma de fazer usando o useState e alterar a classe do container maior de toda a aplicação
- */
-  
 
   return (
-    <section className={`app-container ${mainTheme}`}>
-    <Header callChangeTheme={changeTheme} />
-      <h1>OK</h1>
+    <section className={`app-container ${theme}`}>
+      <Header />
+      <QuizGridTitle />
     </section>
-  )
+  );
 }
 
-export default App
+export default App;

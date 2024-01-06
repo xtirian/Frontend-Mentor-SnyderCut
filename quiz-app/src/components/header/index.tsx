@@ -4,10 +4,9 @@ import './style.scss';
 
 interface headerTypes {
   headerIcon?: String;
-  callChangeTheme: Function
 }
 
-const Header = ({ headerIcon, callChangeTheme }: headerTypes) => {
+const Header = ({ headerIcon }: headerTypes) => {
   
   const [HeaderType, setHeaderType] = useState<string|undefined>(undefined)
 
@@ -23,13 +22,13 @@ const Header = ({ headerIcon, callChangeTheme }: headerTypes) => {
       return (
         <header className="header-container">
           <img src={headerIcon?HeaderType:undefined} alt="icon escolhido" />
-          <ToggleButton changeTheme={callChangeTheme} />
+          <ToggleButton />
         </header>
       );
     } else {
       return (
         <header className="header-container">
-          <ToggleButton changeTheme={callChangeTheme}  />
+          <ToggleButton/>
         </header>
       );
     }

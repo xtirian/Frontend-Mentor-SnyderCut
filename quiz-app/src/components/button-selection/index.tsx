@@ -1,3 +1,4 @@
+import { HandleTheme } from "../../services/handleTheme";
 import "./style.scss";
 
 interface ButtonSelectionType {
@@ -7,8 +8,13 @@ interface ButtonSelectionType {
 }
 
 export const ButtonSelectionTitle = ({ image, content, callBack }: ButtonSelectionType) => {
+
+  const {theme} = HandleTheme.useTheme()
+
+
+
   return (
-    <div className="button_selection-container" onClick={() => callBack(content)}>
+    <div className={`button_selection-container ${theme}`} onClick={() => callBack(content)}>
       <div className={`button_selection-image-container ${content}`}>
         <img src={`/${image}`} alt="" />
       </div>

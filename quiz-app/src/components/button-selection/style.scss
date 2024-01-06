@@ -1,11 +1,11 @@
 @use "../../sass/var" as *;
+@use "../../sass/mixin";
 
-.button_selection-container {
+%button_container {
   position: relative;
   z-index: 1;
 
   border-radius: 12px;
-  background: $pure-white;
   box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
 
   display: flex;
@@ -16,14 +16,22 @@
   width: 100%;
   margin: 0 auto;
 
-  
-
   &:hover {
     border: 3px solid $purple;
 
     transition: ease-in-out;
     transition-duration: 0.15s;
   }
+}
+
+.button_selection-container.light {
+  @extend %button_container;
+  background-color: $pure-white;
+}
+
+.button_selection-container.dark {
+  @extend %button_container;
+  background-color: $navy;
 }
 
 .button_selection-image-container.HTML {

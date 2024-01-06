@@ -1,4 +1,7 @@
-export class handleTheme{
+import { useContext } from "react";
+import { ThemeContext } from "./themeContext";
+
+export class HandleTheme{
   static getPreferredTheme = (): string => {
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const preferredTheme = prefersDarkMode ? 'dark' : 'light';
@@ -24,5 +27,14 @@ export class handleTheme{
     return;
   };
 
+  static useTheme = () =>{
+
+    const context = useContext(ThemeContext)
+
+  if(!context){
+    throw new Error('error with the useTheme')
+  }
+  return context;
+  }
   
 }

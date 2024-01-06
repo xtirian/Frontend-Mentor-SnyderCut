@@ -1,47 +1,66 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./style.scss";
-import { handleTheme } from "../../service/handleTheme";
+import { HandleTheme } from "../../services/handleTheme";
+import { ThemeContext } from "../../services/themeContext";
 
-interface ToggleButtonType {
-  changeTheme: Function;
-}
 
-const ToggleButton = ({ changeTheme }: ToggleButtonType) => {
-  const [actualTheme, setActualTheme] = useState<String | null>(
-    handleTheme.getStoredTheme()
-  );
+const ToggleButton = () => {
+  const context = useContext(ThemeContext);
+
+  if (!context) {
+    return null;
+  }
+
+  const { theme, setTheme } = context;
 
   const [isToggled, setIsToggled] = useState<boolean | undefined>(undefined);
 
+  // muda o design inicial do botão caso o tema seja dark
   useEffect(() => {
-    const getTheme = handleTheme.getStoredTheme();
+    const getTheme = HandleTheme.getStoredTheme();
     if (getTheme == "dark") {
       setIsToggled(true);
     }
   }, []);
 
+  useEffect(() => {
+    // if theme is light, its return false and set to dark. pretty easy
+    setIsToggled(theme === "dark");
+  }, [theme]);
+
+  useEffect(() => {
+    // took of the setTheme from the onclick function and put here in the isToggle useEffect because was creating a conflict
+    if (isToggled) {
+      setTheme("dark");
+    }
+
+    if (!isToggled) {
+      setTheme("light");
+    }
+  }, [isToggled]);
+
+  /*const [actualTheme, setActualTheme] = useState<String | null>(
+    HandleTheme.getStoredTheme()
+  );*/
+
   return (
     <div className="toggle_button-container">
-      <img src={`/icon-sun-${actualTheme=="dark"?"light":"dark"}.svg`} alt="icon-sun" />
+      <img
+        src={`/icon-sun-${theme == "dark" ? "light" : "dark"}.svg`}
+        alt="icon-sun"
+      />
       <div
         className={`toggle_button-button ${isToggled ? "dark" : "light"} ${
           isToggled !== undefined ? "toggle_animation" : ""
         }`}
         onClick={() => {
           setIsToggled(!isToggled);
-
-          if (actualTheme === "dark") {
-            setActualTheme("light");
-            changeTheme("light");
-          }
-
-          if (actualTheme === "light") {
-            setActualTheme("dark");
-            changeTheme("dark");
-          }
         }}
       ></div>
-      <img src={`/icon-moon-${actualTheme=="dark"?"light":"dark"}.svg`} alt="" />
+      <img
+        src={`/icon-moon-${theme == "dark" ? "light" : "dark"}.svg`}
+        alt=""
+      />
     </div>
   );
 };
