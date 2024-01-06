@@ -2,6 +2,9 @@ import { ReactNode, createContext, useState } from "react";
 
 //START SUBJECT CONTEXT
 interface StartSubjectContextProp {
+  // CHENGE THE IS STARTED TO STATUS
+  // Because since there is a 3rd screen for the results
+  // i'll create a context so it render a 3rd view when finish the test
   isStarted: boolean;
   setIsStarted: () => void;
 }
@@ -61,3 +64,31 @@ export const SubjectProvider = ({ children }: SubjectProviderProps) => {
     </SubjectContext.Provider>
   );
 };
+
+interface questionNumberProps{
+  question: number,
+  setQuestion: (question:number) => void
+}
+
+export const QuestionNumberContext=createContext<questionNumberProps|undefined>(undefined)
+
+
+export const QuestionNumberProvider = ({children}:SubjectProviderProps) => {
+
+const [questionNumber, setQuestionNumber] = useState<number>(0)
+
+function setNumber(x:number){
+
+  setQuestionNumber(x)
+  
+}
+
+return <QuestionNumberContext.Provider value={{
+  question: questionNumber,
+  setQuestion:setNumber
+}}>
+  {children}
+</QuestionNumberContext.Provider>
+
+
+}
