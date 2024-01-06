@@ -1,6 +1,6 @@
 import "./style.scss";
 
-const TitleContainer = () => {
+export const TitleContainer = () => {
   return (
     <div className="title">
       <h1>
@@ -12,4 +12,22 @@ const TitleContainer = () => {
   );
 };
 
-export default TitleContainer;
+interface AnswerType{
+  questionNumber: number
+  questionTotal: number
+  title: string
+}
+
+export const QuestionContainer = ({questionNumber, questionTotal, title}: AnswerType) => {
+
+  return (
+    <div className="title">
+      <p className="question_number">Question {questionNumber +1} of {questionTotal}</p>
+      <h2 className="question-title">
+        {title}
+      </h2>     
+    </div>
+  )
+
+}
+
