@@ -1,4 +1,4 @@
-import TitleContainer from "../../components/title";
+import {TitleContainer} from "../../components/title";
 import { ButtonSelectionTitle } from "../../components/button-selection";
 
 import "./style.scss";
