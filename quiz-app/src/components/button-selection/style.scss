@@ -1,0 +1,43 @@
+@use "../../sass/var" as *;
+
+.button_selection-container {
+  position: relative;
+  z-index: 1;
+
+  border-radius: 12px;
+  background: $pure-white;
+  box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+  margin: 0 auto;
+
+  
+
+  &:hover {
+    border: 3px solid $purple;
+
+    transition: ease-in-out;
+    transition-duration: 0.15s;
+  }
+}
+
+.button_selection-image-container.HTML {
+  background-color: #fff1e9;
+}
+
+.button_selection-image-container.CSS {
+  background-color: #e0fdef;
+}
+
+.button_selection-image-container.JavaScript {
+  background-color: #ebf0ff;
+}
+
+.button_selection-image-container.Accessibility {
+  background-color: #f6e7ff;
+}
