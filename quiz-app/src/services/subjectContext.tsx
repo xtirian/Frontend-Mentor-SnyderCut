@@ -65,30 +65,60 @@ export const SubjectProvider = ({ children }: SubjectProviderProps) => {
   );
 };
 
-interface questionNumberProps{
-  question: number,
-  setQuestion: (question:number) => void
+// SET QUESTION NUMBER OF THE ACTUAL QUESTION OPENED IN THE SCREEN
+
+interface questionNumberProps {
+  question: number;
+  setQuestion: (question: number) => void;
 }
 
-export const QuestionNumberContext=createContext<questionNumberProps|undefined>(undefined)
+export const QuestionNumberContext = createContext<
+  questionNumberProps | undefined
+>(undefined);
 
+export const QuestionNumberProvider = ({ children }: SubjectProviderProps) => {
+  const [questionNumber, setQuestionNumber] = useState<number>(0);
 
-export const QuestionNumberProvider = ({children}:SubjectProviderProps) => {
+  function setNumber(x: number) {
+    setQuestionNumber(x);
+  }
 
-const [questionNumber, setQuestionNumber] = useState<number>(0)
+  return (
+    <QuestionNumberContext.Provider
+      value={{
+        question: questionNumber,
+        setQuestion: setNumber,
+      }}
+    >
+      {children}
+    </QuestionNumberContext.Provider>
+  );
+};
 
-function setNumber(x:number){
+// CONTROL THE POINTS OF THE USER AT THE QUESTIONARY
 
-  setQuestionNumber(x)
-  
+interface pointsContext {
+  points: number;
+  setPoints: () => void;
 }
 
-return <QuestionNumberContext.Provider value={{
-  question: questionNumber,
-  setQuestion:setNumber
-}}>
-  {children}
-</QuestionNumberContext.Provider>
+export const PointsContext = createContext<pointsContext|undefined>(undefined);
 
+export const PointsProvider = ({ children }: SubjectProviderProps) => {
+  const [actualPoints, setActualPoints] = useState<number>(0);
 
-}
+  function increasePoints() {
+    setActualPoints(actualPoints + 1);
+  }
+
+  return (
+    <PointsContext.Provider
+      value={{
+        points: actualPoints,
+        setPoints: increasePoints,
+      }}
+    >
+      {children}
+    </PointsContext.Provider>
+  );
+};
