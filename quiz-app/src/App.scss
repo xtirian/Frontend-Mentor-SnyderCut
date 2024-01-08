@@ -5,6 +5,7 @@
 %after_extent{
   content: "";
   position: fixed;
+  z-index: 0;
   top: 0;
   left: 0;
   height: 100%;
@@ -24,7 +25,6 @@
 .app-container.light::before {
   @extend %after_extent;
   background-image: url("/ellipse_pattern.png");
-  z-index: 0;
   background-repeat: no-repeat;
 }
 
@@ -37,7 +37,6 @@
 .app-container.dark::before {
   @extend %after_extent;
 
-  z-index: 0;
   background-image: url("/ellipse_pattern_dark.svg");
   background-repeat: no-repeat;
 }
