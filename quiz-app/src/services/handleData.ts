@@ -1,5 +1,10 @@
 import { useContext } from "react";
-import { QuestionNumberContext, StartSubjectContext, SubjectContext } from "./subjectContext";
+import {
+  PointsContext,
+  QuestionNumberContext,
+  StartSubjectContext,
+  SubjectContext,
+} from "./subjectContext";
 
 export interface DataTypes {
   title: string;
@@ -30,18 +35,14 @@ export class HandleData {
     return context;
   }
 
-  static setQuestionNumberContext(actualQuestion:number) {
-    const context = useContext(QuestionNumberContext);   
+  static setQuestionNumberContext(actualQuestion: number) {
+    const context = useContext(QuestionNumberContext);
 
     if (!context) {
       throw new Error("error with the Subject Content");
     }
 
-    context.setQuestion(actualQuestion)
-
-    console.log(context)
-
-    
+    context.setQuestion(actualQuestion);
   }
 
   static getQuestionNumberContext() {
@@ -51,11 +52,18 @@ export class HandleData {
       throw new Error("error with the Subject Content");
     }
 
-    return context
-
-    
+    return context;
   }
 
+  static getPointsContext(){
+    const context = useContext(PointsContext);
+
+    if (!context) {
+      throw new Error("error with the Subject Content");
+    }
+
+    return context;
+  }
 
   static async getData() {
     const response = await fetch("../../data/data.json");

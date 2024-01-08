@@ -10,8 +10,15 @@
   gap: 8px;
   align-self: stretch;
   border-radius: 50px;
-  background: $pure-white;  
+}
 
+.progress_bar-container.light{
+  background: $pure-white;  
+  
+}
+
+.progress_bar-container.dark{
+  background: $navy;  
 
 }
 

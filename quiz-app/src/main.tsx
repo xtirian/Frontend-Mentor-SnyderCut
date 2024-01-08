@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import "./sass/global.scss";
 import { ThemeProvider } from "./services/themeContext.tsx";
 import {
+  PointsProvider,
   QuestionNumberProvider,
   StartSubjectProvider,
   SubjectProvider,
@@ -14,9 +15,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ThemeProvider>
       <StartSubjectProvider>
         <SubjectProvider>
-          <QuestionNumberProvider>
-            <App />
-          </QuestionNumberProvider>
+          <PointsProvider>
+            <QuestionNumberProvider>
+              <App />
+            </QuestionNumberProvider>
+          </PointsProvider>
         </SubjectProvider>
       </StartSubjectProvider>
     </ThemeProvider>

@@ -23,10 +23,7 @@ const ToggleButton = () => {
     }
   }, []);
 
-  useEffect(() => {
-    // if theme is light, its return false and set to dark. pretty easy
-    setIsToggled(theme === "dark");
-  }, [theme]);
+ 
 
   useEffect(() => {
     // took of the setTheme from the onclick function and put here in the isToggle useEffect because was creating a conflict

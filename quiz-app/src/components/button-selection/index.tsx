@@ -1,6 +1,9 @@
 import { HandleData } from "../../services/handleData";
 import { HandleTheme } from "../../services/handleTheme";
+import { checkAnswer } from "../../services/answerHandle";
+import { useState } from "react";
 import "./style.scss";
+
 
 interface ButtonSelectionType {
   image: string;
@@ -36,30 +39,56 @@ export const ButtonSelectionTitle = ({
 interface ButtonAnswerType {
   answerOption: string;
   content: string;
-  checkAnswerCallBack: Function;
+  isSubmited: string;
+  formCall: Function;
 }
 
 export const ButtonSelectionAnswer = ({
   answerOption,
   content,
-  checkAnswerCallBack,
+  isSubmited,
+  formCall,
 }: ButtonAnswerType) => {
   const { theme } = HandleTheme.useTheme();
-
   const subject = HandleData.getSubjectContent();
   const questionId = HandleData.getQuestionNumberContext();
 
+  const [answerControl, setAnswerControl] = useState<string | undefined>(
+    undefined
+  );
+
   return (
-    <div
-      className={`button_selection-container ${theme}`}
-      onClick={() => {
-        checkAnswerCallBack(content, subject.content, questionId.question );
+    <label
+      className={`button_answer-container ${theme} ${isSubmited}`}
+      onClick={async () => {
+        if (subject.content != undefined) {
+          const check = await checkAnswer(
+            content,
+            subject.content,
+            questionId.question
+          );
+
+          formCall(check);
+          setAnswerControl(check);
+        }
       }}
     >
-      <div className={`button_selection-image-container ${content}`}>
-        <p>{answerOption}</p>
-      </div>
+      <input
+          type="radio"
+          className="radio-button"
+          name={`question${questionId}`}
+          disabled={isSubmited==="submited"&&true}
+        />
+
+      <p
+        className={`answer_option {status == undefined?isSelected:status} ${isSubmited} ${answerControl}`}
+      >
+        {answerOption}
+      </p>
       <p className={`button_selection-content`}>{content}</p>
-    </div>
+      <span className={`border_handle ${isSubmited} ${answerControl}`}></span>
+    </label>
   );
 };
+
+//TODO: COLOCAR O FEEDBACK DA QUESTÃO CORRETA

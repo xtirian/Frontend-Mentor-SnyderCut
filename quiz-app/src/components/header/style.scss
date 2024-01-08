@@ -1,10 +1,47 @@
-.header-container{
+.header-container {
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  z-index: 1;
 
   padding: 26px 0;
   width: 87.2%;
   margin: 0 auto;
+}
 
-  
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  span {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%; /* 18px */
+  }
+}
+
+.header-container.form {
+  justify-content: space-between;
+}
+.icone {
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.icone.HTML {
+  background-color: #fff1e9;
+}
+
+.icone.CSS {
+  background-color: #e0fdef;
+}
+
+.icone.JavaScript {
+  background-color: #ebf0ff;
+}
+
+.icone.Accessibility {
+  background-color: #f6e7ff;
 }

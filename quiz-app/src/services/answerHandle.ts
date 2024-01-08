@@ -14,11 +14,16 @@ export async function checkAnswer(answer: string, content: string, questionId:nu
 
     let data = await HandleData.getData()
       .then((response) => filterSubject(response, content))
-      .then((subject) => subject[0].questions[questionId]);
+      .then((subject) => subject[0].questions[questionId]);    
 
-    console.log(content);
-    console.log(answer);
-    console.log(data);
+    if(answer.toLocaleLowerCase() === data.answer.toLocaleLowerCase()){
+      
+      return 'correct'
+    } else{
+      return 'wrong'
+    }
+
+    
 
     //TODO: MAKE THE CHECK AND RETURN IF IT'S RIGHT
 
