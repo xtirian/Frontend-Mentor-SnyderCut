@@ -1,0 +1,15 @@
+@use "../sass/var" as *;
+
+.quizz_grid-button_grid{
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+
+  max-width: $size-mobile;
+
+  
+}

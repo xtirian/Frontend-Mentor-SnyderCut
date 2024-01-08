@@ -1,0 +1,28 @@
+@use "../../sass/var" as *;
+
+.progress_bar-container {
+  display: flex;
+  height: 16px;
+  padding: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 50px;
+  background: $pure-white;  
+
+
+}
+
+.progress_bar{  
+height: 8px;
+flex-shrink: 0;
+border-radius: 50px;
+background-color: $purple;
+
+transition: 1s ease-in-out;
+
+}
+
+

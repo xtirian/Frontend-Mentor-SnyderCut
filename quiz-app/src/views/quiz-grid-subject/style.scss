@@ -1,0 +1,16 @@
+@use '../../sass/var' as *;
+
+.qizz-subject-container{
+  position: relative;
+  z-index: 1;
+
+  max-width: $size-mobile;
+  margin: 0 auto;
+}
+
+.question-container{
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 24px;
+}
