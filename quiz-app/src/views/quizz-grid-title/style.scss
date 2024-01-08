@@ -1,14 +1,37 @@
 @use "../../sass/var" as *;
+@use "../../sass/mixin" ;
 
 .quizz_grid-button_grid {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
   margin-top: 40px;
+
+  @include mixin.tablet_query{
+    margin-top: 64px;
+    row-gap: 24px;
+  }
+
+  @include mixin.desktop_query{
+    margin-top: 0;    
+  }
 }
 
 .quizz_grid-container {
   max-width: $size-mobile;
 
   margin: 0 auto;
+
+  @include mixin.tablet_query{
+    width: $size-tablet;
+  }
+
+  @include mixin.desktop_query{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: $size-desktop;
+
+    margin-top: 101px;    
+  }
+
 }

@@ -1,13 +1,15 @@
 @use "../../sass/var" as *;
+@use "../../sass/mixin";
 
 .title {
-  padding-top: 32px;
+  position: relative;
+  
 
   h1 {
     font-size: 40px;
     font-weight: 300;
     line-height: 100%; /* 40px */
-    position: relative;
+    
     span {
       margin-top: 8px;
       font-weight: 500;
@@ -21,6 +23,33 @@
     font-style: italic;
     font-weight: 400;
     line-height: 150%;
+  }
+
+  @include mixin.tablet_query {
+    
+
+    h1 {
+      @include mixin.hl;
+
+      
+    }
+
+    h2{
+      @include mixin.hm
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+
+  @include mixin.desktop_query {
+    
+    
+    p {
+     margin-top: 48px;
+    }
   }
 }
 

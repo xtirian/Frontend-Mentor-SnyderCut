@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ButtonSelectionAnswer } from "../button-selection";
 
 import "./style.scss";
-import {ButtonForm} from "../form-button";
+import { ButtonForm } from "../form-button";
 import { HandleData } from "../../services/handleData";
 
 interface AnswerTypes {
@@ -23,14 +23,11 @@ const AnswerGrid = ({ option, changeQuestion }: AnswerTypes) => {
 
   const [formValidation, setformValidation] = useState(false);
 
-  const {setPoints} = HandleData.getPointsContext()
+  const { setPoints } = HandleData.getPointsContext();
 
   useEffect(() => {
-    setIsSubmited("notSubmited");
     setAnswerControl(undefined);
   }, [option]);
-
- 
 
   return (
     <form
@@ -39,19 +36,16 @@ const AnswerGrid = ({ option, changeQuestion }: AnswerTypes) => {
         e.preventDefault();
 
         if (answerControl == undefined) {
-          setformValidation(true);          
-          return false;
+          setformValidation(true);
+          return;
         }
 
         if (isSubmited === "notSubmited") {
-          setIsSubmited("submited");
           setformValidation(false);
           if (answerControl === "correct") {
-            setPoints()            
+            setPoints();
           }
         }
-
-        return false;
       }}
     >
       {option.map((q, index) => (
@@ -63,9 +57,14 @@ const AnswerGrid = ({ option, changeQuestion }: AnswerTypes) => {
           isSubmited={isSubmited}
         />
       ))}
-      <ButtonForm status={isSubmited} callBack={changeQuestion} />
+      <ButtonForm
+        status={isSubmited}
+        callBack={changeQuestion}
+        resetForm={setIsSubmited}
+      />
       {formValidation && (
-        <span className="form_validation"><img src="/icon-error.svg" alt="" />
+        <span className="form_validation">
+          <img src="/icon-error.svg" alt="" />
           Please select an answer
         </span>
       )}

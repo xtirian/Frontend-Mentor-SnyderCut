@@ -58,20 +58,20 @@ export const ButtonSelectionAnswer = ({
 
   useEffect(() => {
     const startQuestion = async () => {
-      if (subject.content != undefined) {
+      if (subject.content != undefined && isSubmited == "submited") {
         const check = await checkAnswer(
           content,
           subject.content,
           questionId.question
-        );        
+        );
         setAnswerControl(check);
-      }
 
-      
+        formCall(check);
+      }
     };
 
-    startQuestion()
-  }, [questionId]);
+    startQuestion();
+  }, [isSubmited]);
 
   function feedback() {
     if (answerControl == "correct") {
@@ -85,17 +85,7 @@ export const ButtonSelectionAnswer = ({
   return (
     <label
       className={`button_answer-container ${theme} ${isSubmited}`}
-      onClick={async () => {
-        if (subject.content != undefined) {
-          const check = await checkAnswer(
-            content,
-            subject.content,
-            questionId.question
-          );
-
-          formCall(check);
-        }
-      }}
+      
     >
       <input
         type="radio"
@@ -109,7 +99,9 @@ export const ButtonSelectionAnswer = ({
       </p>
       <p className={`button_selection-content`}>{content}</p>
       <span className={`border_handle ${isSubmited} ${answerControl}`}></span>
-      <span className={`feedback_handle ${isSubmited}  ${answerControl}`}>{feedback()}</span>
+      <span className={`feedback_handle ${isSubmited}  ${answerControl}`}>
+        {feedback()}
+      </span>
     </label>
   );
 };

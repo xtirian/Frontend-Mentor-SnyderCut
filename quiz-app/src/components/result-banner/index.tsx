@@ -3,6 +3,7 @@ import { HandleData } from "../../services/handleData";
 import { filterSubject } from "../../services/answerHandle";
 
 import "./style.scss";
+import { HandleTheme } from "../../services/handleTheme";
 
 const ResultBanner = () => {
   const { points } = HandleData.getPointsContext();
@@ -23,8 +24,12 @@ const ResultBanner = () => {
     getData();
   }, []);
 
+
+  const {theme} = HandleTheme.useTheme()
+
+
   return (
-    <section className="result_banner-container">
+    <section className={`result_banner-container ${theme}`}>
       <div className="icone-container">
         <div className={`icone ${content}`}>
           <img src={`/${Icon}`} alt="icon escolhido" />
