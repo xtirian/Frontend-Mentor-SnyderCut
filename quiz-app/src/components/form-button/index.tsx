@@ -31,7 +31,7 @@ export const ResetButton = () => {
     <button type={"button"} onClick={() => {
       
       setQuestion(0)
-      setPoints()
+      setPoints(0)
       setIsStarted()
       }} className="reset_button">
       Play Again
