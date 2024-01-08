@@ -1,0 +1,27 @@
+@use "../../sass/var" as *;
+
+.questionaryForm {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.form_validation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  color: $red;
+  img{
+    width: 32px;
+    height: 32px
+  }
+}

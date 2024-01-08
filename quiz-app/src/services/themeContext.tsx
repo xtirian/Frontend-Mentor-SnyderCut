@@ -2,7 +2,7 @@ import { ReactNode, createContext, useEffect, useState } from "react";
 import { HandleTheme } from "./handleTheme";
 
 interface ThemeContextProps {
-  theme: string;
+  theme: string|undefined;
   setTheme: (theme: string) => void;
 }
 
@@ -18,7 +18,7 @@ interface ThemeProviderProps {
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   //HANDLE THEME
-  const [mainTheme, setMainTheme] = useState<string>("light");
+  const [mainTheme, setMainTheme] = useState<string|undefined>(undefined);
 
   useEffect(() => {
     //this use effect it's to take the settings theme from the browser when opening the page an set the mainTheme

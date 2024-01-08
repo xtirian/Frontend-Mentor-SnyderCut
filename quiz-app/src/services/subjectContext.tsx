@@ -99,23 +99,29 @@ export const QuestionNumberProvider = ({ children }: SubjectProviderProps) => {
 
 interface pointsContext {
   points: number;
-  setPoints: () => void;
+  setPoints: (number?: number) => void;
 }
 
-export const PointsContext = createContext<pointsContext|undefined>(undefined);
+export const PointsContext = createContext<pointsContext | undefined>(
+  undefined
+);
 
 export const PointsProvider = ({ children }: SubjectProviderProps) => {
   const [actualPoints, setActualPoints] = useState<number>(0);
 
-  function increasePoints() {
-    setActualPoints(actualPoints + 1);
+  function setPoints(x?: number) {
+    if (x) {
+      setActualPoints(x);
+    } else {
+      setActualPoints(actualPoints + 1);
+    }
   }
 
   return (
     <PointsContext.Provider
       value={{
         points: actualPoints,
-        setPoints: increasePoints,
+        setPoints: setPoints,
       }}
     >
       {children}
