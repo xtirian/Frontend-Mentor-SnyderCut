@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./style.scss";
+import { HandleTheme } from "../../services/handleTheme";
 
 interface ProgressBarProps {
   initial: number;
@@ -23,8 +24,13 @@ const ProgressBar = ({ initial, total }: ProgressBarProps) => {
     changeBar(initial, total);
   }, [initial]);
 
+
+  // theme change bar
+
+  const {theme} = HandleTheme.useTheme()
+
   return (
-    <div className="progress_bar-container">
+    <div className={`progress_bar-container ${theme}`}>
       <span
         className="progress_bar"
         style={{ width: `${barProgress}%` }}
