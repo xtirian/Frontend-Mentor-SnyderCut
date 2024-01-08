@@ -1,0 +1,15 @@
+@use '../../sass/var' as *;
+
+.result-container{
+  width: $size-mobile;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 1;
+}
+
+.game_result-container{
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}

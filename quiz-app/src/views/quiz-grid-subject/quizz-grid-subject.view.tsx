@@ -36,8 +36,9 @@ const QuizGridSubject = () => {
     }
   }, [data]);
 
-  // DEFINE CORE INFOS FOR THE QUESTIONS
 
+
+  // HERE I DEFINE CORE INFOS FOR THE QUESTIONS AND ANSWER
 
   const questionNumberContext = HandleData.getQuestionNumberContext()
 
@@ -49,13 +50,11 @@ const QuizGridSubject = () => {
 
   const [options, setOptions] = useState<string[]>([]);
 
-  const [answer, setAnswer] = useState<string>("");
 
   useEffect(() => {
     if (result !== undefined) {
       setQuestion(result.questions[questionNumberContext.question].question);
       setOptions(result.questions[questionNumberContext.question].options);
-      setAnswer(result.questions[questionNumberContext.question].answer);
       setQuestionNumberTotal(result.questions.length);
     }
   }, [result, questionNumberContext.question]);
@@ -63,7 +62,7 @@ const QuizGridSubject = () => {
   // change questions
 
   function changeQuestion() {
-    if (questionNumberContext.question + 1 < questionNumberTotal) {
+    if (questionNumberContext.question + 1 <= questionNumberTotal) {
       questionNumberContext.setQuestion(questionNumberContext.question + 1);
       return;
     } else {
@@ -85,7 +84,7 @@ const QuizGridSubject = () => {
       </div>
 
       <div className="answer-container">
-        <AnswerGrid option={options} answer={answer} changeQuestion={changeQuestion}  />
+        <AnswerGrid option={options} changeQuestion={changeQuestion}  />
       </div>
     </section>
   );
