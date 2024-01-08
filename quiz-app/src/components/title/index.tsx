@@ -12,22 +12,34 @@ export const TitleContainer = () => {
   );
 };
 
-interface AnswerType{
-  questionNumber: number
-  questionTotal: number
-  title: string
+interface AnswerType {
+  questionNumber: number;
+  questionTotal: number;
+  title: string;
 }
 
-export const QuestionContainer = ({questionNumber, questionTotal, title}: AnswerType) => {
-
+export const QuestionContainer = ({
+  questionNumber,
+  questionTotal,
+  title,
+}: AnswerType) => {
   return (
     <div className="title">
-      <p className="question_number">Question {questionNumber +1} of {questionTotal}</p>
-      <h2 className="question-title">
-        {title}
-      </h2>     
+      <p className="question_number">
+        Question {questionNumber + 1} of {questionTotal}
+      </p>
+      <h2 className="question-title">{title}</h2>
     </div>
-  )
+  );
+};
 
-}
-
+export const ResultTitle = () => {
+  return (
+    <div className="title">
+      <h1>
+        Quiz completed <br />
+        <span>You scored...</span>
+      </h1>
+    </div>
+  );
+};
