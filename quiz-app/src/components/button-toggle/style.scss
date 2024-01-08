@@ -3,10 +3,17 @@
 .toggle_button-container {
   display: flex;
   position: relative;
+  align-items: center;
+  gap: 8px;
+
+  img{
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .toggle_button-button {
-  width: 32px;
+  min-width: 32px;
   height: 20px;
   background-color: $purple;
   border-radius: 50px;
