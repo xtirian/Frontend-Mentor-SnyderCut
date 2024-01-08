@@ -1,9 +1,8 @@
 import { HandleData } from "../../services/handleData";
 import { HandleTheme } from "../../services/handleTheme";
 import { checkAnswer } from "../../services/answerHandle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.scss";
-
 
 interface ButtonSelectionType {
   image: string;
@@ -57,6 +56,32 @@ export const ButtonSelectionAnswer = ({
     undefined
   );
 
+  useEffect(() => {
+    const startQuestion = async () => {
+      if (subject.content != undefined) {
+        const check = await checkAnswer(
+          content,
+          subject.content,
+          questionId.question
+        );        
+        setAnswerControl(check);
+      }
+
+      
+    };
+
+    startQuestion()
+  }, [questionId]);
+
+  function feedback() {
+    if (answerControl == "correct") {
+      return <img src={"/icon-correct.svg"} alt="" />;
+    }
+    if (answerControl == "wrong") {
+      return <img src={"/icon-incorrect.svg"} alt="" />;
+    }
+  }
+
   return (
     <label
       className={`button_answer-container ${theme} ${isSubmited}`}
@@ -69,24 +94,22 @@ export const ButtonSelectionAnswer = ({
           );
 
           formCall(check);
-          setAnswerControl(check);
         }
       }}
     >
       <input
-          type="radio"
-          className="radio-button"
-          name={`question${questionId}`}
-          disabled={isSubmited==="submited"&&true}
-        />
+        type="radio"
+        className="radio-button"
+        name={`question${questionId}`}
+        disabled={isSubmited === "submited" && true}
+      />
 
-      <p
-        className={`answer_option {status == undefined?isSelected:status} ${isSubmited} ${answerControl}`}
-      >
+      <p className={`answer_option ${isSubmited} ${answerControl}`}>
         {answerOption}
       </p>
       <p className={`button_selection-content`}>{content}</p>
       <span className={`border_handle ${isSubmited} ${answerControl}`}></span>
+      <span className={`feedback_handle ${isSubmited}  ${answerControl}`}>{feedback()}</span>
     </label>
   );
 };

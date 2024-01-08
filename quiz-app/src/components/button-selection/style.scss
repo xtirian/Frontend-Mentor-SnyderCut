@@ -96,7 +96,7 @@ input:checked ~ .answer_option.notSubmited {
   color: $pure-white;
 }
 
-input:checked ~ .answer_option.submited.correct {
+input:checked ~ .answer_option.submited.correct, input:not(checked) ~ .answer_option.submited.correct {
   background-color: $green;
   color: $pure-white;
 }
@@ -129,7 +129,7 @@ input:checked ~ .border_handle.notSubmited {
   transition-duration: 0.15s;
 }
 
-input:checked ~ .border_handle.submited.correct {
+input:checked ~ .border_handle.submited.correct, input:not(checked) ~ .border_handle.submited.correct {
   border: 3px solid $green;
 
   transition: ease-in-out;
@@ -148,4 +148,33 @@ input:checked ~ .border_handle.submited.wrong {
   font-size: 18px;
   font-weight: 500;
   line-height: 100%;
+}
+
+
+.feedback_handle{
+  position: absolute;
+  right: 16px;
+
+  img{
+    width: 32px;
+    height: 32px;
+  }
+  
+}
+
+.feedback_handle.notSubmited{
+  display: none;
+}
+
+
+input:not(checked) ~ .feedback_handle.submited.correct{
+  display: flex;
+}
+
+input:checked ~ .feedback_handle.submited.wrong{
+  display: flex;
+}
+
+input:not(checked) ~ .feedback_handle.submited.wrong{
+  display: none;
 }
