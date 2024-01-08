@@ -59,6 +59,9 @@ Users should be able to:
 
 ### What I learned
 
+switch toggle
+contextAPI - https://www.youtube.com/watch?v=g4lw8__0Mow
+cloneElement - React
 
 ### Continued development
 
