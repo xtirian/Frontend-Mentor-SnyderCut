@@ -1,34 +1,52 @@
 import { useEffect, useState } from "react";
 import ToggleButton from "../button-toggle";
-import './style.scss';
+import "./style.scss";
+import { HandleData } from "../../services/handleData";
+import { filterSubject } from "../../services/answerHandle";
 
-interface headerTypes {
-  headerIcon?: String;
-}
+const Header = () => {
+  const { isStarted } = HandleData.getStartContext();
+  const { content } = HandleData.getSubjectContent();
 
-const Header = ({ headerIcon }: headerTypes) => {
-  
-  const [HeaderType, setHeaderType] = useState<string|undefined>(undefined)
+  const [Icon, setIcon] = useState<string>("");
 
   useEffect(() => {
-    if(headerIcon){
-      setHeaderType(headerIcon?HeaderType:undefined)
+    const getData = async () => {
+      const data = await HandleData.getData();
+
+      const filterData = filterSubject(data, content)[0].icon;
+
+      setIcon(filterData);
+    };
+
+    if (isStarted) {
+      getData();
     }
-  }, [headerIcon])
-  
+  }, [isStarted]);
+
+  useEffect(() => {}, [isStarted]);
 
   const headerSet = () => {
-    if (headerIcon) {
+    if (isStarted) {
       return (
-        <header className="header-container">
-          <img src={headerIcon?HeaderType:undefined} alt="icon escolhido" />
+        <header className={`header-container form`}>
+          <div className="title-container">
+            <div className={`icone ${content}`}>
+              <img
+                src={`/${Icon}`}
+                alt="icon escolhido"
+              />
+              
+            </div>
+            <span>{content}</span>
+          </div>
           <ToggleButton />
         </header>
       );
     } else {
       return (
         <header className="header-container">
-          <ToggleButton/>
+          <ToggleButton />
         </header>
       );
     }
