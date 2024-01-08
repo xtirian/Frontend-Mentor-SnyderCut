@@ -66,7 +66,7 @@ export class HandleData {
   }
 
   static async getData() {
-    const response = await fetch("../../data/data.json");
+    const response = await fetch("/data/data.json");
 
     const data = await response.json();
 
