@@ -1,8 +1,9 @@
 import { HandleData } from "../../services/handleData";
 import { HandleTheme } from "../../services/handleTheme";
 import { checkAnswer } from "../../services/answerHandle";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import "./style.scss";
+import { FormSubmitionContext } from "../../services/subjectContext";
 
 interface ButtonSelectionType {
   image: string;
@@ -48,23 +49,22 @@ export const ButtonSelectionTitle = ({
 interface ButtonAnswerType {
   answerOption: string;
   content: string;
-  isSubmited: string;
   formCall: Function;
 }
 
 export const ButtonSelectionAnswer = ({
   answerOption,
   content,
-  isSubmited,
   formCall,
 }: ButtonAnswerType) => {
-
-  const checkBoxRef = useRef<HTMLInputElement>(null)
-
+  const checkBoxRef = useRef<HTMLInputElement>(null);
 
   const { theme } = HandleTheme.useTheme();
   const subject = HandleData.getSubjectContent();
   const questionId = HandleData.getQuestionNumberContext();
+  const {isSubmited} = useContext(FormSubmitionContext)
+
+  
 
   const [answerControl, setAnswerControl] = useState<string | undefined>(
     undefined
@@ -72,15 +72,13 @@ export const ButtonSelectionAnswer = ({
 
   useEffect(() => {
     const startQuestion = async () => {
-      if (subject.content != undefined && isSubmited == "submited") {
+      if (subject.content != undefined && isSubmited === "submited") {
         const check = await checkAnswer(
           content,
           subject.content,
           questionId.question
         );
-        setAnswerControl(check);
-
-        formCall(check);
+        setAnswerControl(check)        
       }
     };
 
@@ -97,20 +95,37 @@ export const ButtonSelectionAnswer = ({
   }
 
   return (
-    <label className={`button_answer-container ${theme} ${isSubmited}`}tabIndex={1} role="definition" aria-label={`You are selecting the answer: ${content}`} onKeyDown={(event) => {
-      if (event.key === 'Enter') {
-        // Ao pressionar Enter, clique no input associado
-        if (checkBoxRef.current) {
-          checkBoxRef.current.click();
+    <label
+      className={`button_answer-container ${theme} ${isSubmited}`}
+      tabIndex={1}
+      role="definition"
+      aria-label={`You are selecting the answer: ${content}`}
+      onKeyDown={(event) => {
+        if (event.key === "Enter") {
+          // Ao pressionar Enter, clique no input associado
+          if (checkBoxRef.current) {
+            checkBoxRef.current.click();
+          }
         }
-      }
-    }} >
+      }}
+    >
       <input
         type="radio"
         className="radio-button"
         name={`question${questionId}`}
         disabled={isSubmited === "submited" && true}
         ref={checkBoxRef}
+        onChange={async () => {
+          if (subject.content != undefined) {
+            const check = await checkAnswer(
+              content,
+              subject.content,
+              questionId.question
+            );
+            formCall(check);
+            
+          }
+        }}
       />
 
       <p className={`answer_option ${isSubmited} ${answerControl}`}>
@@ -119,10 +134,7 @@ export const ButtonSelectionAnswer = ({
       <p className={`button_selection-content`}>{content}</p>
       <span
         className={`border_handle ${isSubmited} ${answerControl}`}
-        
         title={`You are selecting the answer: ${content}`}
-        
-        
       ></span>
       <span className={`feedback_handle ${isSubmited}  ${answerControl}`}>
         {feedback()}
@@ -130,4 +142,3 @@ export const ButtonSelectionAnswer = ({
     </label>
   );
 };
-

@@ -128,3 +128,31 @@ export const PointsProvider = ({ children }: SubjectProviderProps) => {
     </PointsContext.Provider>
   );
 };
+
+//FORM CONTEXT FOR THE FEEDBACK
+
+interface FormSubmitionContextProps {
+  isSubmited: string;
+  setIsSubmited: (status:string) => void;
+}
+
+export const FormSubmitionContext = createContext<FormSubmitionContextProps>({
+  isSubmited: "notSubmited",
+  setIsSubmited() {},
+});
+
+export const FormSubmitionProvider = ({children} : SubjectProviderProps) => {
+
+  const [isSubmited, setSubmited] = useState('notSubmited')
+
+  const changeSubmit = (status:string) => {
+    setSubmited(status)
+  }
+
+
+
+  return <FormSubmitionContext.Provider value={{isSubmited:isSubmited,
+  setIsSubmited: changeSubmit}}>
+    {children}
+  </FormSubmitionContext.Provider>
+}

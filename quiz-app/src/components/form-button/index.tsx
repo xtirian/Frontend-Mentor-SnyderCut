@@ -1,26 +1,28 @@
+import { useContext } from "react";
 import { HandleData } from "../../services/handleData";
 import "./style.scss";
+import { FormSubmitionContext } from "../../services/subjectContext";
 
 interface ButtonFormProps {
-  status: string;
   callBack?: Function;
-  resetForm?: Function;
 }
 
 export const ButtonForm = ({
-  status,
   callBack,
-  resetForm,
 }: ButtonFormProps) => {
-  if (status == "submited") {
+
+  const {isSubmited ,setIsSubmited } = useContext(FormSubmitionContext)
+
+  if (isSubmited == "submited") {
     return (
-      <button tabIndex={0}
-      title={`Press Enter to access the Next Question`}
-      role="definition"
-      aria-label={`Press Enter to access the Next Question`}
+      <button
+        tabIndex={0}
+        title={`Press Enter to access the Next Question`}
+        role="definition"
+        aria-label={`Press Enter to access the Next Question`}
         type="button"
         onClick={() => {
-          resetForm && resetForm("notSubmited");
+          setIsSubmited("notSubmited");
           callBack && callBack();
         }}
       >
@@ -29,18 +31,13 @@ export const ButtonForm = ({
     );
   }
 
-  if (status == "notSubmited") {
+  if (isSubmited == "notSubmited") {
     return (
       <button
-      title={`Press Enter to submit`}
-      role="definition"
-      aria-label={`Press Enter to submit`}
-        type={"submit"}
-        onClick={() => {
-          if (status === "notSubmited") {
-            resetForm && resetForm("submited");
-          }
-        }}
+        title={`Press Enter to submit`}
+        role="definition"
+        aria-label={`Press Enter to submit`}
+        type='submit'
       >
         Submit Answer
       </button>
