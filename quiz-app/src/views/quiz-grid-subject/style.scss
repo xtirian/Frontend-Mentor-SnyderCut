@@ -5,20 +5,21 @@
   position: relative;
   z-index: 1;
 
-  max-width: $size-mobile;
+  width: $size-mobile;
   margin: 0 auto;
 
   padding-top: 32px;
 
   @include mixin.tablet_query{
     padding-top: 62px;
-    max-width: $size-tablet;
+    width: $size-tablet;
   }
 
   @include mixin.desktop_query{
 
     padding-top: 85px;
-    max-width: $size-desktop;
+    width: $size-desktop;
+    max-width: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;

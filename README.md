@@ -6,6 +6,7 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 ## Table of projects
 
+- [Frontend quiz app](#frontend-quiz-app)
 - [Typemaster pre-launch landing page](#typemaster-pre-launch)
 - [Github User Search](#github)
 - [Art Gallery](#art-gallery)
@@ -20,12 +21,12 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 ## Frontend quiz app
 
-Quizz app about frontend and web development.
+Quizz app about web development, thtat test the user and return a final score.
 
 Technologies: React, ViteJS, Typescript, Sass
 
 - Solution URL: [ Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/typemaster-keyboard-landing-page) 
-- Live Site URL: [ Typemaster pre-launch](https://typemaster-keyboard-landing-page-3hcidephw-xtirian.vercel.app/) 
+- Live Site URL: [ WebDev QuizApp](https://quiz-app-xtirian.vercel.app/) 
 
 
 ## Typemaster pre-launch
