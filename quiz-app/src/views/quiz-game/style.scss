@@ -1,7 +1,7 @@
-@use '../../sass/var' as *;
-@use '../../sass/mixin';
+@use "../../sass/var" as *;
+@use "../../sass/mixin";
 
-.result-container{
+.result-container {
   width: $size-mobile;
   margin: 0 auto;
 
@@ -19,13 +19,13 @@
 
     padding-top: 85px;
 
-
-  width: $size-desktop;
+    width: $size-desktop;
+    max-width: 1280px;
   }
 }
 
-.game_result-container{
-  display:flex;
+.game_result-container {
+  display: flex;
   flex-direction: column;
   gap: 12px;
 
