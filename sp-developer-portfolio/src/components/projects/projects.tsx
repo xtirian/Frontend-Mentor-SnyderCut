@@ -103,9 +103,9 @@ export default function Projects() {
             <div
               className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/thumbnail-project3.webp)] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/thumbnail-project9.webp)] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/thumbnail-project3.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/thumbnail-project9.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
@@ -113,7 +113,7 @@ export default function Projects() {
               <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
                 <a
                   target="_blank"
-                  href="https://equalizer-lp-xtirian.vercel.app/"
+                  href="https://typemaster-keyboard-landing-page.vercel.app/"
                   className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
                 >
                   View Project
@@ -122,16 +122,17 @@ export default function Projects() {
               <div className="flex border-b-2 border-b-Green pb-5 lg:static  w-[1/2] absolute bottom-[-140px] left-[171px] md:bottom-[-140px] md:left-[171px]">
                 <a
                   target="_blank"
-                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/equalizer-landing-page"
+                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/typemaster-keyboard-landing-page"
                   className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
                 >
                   View Code
                 </a>
               </div>
             </div>
-            <h3 className="text-m text-White mb-[7px]">EQUALIZER LP</h3>
+            <h3 className="text-m text-White mb-[7px]">TYPEMASTER PRE-SALE</h3>
             <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>HTML</p>
+              <p>VITEJS</p>
+              <p>TYPESCRIPT</p>
               <p>SASS</p>
             </div>
           </div>
@@ -182,9 +183,9 @@ export default function Projects() {
             <div
               className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/thumbnail-project5.webp)] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/thumbnail-project10.webp)] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/thumbnail-project5.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/thumbnail-project10.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
@@ -192,7 +193,7 @@ export default function Projects() {
               <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
                 <a
                   target="_blank"
-                  href="https://pod-alpha.vercel.app/"
+                  href="https://quiz-app-xtirian.vercel.app/"
                   className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
                 >
                   View Project
@@ -201,18 +202,18 @@ export default function Projects() {
               <div className="flex border-b-2 border-b-Green pb-5 lg:static  w-[1/2] absolute bottom-[-140px] left-[171px] md:bottom-[-140px] md:left-[171px]">
                 <a
                   target="_blank"
-                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/pod-request-access-landing-page"
+                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/quiz-app"
                   className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
                 >
                   View Code
                 </a>
               </div>
             </div>
-            <h3 className="text-m text-White mb-[7px]">POD REQUEST</h3>
+            <h3 className="text-m text-White mb-[7px]">WEBDEV QUIZ APP</h3>
             <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>HTML</p>
-              <p>SASS</p>
-              <p>JAVASCRIPT</p>
+              <p>REACT</p>
+              <p>SCSS</p>
+              <p>CONTEXTAPI</p>
             </div>
           </div>
 
