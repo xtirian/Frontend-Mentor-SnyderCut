@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ButtonSelectionAnswer } from "../button-selection";
 
 import "./style.scss";
 import { ButtonForm } from "../form-button";
 import { HandleData } from "../../services/handleData";
+import { FormSubmitionContext } from "../../services/subjectContext";
 
 interface AnswerTypes {
   option: string[];
@@ -13,7 +14,7 @@ interface AnswerTypes {
 const AnswerGrid = ({ option, changeQuestion }: AnswerTypes) => {
   const answerOptionsIndexLetter = ["A", "B", "C", "D", "E"];
 
-  const [isSubmited, setIsSubmited] = useState("notSubmited");
+  const { isSubmited, setIsSubmited } = useContext(FormSubmitionContext);
 
   // Check answers
 
@@ -30,48 +31,62 @@ const AnswerGrid = ({ option, changeQuestion }: AnswerTypes) => {
   }, [option]);
 
   return (
-    <form
-      className="questionaryForm"
-      onSubmit={(e) => {
-        e.preventDefault();
+    <>
+      <form
+        className="questionaryForm"
+        onSubmit={(e) => {
+          e.preventDefault();
 
-        if (answerControl == undefined) {
-          setformValidation(true);
-          return;
-        }
-
-        if (isSubmited === "notSubmited") {
-          setformValidation(false);
-          if (answerControl === "correct") {
+          if (answerControl == "correct") {
+            console.log("ping");
+            setIsSubmited("submited");
+            setformValidation(false);
             setPoints();
+            return;
           }
-        }
-      }}
-    >
-      {option.map((q, index) => (
-        <ButtonSelectionAnswer
-          key={q}
-          answerOption={answerOptionsIndexLetter[index]}
-          content={q}
-          formCall={setAnswerControl}
-          isSubmited={isSubmited}
-        />
-      ))}
-      <ButtonForm
-        status={isSubmited}
-        callBack={changeQuestion}
-        resetForm={setIsSubmited}
-      />
+
+          if (answerControl == "wrong") {
+            setIsSubmited("submited");
+            setformValidation(false);
+            console.log("pong");
+            return;
+          }
+
+          if (answerControl == undefined) {
+            setformValidation(true);
+            return;
+          }
+
+          console.log(answerControl);
+        }}
+      >
+        {option.map((q, index) => (
+          <ButtonSelectionAnswer
+            key={q}
+            answerOption={answerOptionsIndexLetter[index]}
+            content={q}
+            formCall={setAnswerControl}
+          />
+        ))}
+        {isSubmited == "notSubmited" && (
+          <ButtonForm callBack={changeQuestion} />
+        )}
+      </form>
+      {isSubmited == "submited" && <ButtonForm callBack={changeQuestion} />}
+
       {formValidation && (
-        <span className="form_validation" tabIndex={0}
-        title={`Please select an answer`}
-        role="alert"
-        aria-label={`Please select an answer`}>
+        <span
+          className="form_validation"
+          tabIndex={0}
+          title={`Please select an answer`}
+          role="alert"
+          aria-label={`Please select an answer`}
+        >
           <img src="/icon-error.svg" alt="" />
           Please select an answer
         </span>
       )}
-    </form>
+    </>
   );
 };
 

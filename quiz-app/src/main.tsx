@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import "./sass/global.scss";
 import { ThemeProvider } from "./services/themeContext.tsx";
 import {
+  FormSubmitionProvider,
   PointsProvider,
   QuestionNumberProvider,
   StartSubjectProvider,
@@ -15,11 +16,13 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ThemeProvider>
       <StartSubjectProvider>
         <SubjectProvider>
+          <FormSubmitionProvider>
           <PointsProvider>
             <QuestionNumberProvider>
               <App />
             </QuestionNumberProvider>
           </PointsProvider>
+          </FormSubmitionProvider>
         </SubjectProvider>
       </StartSubjectProvider>
     </ThemeProvider>
