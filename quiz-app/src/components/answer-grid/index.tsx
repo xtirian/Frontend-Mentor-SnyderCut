@@ -63,7 +63,10 @@ const AnswerGrid = ({ option, changeQuestion }: AnswerTypes) => {
         resetForm={setIsSubmited}
       />
       {formValidation && (
-        <span className="form_validation">
+        <span className="form_validation" tabIndex={0}
+        title={`Please select an answer`}
+        role="alert"
+        aria-label={`Please select an answer`}>
           <img src="/icon-error.svg" alt="" />
           Please select an answer
         </span>

@@ -1,7 +1,7 @@
 import { HandleData } from "../../services/handleData";
 import { HandleTheme } from "../../services/handleTheme";
 import { checkAnswer } from "../../services/answerHandle";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./style.scss";
 
 interface ButtonSelectionType {
@@ -21,10 +21,20 @@ export const ButtonSelectionTitle = ({
 
   return (
     <div
+      tabIndex={0}
+      title={`Press Enter to access the quiz: ${content}`}
+      role="definition"
+      aria-label={`Press Enter to access the quiz: ${content}`}
       className={`button_selection-container ${theme}`}
       onClick={() => {
         startCallBack();
         subjectCallBack(content);
+      }}
+      onKeyDown={(e) => {
+        if (e.key == "Enter") {
+          startCallBack();
+          subjectCallBack(content);
+        }
       }}
     >
       <div className={`button_selection-image-container ${content}`}>
@@ -48,6 +58,10 @@ export const ButtonSelectionAnswer = ({
   isSubmited,
   formCall,
 }: ButtonAnswerType) => {
+
+  const checkBoxRef = useRef<HTMLInputElement>(null)
+
+
   const { theme } = HandleTheme.useTheme();
   const subject = HandleData.getSubjectContent();
   const questionId = HandleData.getQuestionNumberContext();
@@ -83,22 +97,33 @@ export const ButtonSelectionAnswer = ({
   }
 
   return (
-    <label
-      className={`button_answer-container ${theme} ${isSubmited}`}
-      
-    >
+    <label className={`button_answer-container ${theme} ${isSubmited}`}tabIndex={1} role="definition" aria-label={`You are selecting the answer: ${content}`} onKeyDown={(event) => {
+      if (event.key === 'Enter') {
+        // Ao pressionar Enter, clique no input associado
+        if (checkBoxRef.current) {
+          checkBoxRef.current.click();
+        }
+      }
+    }} >
       <input
         type="radio"
         className="radio-button"
         name={`question${questionId}`}
         disabled={isSubmited === "submited" && true}
+        ref={checkBoxRef}
       />
 
       <p className={`answer_option ${isSubmited} ${answerControl}`}>
         {answerOption}
       </p>
       <p className={`button_selection-content`}>{content}</p>
-      <span className={`border_handle ${isSubmited} ${answerControl}`}></span>
+      <span
+        className={`border_handle ${isSubmited} ${answerControl}`}
+        
+        title={`You are selecting the answer: ${content}`}
+        
+        
+      ></span>
       <span className={`feedback_handle ${isSubmited}  ${answerControl}`}>
         {feedback()}
       </span>
@@ -106,4 +131,3 @@ export const ButtonSelectionAnswer = ({
   );
 };
 
-//TODO: COLOCAR O FEEDBACK DA QUESTÃO CORRETA

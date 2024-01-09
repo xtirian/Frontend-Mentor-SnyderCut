@@ -14,7 +14,10 @@ export const ButtonForm = ({
 }: ButtonFormProps) => {
   if (status == "submited") {
     return (
-      <button
+      <button tabIndex={0}
+      title={`Press Enter to access the Next Question`}
+      role="definition"
+      aria-label={`Press Enter to access the Next Question`}
         type="button"
         onClick={() => {
           resetForm && resetForm("notSubmited");
@@ -29,6 +32,9 @@ export const ButtonForm = ({
   if (status == "notSubmited") {
     return (
       <button
+      title={`Press Enter to submit`}
+      role="definition"
+      aria-label={`Press Enter to submit`}
         type={"submit"}
         onClick={() => {
           if (status === "notSubmited") {

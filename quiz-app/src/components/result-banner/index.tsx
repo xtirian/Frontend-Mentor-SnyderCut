@@ -29,7 +29,9 @@ const ResultBanner = () => {
 
 
   return (
-    <section className={`result_banner-container ${theme}`}>
+    <section className={`result_banner-container ${theme}`} tabIndex={1} title={`Quiz completed! You scored... ${points} points out of 10`}
+    role="definition"
+    aria-label={`Quiz completed! You scored... ${points} points out of 10`}>
       <div className="icone-container">
         <div className={`icone ${content}`}>
           <img src={`/${Icon}`} alt="icon escolhido" />
