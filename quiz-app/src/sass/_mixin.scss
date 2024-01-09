@@ -31,7 +31,7 @@
 @mixin hs{
   font-size: 28px;
    font-weight: 500;
-  line-height: 100%; /* 28px */
+  line-height: 100% ; /* 28px */
 }
  
 @mixin bm{
@@ -51,16 +51,15 @@
   line-height: 150%; /* 18px */
 }
 
-//THEME
-@mixin darkmode{
-  @media (prefers-color-scheme: dark){
+//QUERY
+@mixin tablet_query{
+  @media screen and (min-width: $base-tablet){
     @content;
   }
 }
 
-//QUERY
-@mixin tablet-query{
-  @media screen and (min-width: $base-tablet){
+@mixin desktop_query{
+  @media screen and (min-width: $limit-desktop){
     @content;
   }
 }

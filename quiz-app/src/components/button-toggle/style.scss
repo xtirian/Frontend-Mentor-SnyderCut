@@ -1,4 +1,5 @@
 @use "../../sass/var" as *;
+@use "../../sass/mixin";
 
 .toggle_button-container {
   display: flex;
@@ -6,9 +7,16 @@
   align-items: center;
   gap: 8px;
 
-  img{
+  img {
     width: 16px;
     height: 16px;
+  }
+
+  @include mixin.tablet_query {
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
@@ -19,6 +27,11 @@
   border-radius: 50px;
 
   position: relative;
+
+  @include mixin.tablet_query {
+    min-width: 48px;
+    height: 28px;
+  }
 }
 
 .toggle_button-button.light::after {
@@ -31,9 +44,13 @@
   top: 50%;
   transform: translateY(-50%);
 
-  left: 4px;
 
   background-color: $pure-white;
+
+  @include mixin.tablet_query {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .toggle_button-button.dark::after {
@@ -46,12 +63,16 @@
   top: 50%;
   transform: translateY(-50%);
 
-  right: 4px;
 
   background-color: $pure-white;
+
+  @include mixin.tablet_query {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-%animation_extention{
+%animation_extention {
   animation-duration: 0.5s;
   animation-fill-mode: both;
   animation-timing-function: ease-out;
@@ -60,6 +81,11 @@
 .toggle_animation.light::after {
   animation-name: light-to-dark;
   @extend %animation_extention;
+
+  @include mixin.tablet_query {
+    animation-name: light-to-dark-tablet;
+
+  }
 }
 
 @keyframes light-to-dark {
@@ -71,10 +97,22 @@
   }
 }
 
-.toggle_animation.dark::after {
-  animation-name: dark-to-light;  
-  @extend %animation_extention;
+@keyframes light-to-dark-tablet {
+  from {
+    left: 24px;
+  }
+  to {
+    left: 4px;
+  }
+}
 
+.toggle_animation.dark::after {
+  animation-name: dark-to-light;
+  @extend %animation_extention;
+  @include mixin.tablet_query {
+    animation-name: dark-to-light-tablet;
+
+  }
 }
 
 @keyframes dark-to-light {
@@ -83,5 +121,14 @@
   }
   to {
     left: 16px;
+  }
+}
+
+@keyframes dark-to-light-tablet {
+  from {
+    left: 4px;
+  }
+  to {
+    left: 24px;
   }
 }

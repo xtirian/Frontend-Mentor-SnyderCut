@@ -1,19 +1,37 @@
 @use "./sass/var" as *;
 @use "./sass/mixin";
 
-
-%after_extent{
+%after_extent {
   content: "";
-  position: fixed;
+  position: absolute;
   z-index: 0;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mixin.tablet_query {
+    background-size: 444px
+  }
+  @include mixin.desktop_query {
+    background-size: cover;
+  }
 }
 
-.app-container{
+.app-container {
   position: relative;
+  padding: 16px 0; 
+
+  @include mixin.tablet_query {
+    padding: 40px 0; 
+  }
+  @include mixin.desktop_query {
+    padding: 83px 0; 
+  }
 }
 
 .app-container.light {
@@ -24,8 +42,15 @@
 
 .app-container.light::before {
   @extend %after_extent;
-  background-image: url("/ellipse_pattern.png");
-  background-repeat: no-repeat;
+  background-image: url("/pattern-background-mobile-light.svg");
+
+  @include mixin.tablet-query {
+    background-image: url("/pattern-background-tablet-light.svg");
+  }
+
+  @include mixin.desktop_query {
+    background-image: url("/pattern-background-desktop-light.svg");
+  }
 }
 
 .app-container.dark {
@@ -37,6 +62,12 @@
 .app-container.dark::before {
   @extend %after_extent;
 
-  background-image: url("/ellipse_pattern_dark.svg");
-  background-repeat: no-repeat;
+  background-image: url("/pattern-background-mobile-dark.svg");
+
+  @include mixin.tablet-query {
+    background-image: url("/pattern-background-tablet-dark.svg");
+  }
+  @include mixin.desktop_query {
+    background-image: url("/pattern-background-desktop-dark.svg");
+  }
 }

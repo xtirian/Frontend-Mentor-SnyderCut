@@ -1,4 +1,5 @@
 @use '../../sass/var' as *;
+@use '../../sass/mixin';
 
 .result-container{
   width: $size-mobile;
@@ -6,10 +7,33 @@
 
   position: relative;
   z-index: 1;
+
+  @include mixin.tablet_query {
+    width: $size-tablet;
+  }
+
+  @include mixin.desktop_query {
+    display: flex;
+    justify-content: space-between;
+    gap: 131px;
+
+    padding-top: 85px;
+
+
+  width: $size-desktop;
+  }
 }
 
 .game_result-container{
   display:flex;
   flex-direction: column;
   gap: 12px;
+
+  @include mixin.tablet_query {
+    gap: 40px;
+  }
+
+  @include mixin.desktop_query {
+    width: 500px;
+  }
 }

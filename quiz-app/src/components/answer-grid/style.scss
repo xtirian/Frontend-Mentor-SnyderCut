@@ -1,4 +1,5 @@
 @use "../../sass/var" as *;
+@use "../../sass/mixin" ;
 
 .questionaryForm {
   position: relative;
@@ -8,6 +9,13 @@
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+
+  @include mixin.tablet_query {
+    row-gap: 24px;
+
+  }
+
+  
 }
 
 .form_validation {

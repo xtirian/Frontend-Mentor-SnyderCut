@@ -1,4 +1,5 @@
 @use "../../sass/var" as *;
+@use "../../sass/mixin";
 
 button {
   border: none;
@@ -19,6 +20,18 @@ button {
   font-size: 18px;
   font-weight: 500;
   line-height: 100%;
+
+  &:hover{
+    transition: all .15s;
+    background-color: $purple_50;
+  }
+
+  @include mixin.tablet_query{
+    @include mixin.hs;
+    
+    padding: 32px
+  }
+
 }
 
 

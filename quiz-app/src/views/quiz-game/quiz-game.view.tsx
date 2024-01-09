@@ -8,8 +8,6 @@ import "./style.scss";
 const QuizGame = () => {
   const { question } = HandleData.getQuestionNumberContext();
 
-  console.log(question);
-
   return (
     <>
       {question < 10 ? (

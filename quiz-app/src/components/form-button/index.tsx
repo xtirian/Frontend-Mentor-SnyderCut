@@ -4,38 +4,66 @@ import "./style.scss";
 interface ButtonFormProps {
   status: string;
   callBack?: Function;
+  resetForm?: Function;
 }
 
-export const ButtonForm = ({ status, callBack }: ButtonFormProps) => {
+export const ButtonForm = ({
+  status,
+  callBack,
+  resetForm,
+}: ButtonFormProps) => {
   if (status == "submited") {
     return (
-      <button type={"button"} onClick={() => callBack && callBack()}>
+      <button tabIndex={0}
+      title={`Press Enter to access the Next Question`}
+      role="definition"
+      aria-label={`Press Enter to access the Next Question`}
+        type="button"
+        onClick={() => {
+          resetForm && resetForm("notSubmited");
+          callBack && callBack();
+        }}
+      >
         Next Question
       </button>
     );
   }
 
   if (status == "notSubmited") {
-    return <button type={"submit"}>Submit Answer</button>;
+    return (
+      <button
+      title={`Press Enter to submit`}
+      role="definition"
+      aria-label={`Press Enter to submit`}
+        type={"submit"}
+        onClick={() => {
+          if (status === "notSubmited") {
+            resetForm && resetForm("submited");
+          }
+        }}
+      >
+        Submit Answer
+      </button>
+    );
   }
 };
 
 export const ResetButton = () => {
-
-  const {setIsStarted} = HandleData.getStartContext()
+  const { setIsStarted } = HandleData.getStartContext();
   const { setQuestion } = HandleData.getQuestionNumberContext();
   const { setPoints } = HandleData.getPointsContext();
 
-
   return (
-    <button type={"button"} onClick={() => {
-      
-      setQuestion(0)
-      setPoints()
-      setIsStarted()
-      }} className="reset_button">
+    <button
+      type={"button"}
+      onClick={() => {
+        setQuestion(0);
+        setPoints(0);
+        setIsStarted();
+      }}
+      className="reset_button"
+    >
       Play Again
     </button>
   );
 };
-
