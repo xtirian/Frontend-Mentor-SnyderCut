@@ -3,8 +3,3 @@
 @tailwind utilities;
 @tailwind variants;
 
-
-a {
- cursor: pointer;
- 
- }

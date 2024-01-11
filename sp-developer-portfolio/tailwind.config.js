@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}',
+  './public/**/*'],
 
   //Colocar sobre importação de cores customizadas no README
   theme: {
@@ -14,12 +15,16 @@ module.exports = {
         'White': '#ffffff',
       },
       backgroundImage: {
-        'project1' : "url(/images/projects/thumbnail-project1.webp)",
-        'project2' : "url(/images/projects/thumbnail-project7.webp)",
-        'project3' : "url(/images/projects/thumbnail-project3.webp)",
-        'project4' : "url(/images/projects/thumbnail-project4.webp)",
-        'project5' : "url(/images/projects/thumbnail-project5.webp)",
-        'project6' : "url(/images/projects/thumbnail-project6.webp)",
+        'project1' : "url(/images/projects/project1.webp)",
+        'project2' : "url(/images/projects/project7.webp)",
+        'project3' : "url(/images/projects/project3.webp)",
+        'project4' : "url(/images/projects/project4.webp)",
+        'project5' : "url(/images/projects/project5.webp)",
+        'project6' : "url(/images/projects/project6.webp)",
+        'project7' : "url(/images/projects/project7.webp)",
+        'project8' : "url(/images/projects/project8.webp)",
+        'project9' : "url(/images/projects/project9.webp)",
+        'project10' : "url(/images/projects/project10.webp)",
         "rings" : "url(/images/bg/pattern-rings.svg)",
         "circle" : "url(/images/bg/pattern-circle.svg)",
         "profileDesktop" : "url(/images/profileImage/profile-desktop.jpg)",

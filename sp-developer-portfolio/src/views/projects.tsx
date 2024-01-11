@@ -1,31 +1,29 @@
 import React from "react";
 
-import Card from "./cards";
+import ButtonContact from "@/components/button-contact";
+import CardComponent from "../components/cards";
 
-export default function Projects() {
+interface ProjectsProps {
+  scrollIntoView: Function;
+}
+
+export default function Projects({ scrollIntoView }: ProjectsProps) {
   return (
     <div>
       <section className="container mx-auto flex justify-between items-center flex-wrap mb-[92px] md:mb-0">
         <h2 className="text-White text-[5rem]/[5rem] text-center md:text-left md:text-xl">
           Projects
         </h2>
-        <div className="flex border-b-2 border-b-Green pb-5">
-          <a
-            href="#contactForm"
-            className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] hover:text-Green transition-colors ease-in duration-300"
-          >
-            Contact me
-          </a>
-        </div>
+        <ButtonContact scrollIntoView={scrollIntoView} />
         <div className="w-full flex flex-wrap gap-y-[12.25rem] md:gap-x-[3rem] md:gap-y-[14.75rem] lg:gap-x-[2.5rem] lg:gap-y-[8.625rem] py-[5rem] md:py-[7.5rem] lg:py-[10rem] ">
           {/* card1 */}
           <div>
             <div
               className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/thumbnail-project1.webp)] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/project1.webp)] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/thumbnail-project1.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/project1.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
@@ -51,9 +49,9 @@ export default function Projects() {
             </div>
             <h3 className="text-m text-White mb-[7px]">BMI CALCULATOR</h3>
             <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>HTML</p>
-              <p>SASS</p>
               <p>JAVASCRIPT</p>
+              <p>HTML</p>
+              <p>CSS</p>
             </div>
           </div>
 
@@ -63,9 +61,9 @@ export default function Projects() {
             <div
               className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/thumbnail-project7.webp)] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/project7.webp)] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/thumbnail-project7.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/project7.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
@@ -103,9 +101,9 @@ export default function Projects() {
             <div
               className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/thumbnail-project9.webp)] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/project9.webp)] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/thumbnail-project9.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/project9.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
@@ -143,9 +141,9 @@ export default function Projects() {
             <div
               className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/thumbnail-project8.webp)] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/project8.webp)] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/thumbnail-project8.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/project8.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
@@ -183,9 +181,9 @@ export default function Projects() {
             <div
               className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/thumbnail-project10.webp)] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/project10.webp)] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/thumbnail-project10.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/project10.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
@@ -223,9 +221,9 @@ export default function Projects() {
             <div
               className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/thumbnail-project6.webp)] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/project6.webp)] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/thumbnail-project6.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/project6.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
