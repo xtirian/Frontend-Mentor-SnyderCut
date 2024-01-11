@@ -13,8 +13,8 @@ This is a solution to the [Frontend Developer challenge on Frontend Mentor](http
 - [What I learned](#what-i-learned)
 - [Continued development](#continued-development)
 - [Useful resources](#useful-resources)
+- [Updates](#updates)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 
@@ -147,6 +147,15 @@ About the next, the structure of the projet, I that there is a lot of thing to l
 - [Image component](https://medium.com/frontendweb/how-to-add-an-image-in-next-js-5c1065450e3a) - At first it helped me to use images in the project, but when I bade the build and the deploy, all the images are with some bug that the page couldn't find the address of the images. So I rollback for the tag <img> and everything worked well. I should look for that in the future
 
 - [Git flow Tutorial (PT-BR)](https://youtu.be/394mc6PV8t8?si=d-3bCko1WxLxbZ9V)
+
+## Updates
+
+### **Version 1.1**
+This version recieve some improvments.The 'Contact Me' Button, now has the scrollIntoView function passed by useRef.
+
+The Home page was divided in three components, HeroBanner, Projects and Staks
+
+I tried to create the card as a component, but the tailwind wasn't helping me, since it keep cant using the image as background. I had to put the addres of the image, so it work, and the put the props. But since it wasn't good looking, I just let the card there and in the next update I'll remake the card.
 
 
 
