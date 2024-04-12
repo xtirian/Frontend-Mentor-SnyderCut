@@ -17,243 +17,90 @@ export default function Projects({ scrollIntoView }: ProjectsProps) {
         <ButtonContact scrollIntoView={scrollIntoView} />
         <div className="w-full flex flex-wrap gap-y-[12.25rem] md:gap-x-[3rem] md:gap-y-[14.75rem] lg:gap-x-[2.5rem] lg:gap-y-[8.625rem] py-[5rem] md:py-[7.5rem] lg:py-[10rem] ">
           {/* card1 */}
-          <div>
-            <div
-              className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
-        before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/project1.webp)] before:inset-1 before:absolute before:z-[-1]
-        after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/project1.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
-        lg:hover:after:z-[-1]
-        focus-within:after:opacity-0
-        after:transition-opacity after:duration-500 after:ease-in-out`}
-            >
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
-                <a
-                  target="_blank"
-                  href="https://bmi-calculator-blond-two.vercel.app/"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Project
-                </a>
-              </div>
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static  w-[1/2] absolute bottom-[-140px] left-[171px] md:bottom-[-140px] md:left-[171px]">
-                <a
-                  target="_blank"
-                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/bmi-calculator"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Code
-                </a>
-              </div>
-            </div>
-            <h3 className="text-m text-White mb-[7px]">BMI CALCULATOR</h3>
-            <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>JAVASCRIPT</p>
-              <p>HTML</p>
-              <p>CSS</p>
-            </div>
-          </div>
-
+          <CardComponent
+            project="https://bmi-calculator-blond-two.vercel.app/"
+            code="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/bmi-calculator"
+            title="BMI CALCULATOR"
+            imageName="project1.webp"
+          >
+            <p>JAVASCRIPT</p>
+            <p>HTML</p>
+            <p>CSS</p>
+          </CardComponent>
           {/* Card 2 */}
 
-          <div>
-            <div
-              className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
-        before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/project7.webp)] before:inset-1 before:absolute before:z-[-1]
-        after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/project7.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
-        lg:hover:after:z-[-1]
-        focus-within:after:opacity-0
-        after:transition-opacity after:duration-500 after:ease-in-out`}
-            >
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
-                <a
-                  target="_blank"
-                  href="https://modern-art.vercel.app/"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Project
-                </a>
-              </div>
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static  w-[1/2] absolute bottom-[-140px] left-[171px] md:bottom-[-140px] md:left-[171px]">
-                <a
-                  target="_blank"
-                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/art-gallery-website"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Code
-                </a>
-              </div>
-            </div>
-            <h3 className="text-m text-White mb-[7px]">MODERN ART GALLERY</h3>
-            <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>REACT</p>
-              <p>LEAFLET</p>
-              <p>SASS</p>
-            </div>
-          </div>
+          <CardComponent
+            imageName={"project7.webp"}
+            project={"https://modern-art.vercel.app/"}
+            code={
+              "https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/art-gallery-website"
+            }
+            title={"MODERN ART GALLERY"}
+          >
+            <p>REACT</p>
+            <p>LEAFLET</p>
+            <p>SASS</p>
+          </CardComponent>
 
           {/* Card 3 */}
 
-          <div>
-            <div
-              className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
-        before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/project9.webp)] before:inset-1 before:absolute before:z-[-1]
-        after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/project9.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
-        lg:hover:after:z-[-1]
-        focus-within:after:opacity-0
-        after:transition-opacity after:duration-500 after:ease-in-out`}
-            >
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
-                <a
-                  target="_blank"
-                  href="https://typemaster-keyboard-landing-page.vercel.app/"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Project
-                </a>
-              </div>
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static  w-[1/2] absolute bottom-[-140px] left-[171px] md:bottom-[-140px] md:left-[171px]">
-                <a
-                  target="_blank"
-                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/typemaster-keyboard-landing-page"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Code
-                </a>
-              </div>
-            </div>
-            <h3 className="text-m text-White mb-[7px]">TYPEMASTER PRE-SALE</h3>
-            <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>VITEJS</p>
-              <p>TYPESCRIPT</p>
-              <p>SASS</p>
-            </div>
-          </div>
+          <CardComponent
+            imageName={"project9.webp"}
+            project={"https://typemaster-keyboard-landing-page.vercel.app/"}
+            code={
+              "https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/typemaster-keyboard-landing-page"
+            }
+            title={"TYPEMASTER PRE-SALE"}
+          >
+            <p>REACT</p>
+            <p>TYPESCRIPT</p>
+            <p>SASS</p>
+          </CardComponent>
 
           {/* card4 */}
 
-          <div>
-            <div
-              className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
-        before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/project8.webp)] before:inset-1 before:absolute before:z-[-1]
-        after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/project8.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
-        lg:hover:after:z-[-1]
-        focus-within:after:opacity-0
-        after:transition-opacity after:duration-500 after:ease-in-out`}
-            >
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
-                <a
-                  target="_blank"
-                  href="https://github-user-search-pi-fawn.vercel.app/"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Project
-                </a>
-              </div>
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static  w-[1/2] absolute bottom-[-140px] left-[171px] md:bottom-[-140px] md:left-[171px]">
-                <a
-                  target="_blank"
-                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/github-user-search"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Code
-                </a>
-              </div>
-            </div>
-            <h3 className="text-m text-White mb-[7px]">GITHUB USER SEARCH</h3>
-            <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>VITEJS</p>
-              <p>HOOKS</p>
-              <p>SASS</p>
-            </div>
-          </div>
+          <CardComponent
+            imageName={"project8.webp"}
+            project={"https://github-user-search-pi-fawn.vercel.app/"}
+            code={
+              "https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/github-user-search"
+            }
+            title={"GITHUB USER SEARCH"}
+          >
+            <p>REACT</p>
+            <p>API</p>
+            <p>SASS</p>
+          </CardComponent>
 
           {/* card5 */}
 
-          <div>
-            <div
-              className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
-        before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/project10.webp)] before:inset-1 before:absolute before:z-[-1]
-        after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/project10.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
-        lg:hover:after:z-[-1]
-        focus-within:after:opacity-0
-        after:transition-opacity after:duration-500 after:ease-in-out`}
-            >
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
-                <a
-                  target="_blank"
-                  href="https://quiz-app-xtirian.vercel.app/"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Project
-                </a>
-              </div>
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static  w-[1/2] absolute bottom-[-140px] left-[171px] md:bottom-[-140px] md:left-[171px]">
-                <a
-                  target="_blank"
-                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/quiz-app"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Code
-                </a>
-              </div>
-            </div>
-            <h3 className="text-m text-White mb-[7px]">WEBDEV QUIZ APP</h3>
-            <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>REACT</p>
-              <p>SCSS</p>
-              <p>CONTEXTAPI</p>
-            </div>
-          </div>
+          <CardComponent
+            imageName={"project10.webp"}
+            project={"https://quiz-app-xtirian.vercel.app/"}
+            code={
+              "https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/quiz-app"
+            }
+            title={"WEBDEV QUIZ APP"}
+          >
+            <p>REACT</p>
+            <p>SCSS</p>
+            <p>TYPESCRIPT</p>
+          </CardComponent>
 
           {/* card 6 */}
 
-          <div>
-            <div
-              className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
-        before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/project6.webp)] before:inset-1 before:absolute before:z-[-1]
-        after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/project6.webp)] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
-        lg:hover:after:z-[-1]
-        focus-within:after:opacity-0
-        after:transition-opacity after:duration-500 after:ease-in-out`}
-            >
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static w-[1/2] absolute bottom-[-140px] md:bottom-[-140px]">
-                <a
-                  target="_blank"
-                  href="https://xtirian-portfolio.vercel.app/"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Project
-                </a>
-              </div>
-              <div className="flex border-b-2 border-b-Green pb-5 lg:static  w-[1/2] absolute bottom-[-140px] left-[171px] md:bottom-[-140px] md:left-[171px]">
-                <a
-                  target="_blank"
-                  href="https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/develop/sp-developer-portfolio"
-                  className="text-White  text-[2rem]/[3.25rem] uppercase tracking-[0.28625rem] focus:text-Green hover:text-Green transition-colors ease-in duration-300"
-                >
-                  View Code
-                </a>
-              </div>
-            </div>
-            <h3 className="text-m text-White mb-[7px]">PORTFOLIO DEV</h3>
-            <div className="text-body text-Grey flex gap-x-[2.25rem] ">
-              <p>REACT</p>
-              <p>TAILWINDCSS</p>
-              <p>NEXTJS</p>
-            </div>
-          </div>
+          <CardComponent
+            imageName={"project6.webp"}
+            project={"https://xtirian-portfolio.vercel.app/"}
+            code={
+              "https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/develop/sp-developer-portfolio"
+            }
+            title={"PORTFOLIO DEV"}
+          >
+            <p>REACT</p>
+            <p>TAILWINDCSS</p>
+            <p>NEXTJS</p>
+          </CardComponent>
         </div>
       </section>
     </div>
