@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 interface CardsProps {
@@ -16,10 +15,10 @@ export default function CardComponent({
   title,
   children,
 }: CardsProps) {
-  const [image, setImage] = useState("");
+  const [imagem, setImagem] = useState('');
 
   useEffect(() => {
-    setImage(imageName);
+    setImagem(imageName);
 
     console.log(imageName);
   }, [imageName]);
@@ -29,9 +28,9 @@ export default function CardComponent({
       <div
         className={`relative w-[343px] h-[253px] md:w-[342px] mb-[20px] md:h-[253px] lg:w-[540px] lg:h-[487px] flex lg:flex-col lg:items-center lg:justify-center lg:gap-y-[48px] bg-[rgba(0,0,0,0.80)] 
         before:bg-cover
-        before:content-[""] before:bg-[url(/images/projects/${image})] before:inset-1 before:absolute before:z-[-1]
+        before:content-[""] before:bg-[url(/images/projects/${imagem})] before:inset-1 before:absolute before:z-[-1]
         after:bg-cover 
-        after:content-[""] after:bg-[url(/images/projects/${image})] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
+        after:content-[""] after:bg-[url(/images/projects/${imagem})] after:inset-1 after:absolute after:z-1 lg:hover:after:opacity-0
         lg:hover:after:z-[-1]
         focus-within:after:opacity-0
         after:transition-opacity after:duration-500 after:ease-in-out`}
