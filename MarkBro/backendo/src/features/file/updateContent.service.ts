@@ -8,7 +8,6 @@ export class UpdateFileContent {
     if(!id || !file_content || !user_id){
       throw ErrorPattern.missingRequired('Missing params');
     }
-
     const file = await this.fileRepository.getById(id);
     if(!file){
       throw ErrorPattern.notFound('File not found');
