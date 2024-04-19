@@ -89,6 +89,23 @@ export default class UserRepository {
     }
   }
 
+  async getByUsername(username: string): Promise<User | null>  {
+    const client = await pool.connect();
+    try {
+      const result = await client.query(
+        "SELECT * FROM users WHERE username = $1",
+        [username]
+      );
+      return result.rows[0];
+    } catch (err) {
+      throw ErrorPattern.internalServerError(
+        `Error checking if user exists: ${err}`
+      );
+    } finally {
+      client.release();
+    }
+  }
+
   async delete(id: string): Promise<boolean> {
     const client = await pool.connect();
     try {
