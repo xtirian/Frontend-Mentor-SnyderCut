@@ -1,6 +1,7 @@
 import { User } from "../models/User";
 import pool from "../database/db";
 import { v4 as uuidv4 } from "uuid";
+import { ErrorPattern } from "../services/ErroPattern.service";
 
 export default class UserRepository {
   async create(user: User): Promise<User | null> {
@@ -13,8 +14,7 @@ export default class UserRepository {
       );
       return result.rows[0];
     } catch (err) {
-      console.error("Error creating user:", err);
-      return null;
+      throw ErrorPattern.internalServerError(`Error creating user:${err}`);
     } finally {
       client.release();
     }
@@ -35,8 +35,7 @@ export default class UserRepository {
       const total = parseInt(totalCount.rows[0].count);
       return { users: result.rows, total };
     } catch (err) {
-      console.error("Error getting all users:", err);
-      return null;
+      throw ErrorPattern.internalServerError(`Error getting all users: ${err}`);
     } finally {
       client.release();
     }
@@ -51,8 +50,9 @@ export default class UserRepository {
       );
       return result.rows[0] || null;
     } catch (err) {
-      console.error("Error getting user by email:", err);
-      return null;
+      throw ErrorPattern.internalServerError(
+        `Error getting user by email: ${err}`
+      );
     } finally {
       client.release();
     }
@@ -66,8 +66,9 @@ export default class UserRepository {
       ]);
       return result.rows[0];
     } catch (err) {
-      console.error("Error getting user by id:", err);
-      return null;
+      throw ErrorPattern.internalServerError(
+        `Error getting user by id: ${err}`
+      );
     } finally {
       client.release();
     }
@@ -82,8 +83,7 @@ export default class UserRepository {
       );
       return result.rows[0];
     } catch (err) {
-      console.error("Error updating user:", err);
-      return null;
+      throw ErrorPattern.internalServerError(`Error updating user: ${err}`);
     } finally {
       client.release();
     }
@@ -95,8 +95,7 @@ export default class UserRepository {
       await client.query("DELETE FROM users WHERE id = $1", [id]);
       return true;
     } catch (err) {
-      console.error("Error deleting user:", err);
-      return false;
+      throw ErrorPattern.internalServerError(`Error deleting user: ${err}`);
     } finally {
       client.release();
     }
