@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { ErrorPattern } from "../services/ErroPattern.service";
 
 export default class FileRepository {
-  async create(file: File): Promise<File | null> {
+  async create(file: FileModel): Promise<File | null> {
     const client = await pool.connect();
     try {
       const id = uuidv4();
