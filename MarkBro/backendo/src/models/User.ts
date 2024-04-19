@@ -8,7 +8,7 @@ export interface User {
   createdAt?: Date;
   updatedAt?: Date;
 
-  File: File[];
+  File?: File[];
 }
 
 export class UserModel {
@@ -19,13 +19,13 @@ export class UserModel {
   createdAt?: User["createdAt"];
   updatedAt?: User["updatedAt"];
 
-  File: User["File"];
+  File?: User["File"];
 
-  constructor(user: User) {
-    this.id = user.id;
-    this.username = user.username;
-    this.email = user.email;
-    this.password = user.password;
+  constructor(user: Partial<User>) {
+    this.id = user.id ?? '';
+    this.username = user.username ?? '';
+    this.email = user.email ?? '';
+    this.password = user.password ?? ''; 
     this.createdAt = user.createdAt;
     this.updatedAt = user.updatedAt;
     this.File = user.File;
