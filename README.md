@@ -6,6 +6,7 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 
 ## Table of projects
 
+- [MarkBro](#frontend-quiz-app)
 - [Frontend quiz app](#frontend-quiz-app)
 - [Typemaster pre-launch landing page](#typemaster-pre-launch)
 - [Github User Search](#github)
@@ -18,6 +19,18 @@ Note (05 ago 23): I studied about git workflow, and take some references in [Atl
 - [Skilled Learning - Landing Page](#skilled-learning)
 - [Result Sumary - Component](#result-sumary)
 - [WorkIt - Landing Page](#workit)
+
+## MarkBro
+
+Markdown editor web application.
+
+Technologies: 
+* BD: PostgreSQL
+* Back: Node, Express, Docker, Typescript
+* Front: Angular, Typescript, Sass
+
+- Solution URL: [Git Repository](https://github.com/xtirian/Frontend-Mentor-SnyderCut/tree/main/MarkBro) 
+- Live Site URL: [MarkBro - Em Andamento]() 
 
 ## Frontend quiz app
 
