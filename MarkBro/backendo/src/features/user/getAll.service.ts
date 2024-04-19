@@ -13,20 +13,25 @@ export class getAllUsers {
       throw ErrorPattern.badRequest("Page and take must be greater than 0.");
     }
 
-    const result = await this.repository.getAll(page, take) as { users: User[]; total: number; } | null;
+    const result = (await this.repository.getAll(page, take)) as {
+      users: User[];
+      total: number;
+    } | null;
 
-    if (!result?.users.length || !result?.total ) {
+    if (!result?.users.length || !result?.total) {
       throw ErrorPattern.notFound("No users found.");
     }
 
-    const models = result?.users.map(user => new UserModel(user).publicInfo());
+    const models = result?.users.map((user) =>
+      new UserModel(user).publicInfo()
+    );
 
     return { users: models, total: result.total };
   }
 
   async execute(page: number, take: number) {
-    if (!page) page = 1
-    if (!take) take = 20
-    return await this.repository.getAll(page, take);
+    if (!page) page = 1;
+    if (!take) take = 20;
+    return { page, take, ...(await this.repository.getAll(page, take)) };
   }
 }
