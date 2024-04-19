@@ -40,4 +40,12 @@ export class UserModel {
       updatedAt: this.updatedAt,
     };
   }
+
+  publicInfo() {
+    return {
+      id: this.id,
+      username: this.username,
+      createdAt: this.createdAt,      
+    };
+  }
 }
