@@ -2,12 +2,12 @@ import { User } from "./User";
 
 export interface File {
   id: string;
-  fileName: string;
-  fileContent: string;  
-  createdAt?: Date;
-  updatedAt?: Date;
+  file_name: string;
+  file_content: string;  
+  created_at?: Date;
+  updated_at?: Date;
 
-  userId: string;
+  user_id: string;
   User: User
 }
 
