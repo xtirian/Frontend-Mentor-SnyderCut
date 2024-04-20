@@ -39,4 +39,8 @@ export class CreateFile {
   }
 }
 
-type IServiceAttributes = File;
+type IServiceAttributes = {
+  file_name: File["file_name"];
+  file_content: File["file_content"];
+  user_id: File["user_id"];
+};
