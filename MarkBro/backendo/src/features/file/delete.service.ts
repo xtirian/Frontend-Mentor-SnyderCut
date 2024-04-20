@@ -3,7 +3,7 @@ import { User } from "../../models/User";
 import FileRepository from "../../repositories/file.repository";
 import { ErrorPattern } from "../../services/ErroPattern.service";
 
-export class DeleteService {
+export class DeleteFileService {
   private fileRepository = new FileRepository();
 
   async validate(id: string, userId: string): Promise<boolean> {
