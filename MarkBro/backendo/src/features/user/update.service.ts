@@ -17,6 +17,11 @@ export class UpdateUserService {
     if (!user) {
       throw ErrorPattern.notFound("User not found.");
     }
+    //verifica senha na confirmação
+    const verifyPassword = bcrypt.compareSync(password, user.password);
+    if (!verifyPassword) {
+      throw ErrorPattern.badRequest("Invalid password.");
+    }
     // Verifica se o email já está em uso por outro usuário
     const emailInUse = await this.repository.getByEmail(email);
     if (emailInUse && emailInUse.id !== id) {
@@ -27,19 +32,27 @@ export class UpdateUserService {
     if (usernameInUse && usernameInUse.id !== id) {
       throw ErrorPattern.conflict("Username is already in use.");
     }
-  }
 
-  async execute({ id, username, email, password }: User) {
-    await this.validate({ id, username, email, password });
-
-    const hashedPassword = bcrypt.hashSync(password, 10);
     const updatedUser = new UserModel({
-      id,
-      username,
-      email,
-      password: hashedPassword,
+      id: user.id,
+      username: username === user.username ? user.username : username,
+      email: email === user.email ? user.email : email,
+      password: user.password,
     });
 
-    return await this.repository.update(id, updatedUser);
+    await this.repository.update(id, updatedUser);
+
+    return updatedUser;
   }
+
+  async execute({ id, username, email, password }: IServiceAttributes) {
+    return await this.validate({ id, username, email, password });
+  }
+}
+
+interface IServiceAttributes {
+  id: User["id"];
+  username: User["username"];
+  email: User["email"];
+  password: User["password"];
 }
