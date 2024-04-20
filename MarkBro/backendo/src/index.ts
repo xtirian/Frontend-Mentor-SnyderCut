@@ -1,20 +1,20 @@
 import express from 'express';
-import { Pool } from 'pg';
 import * as dotenv from 'dotenv';
 import setupRoutes from './routes';
+import cors from 'cors';
+import { loggingMiddleware } from './middlewares/loggin.middleware';
+import { UserModel } from './models/User';
+
+
 
 dotenv.config();
-
 const app = express();
 const port = process.env.PORT || 3000;
-
-const pool = new Pool({
-  user: process.env.POSTGRES_USER,
-  host: 'db', // Nome do serviço do banco de dados no Docker Compose
-  database: process.env.POSTGRES_DB,
-  password: process.env.POSTGRES_PASSWORD,
-  port: 5432, // Porta padrão do PostgreSQL
-});
+app.use(cors({
+  origin: process.env.CORS_ORIGIN,
+  optionsSuccessStatus: 200
+}));
+app.use(loggingMiddleware);
 
 // Configura as rotas
 setupRoutes(app);
