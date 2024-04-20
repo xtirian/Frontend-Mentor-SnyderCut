@@ -1,26 +1,17 @@
-class HandleResponse {
-  handleResponse(response: any) {
-    if (this.isSuccess(response)) {
-      return this.handleSuccess(response);
-    } else {
-      return this.handleError(response);
-    }
-  }
-
-  private isSuccess(response: any) {
-    return response.status >= 200 && response.status < 300;
-  }
-
-  private handleSuccess(response: any) {
-    return response.data;
-  }
-
-  private handleError(response: any) {
-    const errorData = {
-      message: response.statusText,
+export const handleResponse = (response: any) => {
+  if (response.status > 300) {
+    return {
+      message: response.message,
       status: response.status,
-      data: response.data,
+      ...(response.error && { error: response.error }),
+      ...(response.details && { details: response.details }),
     };
-    throw new Error(JSON.stringify(errorData));
   }
-}
+
+  if (!response.status) {
+    return {
+      status: 200,
+      data: response
+    };
+  }
+};

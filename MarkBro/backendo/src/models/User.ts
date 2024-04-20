@@ -5,8 +5,8 @@ export interface User {
   username: string;
   email: string;
   password: string;
-  createdAt?: Date;
-  updatedAt?: Date;
+  created_at?: Date;
+  updated_at?: Date;
 
   File?: File[];
 }
@@ -16,8 +16,8 @@ export class UserModel {
   username: User["username"];
   email: User["email"];
   password: User["password"];
-  createdAt?: User["createdAt"];
-  updatedAt?: User["updatedAt"];
+  created_at?: User["created_at"];
+  updated_at?: User["updated_at"];
 
   File?: User["File"];
 
@@ -26,8 +26,8 @@ export class UserModel {
     this.username = user.username ?? '';
     this.email = user.email ?? '';
     this.password = user.password ?? ''; 
-    this.createdAt = user.createdAt;
-    this.updatedAt = user.updatedAt;
+    this.created_at = user.created_at;
+    this.updated_at = user.updated_at;
     this.File = user.File;
   }
 
@@ -36,8 +36,8 @@ export class UserModel {
       id: this.id,
       username: this.username,
       email: this.email,
-      createdAt: this.createdAt,
-      updatedAt: this.updatedAt,
+      created_at: this.created_at,
+      updated_at: this.updated_at,
     };
   }
 
@@ -45,7 +45,7 @@ export class UserModel {
     return {
       id: this.id,
       username: this.username,
-      createdAt: this.createdAt,      
+      created_at: this.created_at,      
     };
   }
 }

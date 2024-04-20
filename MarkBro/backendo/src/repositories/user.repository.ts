@@ -1,4 +1,4 @@
-import { User } from "../models/User";
+import { User, UserModel } from "../models/User";
 import pool from "../database/db";
 import { v4 as uuidv4 } from "uuid";
 import { ErrorPattern } from "../services/ErroPattern.service";
@@ -28,7 +28,7 @@ export default class UserRepository {
     try {
       const offset = (page - 1) * take;
       const result = await client.query(
-        "SELECT (username, createdAt) FROM users OFFSET $1 LIMIT $2",
+        "SELECT (username, created_at) FROM users OFFSET $1 LIMIT $2",
         [offset, take]
       );
       const totalCount = await client.query("SELECT COUNT(*) FROM users");
@@ -74,7 +74,7 @@ export default class UserRepository {
     }
   }
 
-  async update(id: string, user: User): Promise<User | null> {
+  async update(id: string, user: UserModel): Promise<User | null> {
     const client = await pool.connect();
     try {
       const result = await client.query(
@@ -84,6 +84,23 @@ export default class UserRepository {
       return result.rows[0];
     } catch (err) {
       throw ErrorPattern.internalServerError(`Error updating user: ${err}`);
+    } finally {
+      client.release();
+    }
+  }
+
+  async getByUsername(username: string): Promise<User | null>  {
+    const client = await pool.connect();
+    try {
+      const result = await client.query(
+        "SELECT * FROM users WHERE username = $1",
+        [username]
+      );
+      return result.rows[0];
+    } catch (err) {
+      throw ErrorPattern.internalServerError(
+        `Error checking if user exists: ${err}`
+      );
     } finally {
       client.release();
     }

@@ -1,10 +1,10 @@
-import { UserModel } from "../../models/User";
+import { User, UserModel } from "../../models/User";
 import UserRepository from "../../repositories/user.repository";
 import { ErrorPattern } from "../../services/ErroPattern.service";
 
 export default class GetUserById {
   private readonly repository = new UserRepository();
-  async validate(id: string) {
+  async validate(id: User["id"]) {
     if (!id) {
       throw ErrorPattern.missingRequired("User ID is required.");
     }
@@ -19,7 +19,7 @@ export default class GetUserById {
     return model;
   }
 
-  async execute(id: string) {
+  async execute(id: User["id"]) {
     return await this.validate(id);
   }
 
