@@ -1,21 +1,33 @@
-version: '3.8'
+version: "3.8"
 
 services:
   app:
     build: .
     ports:
-      - '3000:3000'
+      - "3000:3000"
     depends_on:
       - db
+    entrypoint: ["./wait-for-it.sh", "db:5432", "--", "node", "dist/index.js"]
     environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_URL: postgres://xtirianadmin:markbrodbpassword123@db:5432/mydatabase?user=xtirianadmin
+    restart: always
   db:
     image: postgres:latest
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    container_name: backendo_db_1
+    restart: always
     ports:
-      - '5432:5432'
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: xtirianadmin
+      POSTGRES_PASSWORD: markbrodbpassword123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "mydatabase"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
