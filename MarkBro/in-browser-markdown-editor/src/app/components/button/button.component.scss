@@ -1,0 +1,54 @@
+@use '../../../sass/var' as *;
+@use '../../../sass/mixin' as mix;
+
+.app-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  min-width: 152px;
+  background-color: $orange;
+  color: $c-100;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+
+  &:hover{
+    background-color: $orangeHover;
+    transform: scale(0.9);
+  }
+}
+
+.app-button-content{
+  @include mix.HeadingDesktopM;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+
+
+
+
+.rotate {
+  animation: loading 3s infinite linear ;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+@keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    60% {
+      transform: rotate(360deg);
+    }
+    75% {
+      transform: scale(1);
+    }
+    87%{
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
