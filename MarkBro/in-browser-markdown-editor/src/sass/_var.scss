@@ -20,3 +20,21 @@ $c-1000: #151619;
 $orange: #E46643;
 $orangeHover: #F39765;
 
+// THEME
+$dark: (
+  'mainBackground': $c-1000,
+  'highlightBackground': $c-900,
+  'textHighlight': $c-800,
+  'mainText': $c-400,
+  'titleText': $c-100,
+  'highlightText': $orange,
+);
+
+$light: (
+  'mainBackground': $c-100,
+  'highlightBackground': $c-200,
+  'textHighlight': $c-200,
+  'mainText': $c-500,
+  'titleText': $c-700,
+  'highlightText': $orange,
+);
