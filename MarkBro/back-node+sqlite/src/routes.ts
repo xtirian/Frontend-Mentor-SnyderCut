@@ -18,7 +18,7 @@ function setupRoutes(app: Express) {
   app.get("/", async (req: Request, res: Response) => {
     try {
       res.json({
-        message: `PostgreSQL says 'Hello, World!' from a Docker container.`,
+        message: `SQLite says 'Hello, World!' from a Node application.`,
       });
     } catch (err: any) {
       res.status(500).json({ error: err.message });
