@@ -10,4 +10,6 @@
   </span>
 </button>
 
-<div *ngIf="!disabled && variant == 'toggle'"></div>
+<div *ngIf="!disabled && variant === 'toggle'"  [ngClass]="isToggled? 'toggle-container isToggled': 'toggle-container'">
+  <span></span>
+</div>
