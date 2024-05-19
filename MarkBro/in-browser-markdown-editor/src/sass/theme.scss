@@ -1,0 +1,6 @@
+@use './mixin' as mix;
+@use './var' as *;
+
+body.dark{
+  background-color: map-get($dark, 'mainBackground');
+}

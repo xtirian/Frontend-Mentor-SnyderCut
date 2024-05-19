@@ -1,0 +1,88 @@
+@use './var' as *;
+
+//TEXT STYLES DESKTOP
+@mixin BodyDesktopM{
+  font-family: $roboto;
+    font-size: 13px;
+    line-height: auto;
+    font-weight: 300;
+}
+@mixin HeadingDesktopM{
+    font-family: $roboto;
+    font-size: 15px;
+    line-height: auto;
+    font-weight: 400;
+}
+@mixin HeadingDesktopS{
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: auto;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+@mixin MarkdownCodeDesktop {
+    font-family: $mono;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+@mixin PreviewH1Desktop {
+    font-family: $slab;
+    font-size: 32px;
+    line-height: auto;
+    font-weight: 700;
+}
+@mixin PreviewH2Desktop {
+    font-family: $slab;
+    font-size: 28px;
+    line-height: auto;
+    font-weight: 300;
+}
+@mixin PreviewH3Desktop {
+    font-family: $slab;
+    font-size: 24px;
+    line-height: auto;
+    font-weight: 700;
+}
+@mixin PreviewH4Desktop {
+    font-family: $slab;
+    font-size: 20px;
+    line-height: auto;
+    font-weight: 700;
+}
+@mixin PreviewH5Desktop {
+    font-family: $slab;
+    font-size: 16px;
+    line-height: auto;
+    font-weight: 700;
+}
+@mixin PreviewH6Desktop {
+    font-family: $slab;
+    font-size: 14px;
+    line-height: auto;
+    font-weight: 700;
+}
+@mixin PreviewParagraphDesktop {
+    font-family: $slab;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+@mixin PreviewParagraphBoldDesktop {
+    font-family: $slab;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+//THEME
+@mixin ThemeLight {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+}
+@mixin ThemeDark {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}

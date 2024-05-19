@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { handleResponse } from "../../../services/HandleResponse.service";
-import { UpdateFileContent } from "../../../features/file/updateContent.service";
 import { UpdateFileName } from "../../../features/file/updateName.service";
 
 const router = Router();
