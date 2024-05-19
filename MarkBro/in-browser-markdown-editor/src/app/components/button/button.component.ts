@@ -21,8 +21,13 @@ export class ButtonComponent {
   @Input() variant: ButtonModel['variant'] = 'button';
   @Input() text: ButtonModel['text'] = 'Button';
   @Input() isToggled:boolean = false;
+  @Input() hasIcon:boolean = false;
+  @Input() iconType:IIconsType;
+
 
   ngOnInit(): void {}
 
 
 }
+
+type IIconsType = 'add' | 'save' | undefined
