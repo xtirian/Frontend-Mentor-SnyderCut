@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { ThemeService } from '../../services/theme.service';
-import { get } from 'http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-theme-button',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, CommonModule],
   templateUrl: './theme-button.component.html',
   styleUrl: './theme-button.component.scss',
 })

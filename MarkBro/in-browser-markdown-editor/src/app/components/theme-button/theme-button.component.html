@@ -1,9 +1,9 @@
-<div (click)="handleToggle()" class="theme-button-container">
-  <i class="material-symbols-outlined theme-icon">
+<div (click)="handleToggle()" class="theme-button-container" >
+  <i class="material-symbols-outlined theme-icon" [ngClass]="isToggled?'':'active'">
     dark_mode
   </i>
   <app-button [loading]="false" variant="toggle" [isToggled]="isToggled"></app-button>
-  <i class="material-symbols-outlined theme-icon">
+  <i class="material-symbols-outlined theme-icon" [ngClass]="isToggled?'active':''">
     light_mode
   </i>
 </div>
