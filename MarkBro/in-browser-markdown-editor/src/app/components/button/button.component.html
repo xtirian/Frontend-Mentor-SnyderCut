@@ -1,0 +1,19 @@
+<button [disabled]="disabled" *ngIf="variant === 'button'" class="app-button-container">
+  <span *ngIf="!loading" class="app-button-content">
+    <span *ngIf="hasIcon" class="icon-container">
+      <i class="material-symbols-outlined button-icon">
+        {{iconType}}
+      </i>
+    </span>
+    <ng-content></ng-content>
+  </span>
+  <span class="loading" *ngIf="loading">
+    <i class="material-symbols-outlined rotate">
+      hourglass
+    </i>
+  </span>
+</button>
+
+<div *ngIf="!disabled && variant === 'toggle'" [ngClass]="isToggled? 'toggle-container isToggled': 'toggle-container'">
+  <span></span>
+</div>
