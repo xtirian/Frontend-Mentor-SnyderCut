@@ -1,0 +1,40 @@
+@use "../../../sass/var" as *;
+@use "../../../sass/mixin" as mix;
+
+.rename-idle_container{
+  color: $c-100;
+  user-select: none;
+  display: flex;
+  max-width: 350px;
+  width: 100%;
+  gap: 11px;
+}
+
+.rename-icon{
+  font-size: 16px;
+  display: flex;
+}
+
+.rename-idle_content{
+  form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+
+    label{
+      color:$c-500;
+      display: none;
+      @include mix.BodyDesktopM;
+    }
+    .fileName-name{
+      background-color: transparent;
+      color: $c-100;
+      border: none;
+      outline: none;
+      @include mix.HeadingDesktopM;
+      &:disabled{
+        user-select: none;
+      }
+    }
+  }
+}
