@@ -16,15 +16,13 @@
   display: flex;
 }
 
-.rename-idle_content{
-  form{
+.file-idle_content{
   display: flex;
   flex-direction: column;
   row-gap: 3px;
 
-    label{
+    .fileName-date{
       color:$c-500;
-      display: none;
       @include mix.BodyDesktopM;
     }
     .fileName-name{
@@ -36,20 +34,9 @@
       &:disabled{
         user-select: none;
       }
-      &:enabled{
-        border-bottom: 1px solid $c-100;
-        caret-color: $orange;
-      }
     }
-  }
 }
 
 @include mix.Tablet{
-  .rename-idle_content{
-    form {
-      label{
-        display: flex
-      }
-    }
-  }
+
 }
