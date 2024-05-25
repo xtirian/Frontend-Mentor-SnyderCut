@@ -1,0 +1,23 @@
+<div class="rename-idle">
+  <div class="rename-idle_container">
+    <i class="material-symbols-outlined rename-icon">
+      description
+        </i>
+    <div class="rename-idle_content" *ngIf="isEdit">
+      <form [formGroup]="fileNameForm" (ngSubmit)="onSubmit()" (dblclick)="handleEdit()">
+        <label for="fileName" userSelect="none">Document Name</label>
+        <input type="text" id="fileName" formControlName="fileName" class="fileName-name" #renameFileRef  >
+        <span class="error_return" *ngIf="fileNameForm.get('fileName')?.errors?.['required'] && fileNameForm.get('fileName')?.touched">Sorry, this field is required</span>
+        <span class="error_return" *ngIf="fileNameForm.get('fileName')?.errors?.['minlength']  && fileNameForm.get('fileName')?.touched">Sorry, this field must have at least 3 characteres</span>
+      </form>
+    </div>
+    <div class="rename-idle_content" *ngIf="!isEdit">
+      <form [formGroup]="fileNameForm" (ngSubmit)="onSubmit()" (dblclick)="handleEdit()">
+        <label for="fileName" userSelect="none">Document Name</label>
+        <p  class="fileName-name">{{fileNameForm.get('fileName')?.value}}</p>
+        <span class="error_return" *ngIf="fileNameForm.get('fileName')?.errors?.['required'] && fileNameForm.get('fileName')?.touched">Sorry, this field is required</span>
+        <span class="error_return" *ngIf="fileNameForm.get('fileName')?.errors?.['minlength']  && fileNameForm.get('fileName')?.touched">Sorry, this field must have at least 3 characteres</span>
+      </form>
+    </div>
+  </div>
+</div>

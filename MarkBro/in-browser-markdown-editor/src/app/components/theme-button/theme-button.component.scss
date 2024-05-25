@@ -8,12 +8,14 @@
   min-width: 152px;
   color: $c-100;
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+  gap: 10px;
 }
 .theme-icon{
   color: $c-100;
   user-select: none;
   cursor: pointer;
   color: $c-600;
+  font-size: 18px;
 }
 
 .active {
