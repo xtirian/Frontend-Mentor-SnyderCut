@@ -77,14 +77,14 @@
 
 //THEME
 @mixin ThemeLight {
-    @media (prefers-color-scheme: light) {
-        @content;
-    }
+  body.light{
+    @content;
+  }
 }
 @mixin ThemeDark {
-    @media (prefers-color-scheme: dark) {
-        @content;
-    }
+  body.dark{
+      @content;
+  }
 }
 
 @mixin Tablet {

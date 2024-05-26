@@ -1,0 +1,61 @@
+@use '../../../sass/var' as *;
+@use '../../../sass/mixin' as mix;
+
+.delete-icon{
+  height: 20px;
+  width: 18px;
+  font-size: 18px;
+  color: $c-500;
+  margin: 0;
+}
+
+.delete-button{
+  padding: 4px;
+}
+.delete-button:hover{
+  background-color: rgba(0, 0, 0, .2)
+}
+
+.delete-dialog{
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 24px;
+  max-width: 343px;
+  width: 100%;
+
+  h2{
+    @include mix.PreviewH4Desktop;
+  }
+  p{
+    @include mix.PreviewParagraphDesktop
+  }
+
+  button{
+    width: 100%;
+  }
+}
+
+@include mix.ThemeDark{
+  .delete-dialog{
+    background-color: $c-900;
+    h2{
+      color: $c-100
+    }
+    p{
+      color: $c-400
+    }
+  }
+}
+
+@include mix.ThemeLight{
+  .delete-dialog{
+    background-color: $c-100;
+    h2{
+      color: $c-700
+    }
+    p{
+      color: $c-500
+    }
+  }
+}
