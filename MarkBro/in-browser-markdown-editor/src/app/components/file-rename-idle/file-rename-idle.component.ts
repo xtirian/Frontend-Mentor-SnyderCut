@@ -12,7 +12,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
 export class FileRenameIdleComponent implements OnInit, AfterViewInit {
   //TODO: recieve info from backend
-  
+
   isEdit:boolean = false;
   @ViewChild('renameFileRef') renameFileRef!: ElementRef<HTMLInputElement>;
   formModel = {
@@ -54,7 +54,7 @@ export class FileRenameIdleComponent implements OnInit, AfterViewInit {
 
   onSubmit() {
     // Aqui você pode adicionar a lógica para processar o envio do formulário
-    this.handleEdit()
+    if(this.fileNameForm.valid)this.handleEdit()
     console.log(this.isEdit);
   }
 
